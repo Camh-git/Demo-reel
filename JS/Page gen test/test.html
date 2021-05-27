@@ -1,0 +1,79 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="Stylesheet.css"/>
+  <title>testpage</title>
+ </head>
+ 
+
+<body>
+ <div align = "Center">
+  <h1>Welcome to this test page</h1>
+    This is a test page for test things
+	<div id="demo"></div>
+  </div>
+  
+<script>
+ var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+   if (this.readyState == 4 && this.status == 200) {
+     var myObj = JSON.parse(this.responseText);
+     //adding ship pages using the information obtained above from the json file	 
+	 for (index = 0; index < myObj.Ships.length; ++index)
+	 { 	   
+       var Box = document.createElement("div");
+	   //determin if the item is a section header, if so config approriatley, else configure a ship section
+	   if (myObj.Ships[index].Name == "Small Ships" || myObj.Ships[index].Name == "Medium Ships" || myObj.Ships[index].Name == "Large Ships")
+	   {
+    	   //configuring a section header
+    	   Box.className = "section_header"	
+		   var h2 = document.createElement("h2")
+	       var Name = document.createTextNode(myObj.Ships[index].Name);
+	       h2.appendChild(Name);
+		   Box.appendChild(h2);		   
+	   }  
+	   else 
+	   {
+	   /*Finding and setting the elements for each ship box*/ 
+	   
+	   var img = document.createElement("img");
+	   img.src = myObj.Ships[index].icon;
+	   img.className = "ship_icon_box";
+	 
+	   
+	   Box.className = "ship_box";		   
+	   var h2 = document.createElement("h2")
+	   var Name = document.createTextNode(myObj.Ships[index].Name);
+	   h2.appendChild(Name);	   
+       
+       //select long or short desc based on screen width
+	   var Desc
+	   if (window.innerWidth > 720){
+	   Desc = document.createTextNode(myObj.Ships[index].Long_desc);
+	   } 
+	   else {
+	   Desc = document.createTextNode(myObj.Ships[index].Short_desc); 
+	   }	   
+	   
+	   var h3 = document.createElement("h3");
+	   var Price = document.createTextNode("From: " + myObj.Ships[index].Price.toLocaleString() + " CR")
+	   h3.appendChild(Price);   
+	  
+	   /*appending the elements to the container */ 
+	     Box.appendChild(img);		 
+         Box.appendChild(h2);         	     
+		 Box.appendChild(Desc);		 
+		 Box.appendChild(h3);		 
+	   }
+	   
+	   //adding the result to the page
+	   demo.appendChild(Box);
+	 }
+   }
+ };
+ xmlhttp.open("GET", "Ship_page_content.json", true);
+ xmlhttp.send();
+ 
+</script>
+</body>
+</html>

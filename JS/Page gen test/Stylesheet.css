@@ -1,0 +1,85 @@
+/* Misc sitewide styles */
+#main 
+{width: 100vw;margin: 0 auto 0 auto;min-width: 600px;background-size: cover;background-repeat:no-repeat; }
+a:link, a:visited
+{text-decoration: none; color:#111111;}
+html, body 
+{max-width: 100%; overflow-x: hidden; margin-top: 2.5%;}
+
+/*Modals*/
+.modal
+{display: none; position: fixed; z-index: 1; padding-top: 1%; left: 0; top: 0; width: 100%; height: 100%;
+  overflow: auto; /* Enable scroll if needed */  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+.modal_content {background-color: #fefefe; margin:auto; padding: 20px; border: 5px solid #ff7100; width: 80%;}
+.login_modal_content {float: right; width: 25%; height:25%; margin: auto; margin-top: 1.5%; padding: 10px; background-color: #bfbfbf; border: 5px solid #ff7100;}
+
+/* headings*/
+
+/*Hover modifiers*/
+.upper_header_item:hover
+{background-color: #bfbfbf;}
+.lower_header_item:hover
+{background-color: #696969;}
+#dropdown_content a:hover
+{background-color: #ddd;}
+#Dropdown:hover #dropdown_content {display: block;} /*Hovering over either of the ship dropdown tags shows the dropdown, reverst on unhover*/
+#dropdown_content:hover #dropdown_content{display:block;}
+.parent:hover > dropdown_content{}
+.parent:hover > dropdown:hover{}
+
+/*END of sitewide styles*/
+
+/*Header stuff*/
+#upper_header_bar
+{position:absolute; top: 0; right: 0; left: 0; height: 5%; overflow: hidden; background-color: #f2f2f2;}
+#lower_header_bar
+{position:absolute; top: 0; right: 0; left: 0; height: 5%; overflow: hidden; margin-top: 2.25%; background-color: #f2f2f2;}
+#Header_logo
+{float: left; height: 100%; width: 10%; background-color: #696969; text-align: center; padding-bottom: 1%;}
+.upper_header_item
+{float: left; height: 100%; width: 10%; background-color: #696969; text-align: center; padding-bottom: 1%;}
+.empty_upper_header_item
+{float: left; height: 100%; width: 10%; background-color: #696969; text-align: center; padding-bottom: 1%;}
+.lower_header_item
+{float: left; height: 100%; width: 16%; background-color: #bfbfbf; text-align: center; padding-bottom: 1%;}
+.empty_lower_header_item
+{float: left; height: 100%; width: 16%; background-color: #bfbfbf; text-align: center; padding-bottom: 1%;}
+#lower_header_space
+{float: left; height: 100%; width: 4%; background-color: #bfbfbf; padding-bottom: 1%;}
+
+#dropdown_content
+{display: none; position: fixed; margin-top:.5%; background-color: #f1f1f1; width: 16%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+#dropdown_content a
+{text-decoration: none; color:#111111; padding: 5%; width:90%; display : inline-block;}
+
+/*Footer stuff*/
+#footer
+{margin-bottom: 0%; text-align: center;}
+#Modal_control_bar
+{width: 100vw; height: 3.5%; overflow: hidden;  float: left;}
+.Modal_bar_item
+{margin-left: .2vw; width: 5vw; display: inline-block; text-align: center;}
+
+/*Static page elements*/
+/*Ship page */
+.ship_icon_box
+{float:left; width: 15%; height: 100%; margin-left: 0%; margin-top: 0%; background-color: #888888; object-fit: contain;}
+.ship_box
+{width: 75%; height: 20%; margin-top: 2.5%; align-content: center; background-color: #696969; opacity: 85%; }
+.ship_icon
+{height: 100%; width: 100%; object-fit: contain;}
+.section_header
+{height: 5%; margin-left: 10%; text-align:center; color:orange; opacity: 100%; }
+/*maybe trim all the extra styling for the rest of the site that isnt here*/
+
+/*News page*/
+#news_ticker
+{Width: 100%; top: 0; right: 0; left: 0; height: 12.5%; overflow: Hidden; background-color:#808080; font-size: 125%;}
+#news_item
+{}
+#news_title
+{}
+#news_abstract
+{}
+
+
