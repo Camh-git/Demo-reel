@@ -1,0 +1,9 @@
+If you are running the standalone:
+Just run it, it will be fine.
+
+If you are using Callapi_fetch.php:
+Run check_code_and_con.
+Enter a 10 char code in the code input box.
+Enter a number between 1 and in the con input box.
+Press the submit button to action the form.
+Callapi_fetch will be called and run to completion.
