@@ -1,0 +1,19 @@
+This quiz tasks the user with identifying U.S states
+The quiz features a map of the us with states that change colour to help the user track their progress.
+
+types of quiz:
+click the named state(random name selected, user clicks that state on map, find location, can fail multiple times)
+state list(just write down state names, states turn green when guessed)
+name this state(a state is highlighted, user writes it's name, turns green if correct, red if wrong)
+
+All text inputs for answers are case insensitive.
+
+name this state and click the named state have a button to cycle to a new state(selection order is random)
+
+The quiz features an optional timer that the user can configure the duration of. 
+
+The quiz will warn the user if they repeat an answer.
+
+The quiz will display a results screen on completion, timer expiration, or after the user presses exit.
+The results screen shows the states the user correctly guessed, incorrectly guessed and missed.
+The results scrren will also display the user's score and how many states they guessed, with alternate messages for all states guessed or a perfect score.
