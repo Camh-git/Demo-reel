@@ -1,0 +1,10 @@
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\bin\Debug\Device profiler.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\bin\Debug\Device profiler.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\bin\Debug\Device profiler.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device profiler.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device_profiler.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device profiler.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device profiler.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device profiler.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device profiler.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Device profiler\Device profiler\obj\Debug\Device_profiler.Form1.resources
