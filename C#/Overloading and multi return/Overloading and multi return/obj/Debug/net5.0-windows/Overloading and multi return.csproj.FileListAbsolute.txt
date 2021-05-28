@@ -1,0 +1,18 @@
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\Overloading and multi return.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\Overloading and multi return.deps.json
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\Overloading and multi return.runtimeconfig.json
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\Overloading and multi return.runtimeconfig.dev.json
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\Overloading and multi return.dll
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\ref\Overloading and multi return.dll
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\bin\Debug\net5.0-windows\Overloading and multi return.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading_and_multi_return.Form1.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.AssemblyInfoInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.AssemblyInfo.cs
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.dll
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\ref\Overloading and multi return.dll
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Code snippets\Overloading and multi return\Overloading and multi return\obj\Debug\net5.0-windows\Overloading and multi return.genruntimeconfig.cache
