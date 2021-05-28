@@ -1,0 +1,24 @@
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\bin\Debug\database update.exe.config
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\bin\Debug\database update.exe
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\bin\Debug\database update.pdb
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\bin\Debug\MySql.Data.dll
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\bin\Debug\Google.Protobuf.dll
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\bin\Debug\MySql.Data.xml
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database_update.Form1.resources
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database_update.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csproj.CopyComplete
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database update.exe
+C:\Users\cameron\Documents\visual studio stuff\database update,delete,insert and read\database update\obj\Debug\database update.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\bin\Debug\database update.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\bin\Debug\database update.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\bin\Debug\database update.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database_update.Form1.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database_update.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database update,delete,insert and read.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database update.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\database update,delete,insert and read\database update\obj\Debug\database update.pdb
