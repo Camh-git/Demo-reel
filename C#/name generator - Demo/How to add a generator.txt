@@ -1,0 +1,19 @@
+Creation
+1. Add the nesecary source lists in the Generator components folder.
+2. Add an empty file for list history in the History folder 
+3. Create a new form for the generator and create the generator.
+4. Add save function to the form.
+Integration
+1. Add a button to the Main menu form to open the form.
+2. Add a List for the generator history in the Name history form.
+3. Populate the list on load, this can be done by copying and adapting the existing code for the other lists.
+4. Create entries for the list in the history deselect and delete buttons, do this as above.
+Integration - Edit source page
+1. Add lists for each source file.
+2. Populate the lists on load, this can be done as above, make sure they are cleared prior to filling.
+2. Add controls for each list, port the code for each button as previously mentioned.
+3. Open the edit items box in the save select box and add options for each new list.
+4. Add a new option to the if statement that finds the right list in the save function, do this for each new list.
+5. Port over the code for each option from other save options.
+6. Add each new list to the sort stack in the page load section.
+7. Add each new list to the deselect button.

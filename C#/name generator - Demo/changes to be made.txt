@@ -1,0 +1,40 @@
+NOTE: this project originaly contained an additional name generator for mission names, this was removed from the demo version due to copyrighted content/ real life conflict references.
+While the aforementioned generator has been removed, some references to it may still remain.
+
+to do
+move array content import to load
+add polish such as message box details, ui alignment and general good practice/tidy up and consistency
+
+done
+Add delete button to history
+add reload button on edit screen
+add place name generator with option for number
+added save source eddit function
+added deselect button to edit page
+sort lists alphabeticaly prior to saving
+add edit source files form
+add and implement banned items lists
+have name component arrays import from list - was originaly local arrys, would not support saving changes
+make view history form
+add main menu
+add save function as history list
+add name generator with multiple options
+
+
+completed touch ups
+update edit page instructions
+add using statements to the writers to handle disposal properly
+remove the goto on fail and make the function run itself again
+Load person source arrays from file
+integrate sort button into page load - maked btn redundent, kept for layout purposes
+have edit page textboxes auto empty when their addition or edit is made
+
+canceled changes
+improve expandability with dynamic edit page textboxes and suitable controls - not 100% but complicated and having an 
+instrution document would be more sensible
+prevent same answer being picked more than once, qol but more effort than it's worth and unlikely with a decently sized source list 
+improve ui of edit page- looked slightly better but seriously compromised user friendlyness, unacceptable ux compromises.
+
+
+
+ 

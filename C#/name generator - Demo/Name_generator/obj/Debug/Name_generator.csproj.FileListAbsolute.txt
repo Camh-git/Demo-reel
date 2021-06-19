@@ -1,0 +1,44 @@
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\bin\Debug\Mission_name_generator.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\bin\Debug\Mission_name_generator.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\bin\Debug\Mission_name_generator.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Name_generator.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Mission_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Person_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Name_generator.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Name_generator.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Name_history.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Edit_sources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Main_menu.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator\Mission_name_generator\obj\Debug\Mission_name_generator.Place_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\bin\Debug\Mission_name_generator.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\bin\Debug\Mission_name_generator.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\bin\Debug\Mission_name_generator.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Name_generator.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Edit_sources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Main_menu.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Mission_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Name_history.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Person_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Place_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Name_generator.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Name_generator.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Mission_name_generator\obj\Debug\Mission_name_generator.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\bin\Debug\Name_generator.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\bin\Debug\Name_generator.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\bin\Debug\Name_generator.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Name_generator.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Mission_name_generator.Edit_sources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Mission_name_generator.Main_menu.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Mission_name_generator.Name_history.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Mission_name_generator.Person_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Mission_name_generator.Place_name_generator.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Name_generator.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Name_generator.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Name_generator.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Name_generator.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\name generator - Demo\Name_generator\obj\Debug\Name_generator.pdb
