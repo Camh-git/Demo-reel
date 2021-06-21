@@ -1,5 +1,5 @@
 import time
-day = int(0)
+day = int(1)
 
 
 try:
@@ -9,8 +9,12 @@ except:
     print("growth rate input was skipped, will default to 1.5")
 try:
     target_days = int(input("Enter the number of days to run: "))
+    target_days +=1
+     #1st run is offset so that it runs from days 1 to target instead of 0
+     #to target-1, this offset is undone on any 2nd run 
+     #UX thing, this way it doesn't look like an off by 1 error
 except:
-    target_days = int(1)
+    target_days = int(2)
     print("Run length input was skipped, will default to 1")
 
 try:
@@ -18,7 +22,7 @@ try:
 except:
     Count = int(1)  
 
-#Running through the infection calculation for X days untill the user quits
+#Running through the count calculation for X days untill the user quits
 
 close = bool(0)
 Loop_start_day = int(0)
@@ -45,13 +49,17 @@ while close == 0:
                 target_days = int(input("Enter the number of days to run: "))
                 Loop_start_day = day               
             except:
-                target_days = target_days + day
+                if day <= target_days: #remove 1st run offset
+                    target_days -=1                  
+                Loop_start_day = day    
                 print("Run length input was skipped, will default to previous target")
             try:
                 Count = int(input("set starting Count(optional, defualt current value):"))
             except:
                 print("Count input skipped, continuing with previous count")            
         else:
+            if day <= target_days: #remove 1st run offset
+                    target_days -=1  
             Loop_start_day = day
             print("running again with no paramater changes")      
     #exit
