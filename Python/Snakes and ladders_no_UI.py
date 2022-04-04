@@ -1,35 +1,13 @@
+#This is a text based, self playing version of snakes and ladders
 import random
 
 class Jump():
   def __init__(self,entry,ext):
       self.Entrance = entry
       self.Exit = ext
-
-  def move_piece(Piece):
-      piece.Location = self.ext      
-
-class Piece():
-    icon ="x.png"
-    def __init__(location):
-        self.Location = location
-        
-class Co_ordinate():
-  def __init__(self, X_co_ord, Y_co_ord):
-    self.X = X_co_ord
-    self.Y = Y_co_ord
-    
-class Grid():
-  Width,Height = 400,400
-  Vertical_boxes,Horizontal_boxes = 10,10
-  max_position = Vertical_boxes*Horizontal_boxes  
-
-  def Box():
-     W = self.Width/Horizontal_boxes
-     H = self.Height/Vertical_boxes     
-
+ 
 def Roll():
   return(random.randrange(1,7))
-
 
 #setup
 Snakes = [Jump(43,12),Jump(72,52),Jump(13,8),Jump(52,25),Jump(90,61),Jump(98,20)]
