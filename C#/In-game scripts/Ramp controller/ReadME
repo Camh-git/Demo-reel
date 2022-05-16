@@ -9,4 +9,4 @@ When deploying the ramp contact with the ground is detected by measuring the cha
 We know the decending ramp hasn't broken or jammed, because the game doesnt have that feature, we know it hasn't lost power because gravity will still pull it down.
 The angle check is skipped on the first pass to stop the ramp from imediately seizing up due to the lower travel distance from waiting for the ramp to accelerate.
 
-The script also stores the ramps status so that the user can opperate the system using a simple toggle, and let the script take care of the rest.
+The script also stores the ramp's status so that the user can opperate the system using a simple toggle, and let the script take care of the rest.
