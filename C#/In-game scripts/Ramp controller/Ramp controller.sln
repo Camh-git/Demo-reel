@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ramp controller", "Ramp controller\Ramp controller.csproj", "{B7028FAD-4059-435C-8D34-79D3DC7949C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7028FAD-4059-435C-8D34-79D3DC7949C0}.Debug|x64.ActiveCfg = Debug|x64
+		{B7028FAD-4059-435C-8D34-79D3DC7949C0}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F9168BC-F3AC-40C9-AE0F-44AA572A6444}
+	EndGlobalSection
+EndGlobal
