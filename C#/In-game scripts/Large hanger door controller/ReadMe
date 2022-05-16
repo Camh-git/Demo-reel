@@ -5,4 +5,4 @@ These complications, along with the inability to use any kind of thread.wait() s
 The script follows a series of steps for each procces.
 When the script has to wait for a step to complete it re-calls itself every 1.4 seconds and increments a timer until the timed action is complete, or, if completion is measured another way (eg if a piston has fully extended without reaching it's target) it has timed out.
 
-The result of this script is to allow users to easily control a complex door mechanism that can be substantialy larger that the block the game provides for such purposes by default.
+The Purpose of this script is to allow users to easily control a complex door mechanism that can be substantialy larger that the block the game provides for such purposes by default.
