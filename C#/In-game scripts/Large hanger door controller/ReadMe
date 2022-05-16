@@ -1,0 +1,6 @@
+This script controls the actuation of a large, multi-segement door in the game space engineers.
+The door is connected to the rest of the contruct via a single "merge" block and cannot make contact with any others (game restriction)
+Due to a quirk of the game's physics the hinge that actuates the door must have pistons on both ends to make it a seperate grid object from the part's its connecting.
+These complications, along with the inability to use any kind of thread.wait() style command give the script its current form.
+The script follows a series of steps for each procces.
+When the script has to wait for a step to complete it re-calls itself every 1.4 seconds and increments a timer until the timed action is complete, or, if completion is measured another way (eg if a piston has fully extended without reaching it's target) it has timed out.
