@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Large hanger door controller", "Large hanger door controller\Large hanger door controller.csproj", "{7EE59B4D-BB02-4842-A360-6BF30FE8581E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EE59B4D-BB02-4842-A360-6BF30FE8581E}.Debug|x64.ActiveCfg = Debug|x64
+		{7EE59B4D-BB02-4842-A360-6BF30FE8581E}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C1DDF49-DEB2-4EEF-8D56-B9F0F4507808}
+	EndGlobalSection
+EndGlobal
