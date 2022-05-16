@@ -1,0 +1,12 @@
+The purpose of this script is to control the unfolding and deployment/ retraction of a multi-segment boarding ramp.
+
+To deploy the ramp the script unfolds the ramp's first segement, giving the others sufficient ground clearance to unfold, unfolds the rest of the ramp and lowers it until concact is detected with the ground. Finaly it locks the ramp in place
+To retract the ramp the proccess is simpler, but reversed, the ramp is unlocked, raised fully, folded and locked in place.
+
+When the script has to wait for a step to complete it re-calls itself every 1.4 seconds and increments a timer until the timed action is complete.
+
+When deploying the ramp contact with the ground is detected by measuring the change in the angle the main hinge is facing since the last check, if it is near or at 0 then resistance from the ground is slowing it down.
+We know the decending ramp hasn't broken or jammed, because the game doesnt have that feature, we know it hasn't lost power because gravity will still pull it down.
+The angle check is skipped on the first pass to stop the ramp from imediately seizing up due to the lower travel distance from waiting for the ramp to accelerate.
+
+The script also stores the ramps status so that the user can opperate the system using a simple toggle, and let the script take care of the rest.
