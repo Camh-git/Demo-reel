@@ -1,0 +1,236 @@
+All images from wikimedia commons unless stated otherwise
+All product images from wikimedia commons unless othewise stated, other credits can be found in a txt doc called credits, currently found for the following products:
+  0002-Fish goujons
+  3003-Millionares_cheesecake
+
+sources of images in prototypes:
+Where possible images are from wikimedia  
+Starters/sides:
+ Salad  https://commons.wikimedia.org/wiki/File:Avocado-pecan_salad.jpg
+        https://commons.wikimedia.org/wiki/File:Two_salads_and_wine.jpg
+		https://commons.wikimedia.org/wiki/File:Salads_for_two.jpg
+		
+ Chips  https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/French_fries_box.jpg/640px-French_fries_box.jpg
+        https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/SupermaketFries.jpg/640px-SupermaketFries.jpg
+ 
+Mains:
+
+dessert:
+Ice cream  https://commons.wikimedia.org/wiki/File:A_mint_chocolate_ice_cream.jpg  
+           https://commons.wikimedia.org/wiki/File:Ice_cream_in_cup_with_sprinkles_and_spoon.jpg
+		   https://commons.wikimedia.org/wiki/File:Chipwich_Birthday_Cake_ice_cream_sandwich.jpg
+		  
+Brownies  https://commons.wikimedia.org/wiki/File:Several_brownies.jpg  https://commons.wikimedia.org/wiki/File:Brownie_transparent.png
+
+Cheese cake  https://commons.wikimedia.org/wiki/File:Cheese_cake_of_American_and_Italian_style.jpg 
+             https://commons.wikimedia.org/wiki/File:Mocha_cheesecake_and_chestnuts_chocolate_cake_with_ice_cream.jpg
+		     https://commons.wikimedia.org/wiki/File:Chocolate_cheese_cake.jpg
+			 https://commons.wikimedia.org/wiki/File:Cheese_Cake_(15226352).jpg
+
+Drinks:
+Cola  https://commons.wikimedia.org/wiki/File:Romulan_Cola_taller_glass.jpg
+ 
+juice https://commons.wikimedia.org/wiki/File:Pineapple_Juice_fruits-465832.jpg
+       https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg
+	   https://commons.wikimedia.org/wiki/File:Papaya_juice.JPG
+	   https://commons.wikimedia.org/wiki/File:Glasses_of_Mango_juice.jpg
+	   
+milkshake https://commons.wikimedia.org/wiki/File:Milkshake_on_table_with_patterns.jpg
+          https://commons.wikimedia.org/wiki/File:Chili-mango_milkshake_-_Sparkys_-_Hatch_New_Mexico.jpg
+		  https://commons.wikimedia.org/wiki/File:Strawberry_Milkshake.jpg
+		  https://commons.wikimedia.org/wiki/File:Peach_Melba_Milkshake.jpg
+		  
+Coffee  https://commons.wikimedia.org/wiki/File:A_small_cup_of_coffee.JPG
+        https://commons.wikimedia.org/wiki/File:Cup_of_coffee_in_Caf%C3%A9_Butter_-_Prenzlauer_Berg,_Berlin.jpg
+        https://commons.wikimedia.org/wiki/File:Coffee,_expresso.jpg
+		https://commons.wikimedia.org/wiki/File:A_cup_of_coffee_milk.jpg
+		https://commons.wikimedia.org/wiki/File:Homemade_Dalgona_Coffee_-_Odisha.jpg
+
+
+
+All product nutritonal info is taken from a representative example from a UK supermarket, these are:
+  
+  0001-Soup of the day - asda
+    https://groceries.asda.com/product/tinned-soup/heinz-chicken-vegetable-big-soup/1972551
+
+  0002-Fish goujons  - asda
+    https://groceries.asda.com/product/battered-breaded-fish/whitby-seafoods-gluten-free-cod-goujons/1000140301659
+
+  0003-Prawn cocktail - Morrisons
+    https://groceries.morrisons.com/products/morrisons-cocktail-prawns-411430011
+
+  0004-Breaded mushroms - Morrisons
+    https://groceries.morrisons.com/products/morrisons-breaded-garlic-mushrooms-120906011
+
+  0005-Small cheese board - asda
+    https://groceries.asda.com/product/mature-cheese/asda-classic-cheese-board/1000036011364
+  
+  0006-Tomato and mozzarella - asda
+    https://groceries.asda.com/product/tapas-antipasti/asda-semi-dried-tomatoes-mozzarella/910003043634
+
+  0007-Caesar salad - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/sainsburys-caesar-salad--be-good-to-yourself-265g  
+
+  0008-Potato salad - asda
+    https://groceries.asda.com/product/coleslaw-potato-salad/asda-extra-special-potato-salad/910000879998
+  
+  0009-Chicken skewers - Morrisons
+    https://groceries.morrisons.com/products/morrisons-mini-chicken-skewers-115970011
+
+  0010-Vege fritters - asda
+    https://groceries.asda.com/product/tapas-antipasti/asda-turkish-inspired-6-courgette-sweetcorn-fritters/1000364145681
+
+  0011-Chicken fritters - asda
+    https://groceries.asda.com/product/breaded-chicken-turkey/asda-british-chicken-breaded-goujons/1000038106579
+
+  1000-Sheppard's pie - Morrisons
+    https://groceries.morrisons.com/products/morrisons-shepherd-s-pie-210851011
+	
+  1001-Chicken tikka masala - Sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/sainsburys-chicken-tikka-masala---rice--taste-the-difference-450g-7802533-p-44
+
+  1002-Pizza - Morrisons
+    https://groceries.morrisons.com/products/morrisons-the-best-cajun-chicken-sweet-red-peppers-pizza-562070011
+  
+  1003-Burger and fries - Morrisons
+    https://groceries.morrisons.com/products/morrisons-the-best-4-scotch-beef-quarter-pounders-509355011
+	https://groceries.morrisons.com/products/morrisons-limited-edition-seasoned-chips-517370011
+
+  1004-Full english breakfast - 
+    https://www.myfitnesspal.com/food/calories/full-english-breakfast-1877109240
+
+  1005-Paella - Morrisons
+    https://groceries.morrisons.com/products/morrisons-the-best-king-prawn-chicken-paella-431108011
+	
+  1006-Risotto - asda
+    https://groceries.asda.com/product/italian-meals/asda-italian-chicken-mushroom-risotto/910002366348
+	
+
+  1007-spaghetti bolognese - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/plant-pioneers-spaghetti-bolognese-400g
+
+  1008-Meatballs and pasta - asda
+    https://groceries.asda.com/product/family-meals/asda-tomato-meatball-pasta-bake/1000159248591
+
+  1009-Roast beef & veg - Morrisons
+    https://groceries.morrisons.com/products/morrisons-carvery-roast-beef-slices-547191011
+
+  1010-Curry - Morrisons
+    https://groceries.morrisons.com/products/morrisons-takeaway-indian-chicken-madras-299166011
+  
+  1011-Lasagne - Morrisons
+    https://groceries.morrisons.com/products/morrisons-beef-lasagne-210213011
+
+  1012-Beef wellington - BBC -Gordon ramsay
+    https://www.bbcgoodfood.com/recipes/beef-wellington
+	
+  1013-BBQ ribs - asda
+    https://groceries.asda.com/product/simple-to-cook/asda-sweet-bbq-pork-rack-of-ribs/1000121694568
+
+
+  2001-Chips  - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/aunt-bessies-crispy-fluffy-homestyle-chips-800g
+  
+  2002-Cheesy chips - asda, with #2001
+    https://groceries.asda.com/product/grated-sliced-cheese/asda-10-mature-cheddar-cheese-slices/910001256210
+  
+  2003-Curly_fries - sainsburys - same as #2001
+    https://www.sainsburys.co.uk/gol-ui/product/aunt-bessies-crispy-fluffy-homestyle-chips-800g
+  
+  2004-Tomato dip - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/heinz-tomato-ketchup-800ml
+
+  2005-BBQ dip - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/hp-honey-woodsmoke-bbq-sauce-465g
+
+  2007-Onion_rings - asda
+    https://groceries.asda.com/product/onion-rings/asda-battered-onion-rings/910001504971
+
+  2008-Baked beans - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/heinz-baked-beans-3x200g
+
+  2009-Hash browns - Morrisons
+    https://groceries.morrisons.com/products/morrisons-hash-browns-110843011
+
+  2010-Coleslaw - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/sainsburys-coleslaw--taste-the-difference-300g
+
+  2011-Cucumber_slices - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/sainsburys-cucumber-whole
+	
+	
+  3000-Plain_cheesecake - Morrisions
+    https://groceries.morrisons.com/products/morrisons-new-york-cheesecake-299288011
+	
+  3001-Raspberry_cheesecake - Asda
+    https://groceries.asda.com/product/cheesecakes-trifles/asda-raspberry-cheesecake/1000036011844
+	
+  3002-Chocolate_cheesecake - morrisons
+    https://groceries.morrisons.com/products/morrisons-triple-chocolate-cheesecake-111129011
+
+
+  3003-Millionares_cheesecake - asda
+    https://groceries.asda.com/product/cheesecakes/asda-extra-special-millionaires-cheesecakes/1000305580586
+
+  3004-Brownies - asda
+    https://groceries.asda.com/product/brownies-cookies-shortbread/cadbury-dairy-milk-15-brownie-bites/1000269713177
+	
+  3005-Vanila ice cream - asda
+  3006-Bannana_ice_cream
+  
+    https://groceries.asda.com/product/luxury-ice-cream-tubs/asda-really-creamy-vanilla-ice-cream/910000490556
+    
+  3007-Chocolate_ice_cream - asda
+    https://groceries.asda.com/product/family-sized-ice-cream-tubs/carte-d-or-indulgent-chocolate-ice-cream-dessert/1000342872642
+
+  3008-Neapolitan_ice_cream - morrisions
+    https://groceries.morrisons.com/products/morrisons-neapolitan-ice-cream-111059011
+
+  3009-Ice cream sundae - Morrisions
+    https://groceries.morrisons.com/products/ben-jerry-s-sundae-oh-my-banoffee-pie-573855011
+
+  3010-Ice_cream_cake - asda
+    https://groceries.asda.com/product/family-sized-ice-cream-tubs/viennetta-the-original-birthday-celebration-cake/1000342872925
+
+  3011-Chocolate_cake - asda
+    https://groceries.asda.com/product/birthday-party-cakes/galaxy-triple-chocolate-cake/1000211461113
+
+  3012-Red_velvet_cake - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/g%C3%BC-inspirations-red-velvet-desserts-2x82g
+	
+  3013-Victoria_sponge_cake - morrisons
+    https://groceries.morrisons.com/products/morrisons-free-from-4-victoria-sponge-slices-431324011
+    
+  3014-Jam_doughnuts -asda
+    https://groceries.asda.com/product/ice-cream-party-desserts/country-style-6-real-dairy-cream-jam-doughnuts/910001786649
+	
+  3015-Chocolate_doughnuts - asda
+    https://groceries.asda.com/product/mini-bites-muffins/cadbury-chocolate-donuts/1000000580622
+
+  3016-Sprinkle_ring_doughnuts - sainsburys
+    https://www.sainsburys.co.uk/gol-ui/product/sainsburys-bakery-pink-iced-doughnuts-x4    
+	
+  4001-Tea - Morrisons
+    https://groceries.morrisons.com/products/yorkshire-gold-tea-bags-160-pack-113686011
+	
+  4002-Coffee - asda
+    https://groceries.asda.com/product/decaf-coffee/nescafe-original-decaff-instant-coffee/40015
+
+  4003-Orange juice - asda
+    https://groceries.asda.com/product/orange-citrus-juice/tropicana-orange-juice-with-bits/1000114125306
+	
+  4004-Apple juice - asda
+    https://groceries.asda.com/product/apple-juice/tropicana-apple-juice/1000114125297
+	
+  4005-Blackcurrent juice - asda
+    https://groceries.asda.com/product/chilled-smoothies/innocent-kids-apple-blackcurrant-smoothies/1000197663906
+
+  4006-Hot chocolate - asda
+    https://groceries.asda.com/product/hot-chocolate/galaxy-instant-hot-chocolate/1000327716158
+	
+  4007-Bannana milkshake - asda
+    https://groceries.asda.com/product/milk-drinks/yazoo-banana-flavoured-milk/910002785811
+
+  4008-Chocolate milkshake - asda
+    https://groceries.asda.com/product/milk-drinks/yazoo-chocolate-flavoured-milk/910002786409
+    

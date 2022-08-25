@@ -1,0 +1,39 @@
+Format:
+The site files have two sections: server side and client side.
+Client side is the html,css,js, php ect to display the site, this is the part the user accesses.
+Server side contains the documentation, product files, copies of db files and any server side scripts, not norm accessed by users.
+
+The user will land at "Homepage.html" on the client side, when they go to the product page a script will call the db for info, which it will then
+use to extract the required product info from server side.
+
+this is done to make the site more realistic and to avoid loading all product data onto the user the moment they connect. 
+
+Pages:
+  Homepage
+  About us
+  Products
+  Login/user area
+
+Inital DB(see database.txt for more):
+table-Events
+  ID:varchar 10(unique,rand,prime),EventCode(4,item 1), EventName(15,derived from event code),EventTime(datetime when it happened),EventType(15,item 2),account/machine(15,item 3)
+  item 1: a 4 digit code corresponding to an event type, see docs/Event_types.txt
+  item 2: the severity of the event, linked to event type but can vary, mostly exists to allow admins to spot issues without going to Event_types.txts
+  item 3: the user/server name that generated the event, optional if cant be found/displayed
+table-Customers
+  ID: varchar 10(unique,rand,prime),Username varchar 15(unique), password varchar 20(Hash&salt), status int 2 (various codes)
+table-products
+  ID: varchar 5(unique,rand), Name varchar 20, Link varchar 10(link 1), stock int 2, promoted bool
+ annotations:  
+  link 1: The product folder, formated as Prod-$ID, folder containing items 1 and 2, located in serverside/products
+  item 1: The products json/xml description file, titled "Desc.json", this contains the text for the item page
+  item 2: The products images folder, titled "Imgs", contains at least one image titled "Main" and optional sequentialy numbered secondary imgs#
+  item 3: the products "info.json" file, this contains nutritional info, price, ingredients list and alergen/warning info, stock stored in db(fluid).
+  
+  Note: The linkbuilder will assume the static path up to /Products, the final path is then determined from link 0, the script will then get the 
+  description as path/Desc.json and the images as path/Images/Primary.png and any others as path/Images/x.png(where x>0).
+
+table-orders
+  ID: int 10(unique,ai), Customer varchar 10(fkey-UserID), Manifest varchar 14(link 2) Total currency(or float), Time Datetime  
+  
+  link 2: Linkbuilder starts as Serverside/Order_manifests/, the filename (the varchar)will be Man_$ID.json  
