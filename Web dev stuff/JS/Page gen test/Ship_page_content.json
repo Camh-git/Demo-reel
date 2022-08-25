@@ -3,37 +3,36 @@
  {"Name":"Small Ships"},
 
  {"Name":"F63 Condor","Long_desc":"The F63 Condor is a small space superiority fighter designed for use by planetary defence forces and in co-ordination with larger naval vessels.The condor is a cheap and easy to use fighter that is widely available to all pilots who need a fast, nimble Fighter.",
-  "Short_desc":"Small,nimble ship launched fighter","Price":13743,"icon":"Vectors/box.png"},
+  "Short_desc":"Small,nimble ship launched fighter","Price":13743,"icon":"Vectors/condor_fighter.png"},
   
  {"Name":"Eagle MKII","Long_desc":"The eagle is a proven combat fighter with a distinguished history. It is one of the smallest fighters available with jump capability,It has the distinction of being the only ship that has been so successful, versions have been built for both federation and imperial navies.",
-  "Short_desc":"Highly agile and distinguished jump capable fighter","Price":44800,"icon":"Vectors/box.png"},
+  "Short_desc":"Highly agile and distinguished jump capable fighter","Price":44800,"icon":"Vectors/Eagle-mk-ii.png"},
   
  {"Name":"Imperial Eagle","Long_desc":"The Imperial Eagle has seen service in the Imperial Navy and its allies for many years. The original Eagle is a multi-role fighter where the Imperial version is geared more towards the interceptor role, It carries more powerful weaponry and is capable of higher speeds than the original.",
-  "Short_desc":"High speed imperial interceptor based on the MKII eagle","Price":110830,"icon":"Vectors/box.png"},
+  "Short_desc":"High speed imperial interceptor based on the MKII eagle","Price":110830,"icon":"Vectors/imperial-eagle.png"},
   
  {"Name":"Vulture","Long_desc":"The Vulture space superiority fighter incorporates advanced manufacturing techniques to integrate large hardpoints into its relatively small frame. The Vulture excels in the role of heavy fighter in strike missions against larger, well defended targets, it's nimble flight characteristics make it equally devastating against smaller targets.",
-  "Short_desc":"Heavy space superiority fighter with 2 large hardpoints","Price":4925615,"icon":"Vectors/box.png"},
+  "Short_desc":"Heavy space superiority fighter with 2 large hardpoints","Price":4925615,"icon":"Vectors/vulture.png"},
   
   
  {"Name":"Medium Ships"},  
  
  {"Name":"Federal Dropship","Long_desc":"The Federal Dropship is the Federation Navy’s workhorse ship for tactical and special forces deployments. This is a well-armoured and well-armed ship capable of carrying large loads. It's versatile nature means that it is well-suited to tackling even the most hostile environment.",
- "Short_desc":"Massively armoured heavy dropship","Price":14314210,"icon":"Vectors/box.png"},
+ "Short_desc":"Massively armoured heavy dropship","Price":14314210,"icon":"Vectors/federal-dropship.png"},
  
  {"Name":"Federal Assault ship","Long_desc":"Many of our customers desired more specific roles for their Dropships and the Assault Ship is a response to those demands. The Assault ship is designed for a more combat intensive role than the original Gunship. It has improved manoeuvrability and weapon capacity. These additions make it less versatile, but better in its specialised role.",
-  "Short_desc":"Heavily armed, agile specialised assult ship","Price":19814210,"icon":"Vectors/box.png"},
+  "Short_desc":"Heavily armed, agile specialised assult ship","Price":19814210,"icon":"Vectors/federal-assault-ship.png"},
   
  {"Name":"Federal Gunship","Long_desc":"The Federal Gunship developed from the need for a more advanced support vessel in operations, utilising the standard Dropship frame. Its primary role is in fire support, but it also supports higher rated modules making it more versatile than the base Gunship. It can also be equipped with a fighter hangar.",
-  "Short_desc":"Specialised heavy weapons and fighter support ship","Price":35658297,"icon":"Vectors/box.png"},
+  "Short_desc":"Specialised heavy weapons and fighter support ship","Price":35658297,"icon":"Vectors/federal-gunship.png"},
   
   
  {"Name":"Large Ships"}, 
  
  {"Name":"Federal Corvette","Long_desc":"The Federal Corvette is the smallest warship deployed by the Federal Navy. It is a quick, hard hitting vessel also capable of transporting cargo and personnel. It is highly versatile and can be found everywhere, on long range patrol, peace keeping, pirate suppression, in fact anywhere the navy wishes to maintain a solid presence without deploying a Farragut Battlecruiser. It is possible, if rare, for a private CMDR to own one of these vessels. The ship can carry and deploy two small fighters.",
-  "Short_desc":"Small mainstay general purpose warship","Price":187969450,"icon":"Vectors/box.png"},  
+  "Short_desc":"Small mainstay general purpose warship","Price":187969450,"icon":"Vectors/federal-corvette.png"},  
   
   {"Name":"Farragut battle-cruiser","Long_desc":"The Farragut Battle cruiser is the mainstay capital ship of the Federation. Heavily armed with classified weaponry, the Farragut stretches over two kilometres long. The backbone of the Federal Navy, it also forms the central core of Federal Navy Fleets.",
-  "Short_desc":"Federal navy capital ship","Price":"(naval purchase only) 7,500,000,000","icon":"Vectors/box.png"}
+  "Short_desc":"Federal navy capital ship","Price":"(naval purchase only) 7,500,000,000","icon":"Vectors/farragut-battle-cruiser.png"}
  
 ]}
-
