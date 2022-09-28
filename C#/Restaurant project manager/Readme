@@ -1,0 +1,3 @@
+This appliction allows the user to create,modify and upload json files regarding products.
+For use with the Restaurant website found in webdev stuff/Restaurant site (for managing products).
+Makes use of a SQL database called Restaurant_DB, There should a SQL file for this database in this directory
