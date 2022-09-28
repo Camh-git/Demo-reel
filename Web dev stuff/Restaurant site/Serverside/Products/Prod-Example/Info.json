@@ -1,1 +1,18 @@
-
+{
+    "Nutritional_info": [    
+      {"Calories": 563 },
+      {"Total_fat": 14.6},
+      {"Saturated_fat":7.3},
+      {"Sugars": 5.2},
+      {"Salt": 2.3}
+    ],
+    "Additional_nutritional_info":[],
+    "Price": 5.20,
+    "Prep_time": 3,
+    "Parallel_time": 1,
+    "Batch_time": 20,
+    "Ingredients": ["Wheat", "Soy", "Rice", "Mystery meat", "73 herbs and spices", "Hazel nuts", "cashew nuts" ],
+    "Alergens": ["Soy", "Several herbs", "A variety of spices"],
+    "Warnings": ["Contains Soy", "Contains herbs that can cause alergic reactions", "Contains spices that can cause alergic reactions", "exceedingly spicy" ],
+    "Tags":[{"Category":"Main"},{"Vegan":false},{"Vegetarian":true}]  
+}
