@@ -1,0 +1,82 @@
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.deps.json
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.runtimeconfig.json
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.AssemblyReference.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant_product_maker.Edit_product.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant_product_maker.Landing_page.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant_product_maker.new_product.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.GenerateResource.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.AssemblyInfoInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.AssemblyInfo.cs
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.CoreCompileInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.CopyComplete
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\refint\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.genruntimeconfig.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product maker\Restaurant product maker\obj\Debug\net6.0-windows\ref\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.deps.json
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.runtimeconfig.json
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Restaurant product manager.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.AssemblyReference.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant_product_maker.Edit_product.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant_product_maker.Landing_page.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.GenerateResource.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.AssemblyInfoInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.AssemblyInfo.cs
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.CoreCompileInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.csproj.CopyComplete
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\refint\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant product manager.genruntimeconfig.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\ref\Restaurant product manager.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\obj\Debug\net6.0-windows\Restaurant_product_maker.new_product.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Azure.Core.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Azure.Identity.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\System.Memory.Data.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\freebsd\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\illumos\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\ios\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\solaris\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\tvos\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.Odbc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Restaurant product mananger\Restaurant product maker\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
