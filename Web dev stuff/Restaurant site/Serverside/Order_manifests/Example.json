@@ -1,0 +1,8 @@
+{
+    "ORDER":"0",
+    "Products":[{"ID":"aaaaaaaaaa","Quantity":1,"UnitPrice":5.20}, {"ID":"bbbbbbbbbb","Quantity":2,"Unit_price":2.75}
+    ],    
+    "User":"aaaaaaaaaa",
+    "Time":"2020-12-31T23:59:59.999Z",
+    "Total":10.70
+}
