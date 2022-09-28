@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="Assets/StyleSheet.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/Images/favicon.ico">
+    <title>Checkout-Example eatery</title>
+  </head>
+  <div id = "header_container"> </div>
+
+  <body>
+    <h1 style ="text-align: center">Checkout</h1>
+
+    <div class="Checkout_collumn"><!--Total/list collumn-->
+      <h2 name ="Checkout_total_display">Total: £00.00</h2>
+      <h3>Order:</h3>
+      <h3 name ="Checkout_order_content_list">1 Placeholder<br>1 Example<br>2 Placeholder<br>2 Example</h3>
+      <button type = "button" class = "Large_btn" onclick=""><h4 >Deals<h4></button>
+      <h4>Active deals:</h4>
+      <h4 name ="Checkout_deals_list"></h4>
+    </div>
+
+    <div class="Checkout_collumn"><!--Delivery info collumn-->
+      <h2>Deliver to:</h2>
+      <input type="text" placeholder="Postcode" class="Text_input" name="Checkout_postcode_input"><br>
+      <input type="text" placeholder="Address" class="Text_input" name="Checkout_postcode_input"><br>
+      <h3 style="display:inline-block;">Prep time:</h3><h3 name="Checkout_prep_time_display" style="display:inline-block;">00 mins</h3><br>
+      <h3 style="display:inline-block;">Drive time:</h3><h3 name="Checkout_drive_time_display" style="display:inline-block;">00 mins</h3><br>
+      <h3 style="display:inline-block;">Total:</h3><h3 name="Checkout_total_time_display" style="display:inline-block;">00 mins</h3><br>
+      <button type = "button" class = "Large_btn" onclick=""><h4 >Confirm<h4></button>
+    </div>
+
+    <div class="Checkout_collumn"><!--payment details collumn-->
+      <h2>Payment details</h2>
+      <div name ="Checout_options_list" style="max-height: 500px; overflow: hidden;">
+              <!--<button type ="button" class="Select_btn"></button><h4 style="display: inline-block;">Payment option 1</h4>--> <!--Example entry-->
+              <button type ="button" class="Select_btn"></button><h4 style="display: inline-block;">Payment option 1</h4><br>
+              <button type ="button" class="Select_btn"></button><h4 style="display: inline-block;">Payment option 2</h4><br>
+              <button type ="button" class="Select_btn"></button><h4 style="display: inline-block;">Payment option 3</h4><br>
+              <button type ="button" class="Select_btn"></button><h4 style="display: inline-block;">Payment option 4</h4><br>  
+      </div>
+      <button type = "button" class = "Large_btn" onclick=""><h4 >Add option<h4></button>
+
+    </div>
+
+
+  </body>
+
+  <div id = "footer_container"></div>
+  <script src = "Scripts/Append_H&F.js"> </script>
+ 
+</html>

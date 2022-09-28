@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+  <!-- making declerations and setting the site icon -->
+    <meta charset="utf-8"/>
+	  <link rel="shortcut icon" type="image/png" href="Assets/Images/favicon_ico/favicon.ico"/>
+	  <link rel="stylesheet" href="Assets/StyleSheet.css"/>
+	  <title> Example eatery </title>	
+  </head>
+  <body>
+    <div id = "Header_bar">
+
+       <div id="Header_logo">
+         <a href="Homepage.html"> <img src = "Assets/Images/Logo_no_border.png"/> </a>
+       </div>
+
+       <div class="Header_item_logged_in">
+         <a href="Dishes.html"><h1>Dishes</h1></a>
+       </div>
+
+       <div class="Header_item_logged_in">
+        <a href="Deals.html"><h1>Deals</h1> </a>
+      </div>
+
+      <div class="Header_item_logged_in">
+        <a href="User_area.html"><h1>Login</h1></a>
+       </div>
+
+       <div class="Header_item_logged_in" id ="login_only">
+        <a href="Basket.html"><h1>Basket</h1></a>
+       </div>    
+
+       <div class="Header_item_logged_in">
+        <a href="About_us.html"><h1>About us</h1></a>
+       </div>
+       <div class="Header_item_logged_in">
+        <a href="Help.html"><h1>Help</h1></a>       
+       </div>     
+   
+    </div>
+  </body>
+
+<script>
+  var items = document.getElementsByClassName("Header_item_logged_in Header_item_logged_out");
+  if("Logged_in" in sessionStorage)
+  {
+    for (index = 0; index < myObj.Ships.length; ++index)
+    {
+      items[index].className ="Header_item_logged_out"      
+    }
+  }
+  else
+  {
+    for (index = 0; index < myObj.Ships.length; ++index)
+    {
+      if(items[index].id="login_only")
+      {
+        items[index].className ="Header_collapsed_item"
+      }
+      else
+      {
+        items[index].className ="Header_item_logged_out"
+      }
+    }
+  }
+
+</script>
+</html>

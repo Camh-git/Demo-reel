@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="Assets/StyleSheet.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/Images/favicon.ico">
+    <title>Example eatery</title>
+
+    <style>
+      h2{display: inline-block;}
+      h3{display: inline-block;}      
+    </style>
+  </head>
+  <div id = "header_container"> </div>
+
+  <body>
+
+    <!--TODO:add the onclick activities to these buttons-->
+    <div id = "Prod_headline">
+      <h2 name ="Prod_name">Product_name</h2>
+      <button type = "button" class = "Large_btn" onclick=""><h4 >Add to basket<h4></button>
+      <br>
+      <h3 name = "Prod_subtitle">Subtitle</h3> <h3 name = "Prod_price">£0.00</h3>
+      <!--<img src = "Assets/Images/Icons/favorite_black_24dp.svg" onclick="alert(something)"></img>-->
+      <button type ="button" class ="Transparent_BTN" style="float: right;" onclick=""><img src="Assets/Images/Icons/favorite_black_24dp.svg"></img></button><br>
+
+
+    <div id = "Prod_desc_box">
+      <p1>
+      <div name = "P1_loc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud...</div>
+      <div name = "P2_loc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud...</div>
+      <div name = "P3_loc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud...</div>
+      </p1>
+    </div>
+    <div id ="Prod_warnings_box"></div>
+
+    </div> 
+    <div id = "Prod_Nutritional_info_box">
+      <h3>Nutritional info</h3>
+      <p name = "Prod_nutrtion_info" style="text-align:justify; padding-left: 5%;">
+        <p1>
+        Serving size: 000g<br>
+        1 Serving contains:     %GDA<br>
+        Calories:<br>
+        Sugar:<br>
+        Fat:<br>
+        Carbs:<br>
+        Fibre:<br>
+        Protein:<br>
+        </p1>
+      </p>
+    </div>
+  </body>
+
+  <div id = "footer_container"></div>
+  <script src = "Scripts/Append_H&F.js"> </script>
+ 
+</html>

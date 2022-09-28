@@ -1,0 +1,193 @@
+/*Text styles*/
+h1
+{font-family: "Segoe UI",sans-serif; font-size: 50pt; color: #026C1D; font-weight: bolder; margin-top: 0px; -webkit-text-stroke-width: 1px; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #F1FEC8;}
+h2
+{font-family: "Segoe UI",sans-serif; font-size: 35pt; color: #026C1D; font-weight: bolder; margin-top: 0px; -webkit-text-stroke-width: 1px;  -webkit-text-stroke-color: #F1FEC8;}
+h3
+{font-family: "Segoe UI",sans-serif; font-size: 25pt; color: #026C1D; font-weight:bold; margin-top: 0px;}
+h4
+{font-family: "Segoe UI",sans-serif; font-size: 20pt; color: #026C1D; font-weight:bold; margin-top: 0px;}
+h5
+{font-family: "Segoe UI",sans-serif; font-size: 15pt; color: black; font-weight: bold;margin-top: 0px;}
+p1
+{font-family: "Segoe UI",sans-serif; font-size: 15pt; color: black; font-weight: normal;}
+p2
+{font-family: "Segoe UI",sans-serif; font-size: 10pt; color: black; font-weight: normal;margin-top: 0px;}
+/*p3, used to avoid the centering of p while maintaining the same style*/
+p
+{text-align: center;}
+
+/* Misc sitewide styles */
+#main 
+{width: 100vw;margin: 0 auto 0 auto;min-width: 600px;background-size: cover;background-repeat:no-repeat;overflow-x: hidden;}
+a:link, a:visited
+{text-decoration: none; color:#111111;}
+html, body 
+{max-width: 100%; overflow-x: hidden; margin-top: 2.5%; padding:0%; margin-left: 0%; margin-right: 0; overflow: visible; }
+.Large_btn
+{padding:10px; height: 60px; width: 200px; background-color: #9DDD62; border-radius: 15px; transition-duration: 0.4s; text-align: center;}
+.Large_btn:hover
+{background-color: #F1FEC8;}
+.Medium_btn
+{padding:10px; height: 50px; width: 150px; background-color: #9DDD62; border-radius: 15px; transition-duration: 0.4s; text-align: center;}
+.Medium_btn:hover
+{background-color: #F1FEC8;}
+.Transparent_BTN
+{background-color: rgba(0,0,0,0); border-style: none;}
+.Select_btn
+{height: 30px; width: 30px; background-color: rgba(0,0,0,0); border-style: solid; border-width: 5px; border-color: #9DDD62; border-radius: 5px;}
+.Text_input
+{min-height: 30px; min-width: 125px; border-style: solid; border-color: #111111; border-radius: 0px;}
+
+
+/*Header*/
+#Header_bar
+{position:absolute; top: 0; right: 0; left: 0; height: 100px; overflow: hidden; margin:0px; background-color: #9DDD62;}
+#Header_logo
+{float:left; height: 100%; width: 17%; min-width: 300px; background-color: #9DDD62; text-align: center; padding-bottom: 1%;}
+.Header_item_logged_in
+{float: left; margin-right: 1%; height: 100%; width: 12.5%; background-color: #9DDD62; text-align: center; padding-bottom: 1%;} /*width was 16%*/
+.Header_item_logged_out
+{float: left; margin-right: 1%; height: 100%; width: 16%; background-color: #9DDD62; text-align: center; padding-bottom: 1%;}
+.Header_collapsed_item
+{float: left; margin-right: 0; height: 100%; width:0px; background-color: #9DDD62; text-align: center;}
+
+/*Footer*/
+#Footer
+{text-align: center;}
+#footer_container
+{margin-bottom: 0px; padding-top: 2%; min-height: 100px; width: 100%; clear: both;}
+.Modal_bar_item
+{display: inline-block;}
+.Modal_bar_item:hover
+{font-weight: bold;}
+
+/*Homepage*/
+#Search_container
+{height:50px; width: 70%; min-width: 450px; margin-left: 30%; margin-right: 30%;margin-top: 25px;}
+#Search_bar_left
+{height:100%; width: 15%; min-width: 225px; float:left; background-color: #9DDD62; border-color: #9DDD62; border-width: 0px; border-style:solid; border-top-left-radius: 10px; border-bottom-left-radius: 10px; text-align: center;}
+#Search_bar_mid
+{height:100%; width: auto;min-width: 300px; float:left; font-size: 20; border-color: #9DDD62; border-width: 2px;}
+#Search_bar_right
+{height:100%; width: 100px; min-width: 50px; float:left; margin-left: -1px;border-color: #9DDD62; border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+
+#Deals_container
+{height:30%; width: 80%; min-width: 1000px;  margin-left: 10%; margin-right: 10%; border-color: black; border-style: solid; }
+.Deal_space
+{height: 100%; min-width: 49.6%; max-width: 50%; float: left; border-color: blue; border-style: solid;}
+
+#Lower_container
+{height:20%; min-height: 300px; width: 98%; margin-left: 2%; margin-bottom: 0%; margin-top: 5%;}
+
+/*#Order_tracking_container*/
+.Lower_obj
+{height: 100%; min-height: 300px; max-width: 30%; min-width: 500px; float:left;}
+.lower_img_container
+{float:left; margin-left: 10%; max-height: 80%; min-height: 100px; max-width: 49%; min-width: 150px;}
+.Lower_obj_text
+{float: left; margin-right: 0%; max-width: 49%;}
+/*
+ #Oppotunities_container
+{height: 100%; min-height: 300px; max-width: 33%; min-width: 640px; align-self:center; margin-bottom: 0%; border-color: red; border-width: 1px; }
+#App_ad_container
+{height: 100%; min-height: 300px; max-width: 33%; min-width: 640px; margin-right: 0; margin-bottom: 0%; border-color: red; border-width: 1px; }
+*/
+
+
+/*about us*/
+#Menu_frame
+{ top: 0; right: 0; margin-left: 20%; height: 250px; overflow: hidden; align-items: center;}
+.Menu_segment
+{width: 15%; margin-left: 0%; float: left;}
+
+.Abt_lower_item
+{width: 40%; margin-left: 5%; align-content: center; float:left; border-color: #111111; border-width: 1px;}
+.Lower_item_left
+{float: left; max-width: 30%; max-height: 250px;}
+.Lower_item_right
+{float: right; max-width: 65%;}
+
+
+/*Help page*/
+#Help_collumn_header /*including this allows a clean top bar, whilst still having some spacing for the following collumns*/
+{position: absolute; left:0px; right:0px; background-color: #9DDD62; height:75px; }
+.Help_collumn
+{width:24%; float:left; margin-left: 1%; background-color: #9DDD62; height:75px}
+.Help_item
+{width:100%; max-height: 250px; margin-top: 25px;}
+#Help_end_card
+{margin-bottom: 0px; width:100%; text-align: center;}
+
+
+/*Account page*/
+#User_head_info_container
+{margin-left: 20%; width: 60%; text-align: center;}
+#User_header_box_left
+{display: inline-block; margin-left: 0px;}
+#User_header_box_right
+{display: inline-block; margin-right: 0px;}
+.User_profile_pic
+{display: inline-block; margin-left: 5%; max-width: 250px; max-height: 250px; max-width: 250px; min-width: 100px; min-height: 100px; background-color: #dbdbdb;}
+.User_info_box
+{margin-left: 10%; width: 80%; height: 10%;}
+
+/*Account management*/
+.Management_collumn
+{display: inline-block; margin-left: 5%; width: 40%;}
+.Management_right_collumn
+{display: inline-block; margin-left: 10%; width: 40%;}
+#Profile_pic_upload_box
+{margin-top: 10%; width:80%; min-width: 300px; min-height: 150px; border-style: solid; border-width: 2px; border-color: #026C1D;}
+.Acc_page_spacer
+{ margin-left: 0px; width: 100%; height: 10%;}
+#Report_box
+{width: 80%; min-width: 300px; min-height: 150px; border-style: solid; border-width: 2px; border-color: #026C1D;}
+.Acc_managment_page h4
+{font-family: "Segoe UI",sans-serif; font-size: 20pt; color: #026C1D; font-weight:bold; margin-top: 0px; padding-top: 5%; padding-bottom: 0%;}
+.Acc_managment_page .Medium_btn
+{margin-top: 2.5%;}
+
+/*Order history*/
+.Order_history_box
+{margin-left: 10%; width: 80%; height: 10%;}
+#Profile_pic_upload_box
+{width: 80%;}
+#Profile_pic_box_content
+{margin-left: 33%; margin-top: 5%;}
+
+/*products and deals pages*/
+
+#Search_options_container
+{width: 16%; height:100%; float: left; padding-left: 1%; background-color: #F1FEC8;}
+#Product_container
+{width:75%; float: left;margin-left: 5%;}
+.Product_segment_container
+{width: 75%;}
+
+/*Basket page*/
+#Basket_container
+{margin-left:5%; width:90%;}
+
+
+/*product page*/
+#Prod_headline
+{margin-left: 5%; float:left; width:70%;}
+#Prod_desc_box
+{width: 40%; float: left; }
+#Prod_warnings_box
+{margin-left:20%; float: left; width: 39%; height: 10%;}
+#Prod_Nutritional_info_box
+{float:left; margin-left:1%; width: 14%; border-width: 0.5%; border-color: #111111; border-style: solid;}
+
+/*Checkout page*/
+.Checkout_collumn
+{float: left; margin-left: 7.5%; width: 25%;}
+
+/*Confirmation page*/
+.Confirm_collumn
+{float: left; margin-left: 5%; width: 40%;}
+#Confirm_map_box
+{width: 400px; height: 400px; background-color: #111111;}
+#Confirm_lower_box
+{margin-bottom: 0px; width:100%; text-align: center;}

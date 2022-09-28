@@ -1,0 +1,33 @@
+/*Misc*/
+.Large_popup_container /*curently used by: Phone number reset, Phone reset 2FA, PW reset form*/
+{max-width: 900px; max-height: 850px;}
+.Medium_popup_container /*currently used by: deals setup, add payment method and 2fa setup,sms,2nd device and auth*/
+{max-width: 500px; max-height: 845px;}
+.Small_popup_container /*currently used by: 2fa usb and fin, email reminder, incorrect pw, phone reset success and username change req*/
+{max-width: 500px; max-height: 400px;}
+.modal
+{position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; /* Enable scroll if needed */  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+.modal_content 
+{background-color: #fefefe; margin: 0 auto; padding: 0; text-align: center; align-self: center; border-style:solid ; border-width: 3px; border-color: #9DDD62;}
+
+/*Help*/
+.Help_popup_small
+{ align-self: center; border-style:solid ; border-width: 2px; border-color: #9DDD62;}
+.Help_popup_large
+{max-width: 1520px; max-height: 880px; align-self: center; border-style:solid ; border-width: 2px; border-color: #9DDD62;}
+
+/*Account management*/
+.Password_reset_msg
+{}
+.Report_sent
+{}
+.Two_FA_container_norm
+{}
+
+/*Checkout*/
+.Address_dropdown
+{}
+.Gift_card_popup
+{}
+.Price_breakdown
+{}

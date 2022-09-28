@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="Assets/StyleSheet.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Assets/Images/favicon.ico">
+    <title>Order confirmation-Example eatery</title>
+  </head>
+  <div id = "header_container"> </div>
+
+  <body>
+    <h1 style ="text-align: center">Order confirmation</h1>
+
+    <div class="Confirm_collumn">
+      <h3> Your order is on it's way to:</h3>
+      <h3 name = "Confirm_location_display">123 example road</h3>
+      <div id = Confirm_map_box></div>
+      <h3>Estimated arrival:</h3>
+      <h3 name = "Confirm_ETA_display">00 mins(00:00)</h3>
+    </div>
+
+    <div class="Confirm_collumn" style = "min-height: 500px; background-color: aqua;">
+      <h3 style="display:inline-block;">Total:</h3><h3 name="Confirm_total_display" style="display:inline-block;">£00.00</h3>
+      <h3 name ="Confirm_list_display"></h3>     
+
+    </div>
+
+    <div id = "Confirm_lower_box">
+      <button type = "button" class = "Large_btn" onclick=""><h4 >Home<h4></button>
+        <h4>You can check your order's progress on your account home page </h4>
+    </div>
+
+
+  </body>
+
+  <div id = "footer_container"></div>
+  <script src = "Scripts/Append_H&F.js"> </script>
+ 
+</html>
