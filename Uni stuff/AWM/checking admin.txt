@@ -1,0 +1,15 @@
+if (isset($_SESSION['user_id'])) {
+		$id = $_SESSION['user_id'];
+		$query = "SELECT user_id FROM user WHERE admin_status =0 AND user_id = '$id'";
+		$result = mysqli_query($dbc, $query);
+		// check if user has user rights to view customer information
+		if (mysqli_num_rows($result) == 1) {
+			return true;
+		} else {
+			$allowedentry ="true";
+			("you must be an admin to use the admin area");
+		}
+	} else {
+	echo ("you must be an admin to use the admin area");
+		return false;
+	}

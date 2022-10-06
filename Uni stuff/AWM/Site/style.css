@@ -1,0 +1,120 @@
+#main {
+	width: 65%;
+	margin: 0 auto 0 auto;
+	min-width: 600px;
+	background-color: white;
+	position:relative;
+	opacity: 0.8;
+	padding: 10px
+}
+#Menu
+{margin-left:-1%; width:103%; margin-top:-0.4%; height: 6%; padding: 0; overflow: hidden; background-color:#555555}
+
+#Menu_Entry
+{float: left; display: block; width: 14.28%; height: 100%; font-weight: bold; background-color:#555555; text-align: center;}
+
+#Product_area
+{margin-left: 10%; witdth:80%; height:10%; background-color:#DDDDDD}
+
+#News_item
+{margin-left: 10%; witdth:80%; margin-right: 10%; height:15%; background-color:#DDDDDD}
+#News_image
+{float: left;width:100px; height:100px}
+
+.welcome {
+	float: right;
+}
+
+
+#middle {
+	padding: 15px;
+	min-height: 300px;
+}
+#return_home {
+	margin: 4px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.form_box {
+	padding: 20px;
+}
+
+.box_style {
+	width: 250px;
+}
+
+.error {
+	font-weight: bold;
+	color: #111111;
+}
+
+.submit {
+  
+    border-radius:8px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+	padding: 2px;
+	width: 250px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+	font-size: 120%;
+	margin: 4px;
+}
+
+a:link, a:visited {
+    font-weight: bold;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
+}
+a:link
+{text-decoration: none; color:#111111;}
+
+a:hover, a:active {
+    color: #111111;
+}
+
+.table_1 {
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.table_1, .table_1 th,.table_1 td {
+    border-collapse: collapse;
+	width: 600px;
+	padding: 4px;
+    text-align: center;
+
+}
+
+.table_1 th {
+    background-color: #2196F3;
+    color: white;
+}
+
+.table_1 tr:nth-child(even) {
+    background-color: #E3F2FD;
+	color: black;
+}
+
+.table_1 tr:nth-child(odd) {
+   background-color:#BBDEFB;
+   color: black;
+}
+
+
