@@ -1,7 +1,5 @@
-NOTE: this project originaly contained an additional name generator for mission names, this was removed from the demo version due to copyrighted content/ real life conflict references.
-While the aforementioned generator has been removed, some references to it may still remain.
-
 to do
+improve portability by figuring out how to use relative file links vs absoulte ones
 move array content import to load
 add polish such as message box details, ui alignment and general good practice/tidy up and consistency
 
@@ -19,7 +17,7 @@ make view history form
 add main menu
 add save function as history list
 add name generator with multiple options
-
+create mission name generator
 
 completed touch ups
 update edit page instructions

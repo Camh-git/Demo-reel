@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Name_generator", "Name_generator\Name_generator.csproj", "{9D62B6A0-F660-4CA4-B9D6-46D330D190E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Name_generator", "Mission_name_generator\Name_generator.csproj", "{9D62B6A0-F660-4CA4-B9D6-46D330D190E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
