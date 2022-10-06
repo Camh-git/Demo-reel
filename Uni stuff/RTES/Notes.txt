@@ -1,0 +1,82 @@
+each display invidualy
+
+display set by method with var = to a mem location
+
+method assigning them the relevent values
+
+
+
+indepentent timers for each
+
+each diplay being called to display every few ms
+
+
+8051 takes 5v current up to 10milli amps
+resistance 300 ohm
+
+numbers:
+1-#11111001B
+2-#10100100B
+3-#10110000B
+4-#10011001B
+5-#00010010B
+6-#00000010B
+7-#01011000B
+8-#00000000B
+9-#00010000B
+0-#01000000B
+
+segments
+3-CLR p3.3(clears, not sure if needed) SETB p3.4(not needed)
+2-CLR P3.3	 
+1-CLR p3.4 SETB p3.3
+0-CLR p3.4 CLR p3.3
+
+DEC p1- decrement port1
+MOV R0, #120 - set value of r0 to 120 (shows as 78 because hex)
+remember to add decrements on each second, have the 10's and sec decrement the appropriate counters before setting themselves back to 5 or 9 respectivley
+
+DE-1M50S
+64-1M40S
+5A-1M30S
+50-1M20S
+46-1M10S
+3C-1M
+32-50S
+28-40S
+1E-30S
+14-20S
+A -10S
+0 -0S
+
+
+for 8051 it would look something like
+JNZ P1.0 labelelse ;
+code ;write code for then here
+JMP endlabelelse
+labelelse:
+code ;write code for else
+endlabelelse:
+code ;further code
+
+
+
+https://gist.github.com/kingster/1234734
+http://www.keil.com/support/man/docs/is51/is51_cjne.htm
+http://www.edsim51.com/8051Notes/8051/timers.html
+google search for 8051 cjne
+
+
+
+to revise:
+
+
+the djnz command
+the sjmp command
+addc command
+movx command
+
+double check how to save values in the accumulator
+one more feature of microcontroler
+one more trend in embeded systems
+bengas practice q
