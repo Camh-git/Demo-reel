@@ -1,9 +1,9 @@
 to do
-improve portability by figuring out how to use relative file links vs absoulte ones
-move array content import to load
 add polish such as message box details, ui alignment and general good practice/tidy up and consistency
 
 done
+improve portability by figuring out how to use relative file links vs absoulte ones
+move array content import to load
 Add delete button to history
 add reload button on edit screen
 add place name generator with option for number
