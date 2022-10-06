@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+html 
+{background:url(ISS_and_shuttle.jpg) no-repeat; background-size: cover;}
+#title
+{margin-left: 15%; width:70%; height:70px; background-color:#DDDDDD}
+#menu
+{margin-left:15%;width:70%; height: 5%; background-color:#CCCCCC}
+#main_content
+{margin-left:10%; width:80%; height: 80%; margin-top: 50px; background-color:#CCCCCC; opacity:0.9}
+#image_wrapper
+{margin-top:1%; width:80%; background-color:#DDDDDD ;opacity:1}
+#image_caption
+{width:80%; background-color:#EEEEEE;opacity:0.9}
+#news_item_wrapper
+{width:80%; background-color:#EEEEEE;opacity:0.9}
+#linkbox
+{width:550px; height:400px;background-color:#EEEEEE; margin-top:-400px;opacity:0.1}
+
+a:link
+{text-decoration: none; color:#fbfbfb;}
+a:visited
+{text-decoration:none; color:#fbfbfb;}
