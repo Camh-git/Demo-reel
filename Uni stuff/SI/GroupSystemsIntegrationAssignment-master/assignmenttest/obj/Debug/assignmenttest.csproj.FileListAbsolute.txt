@@ -1,0 +1,19 @@
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.exe.config
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.exe
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.pdb
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.csprojResolveAssemblyReference.cache
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.Properties.Resources.resources
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.csproj.GenerateResource.Cache
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.exe
+C:\Users\camer_000\Documents\BSC Year3\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.pdb
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.exe.config
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.exe
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.pdb
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.exe
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.pdb
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.csprojResolveAssemblyReference.cache
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.Properties.Resources.resources
+H:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.csproj.GenerateResource.Cache
+F:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\bin\Debug\assignmenttest.exe.config
+F:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.exe
+F:\work\SI\GroupSystemsIntegrationAssignment-master\assignmenttest\obj\Debug\assignmenttest.pdb
