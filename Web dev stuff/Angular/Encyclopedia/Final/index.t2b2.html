@@ -1,0 +1,53 @@
+<html>
+
+<header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>          
+    <link rel="stylesheet" href="css/master.css">
+    <title>World Index</title>
+</header>
+<body>
+
+<div ng-app="worldIndex" ng-controller="appController" class="background">
+    <h1>WORLD INDEX</h1>   
+    <form name="appForm">
+        <table>
+            <colgroup>
+                <col width="40%">
+                <col width="60%">
+            </colgroup>
+
+            <tr>
+                <td class="right-aligned">Select country: </td>
+                <td>
+                    <select ng-model="countrySelected"
+                        ng-options="country.name for country in countries">
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+        <div>
+            <h2>Results:</h2>
+            <p>
+                You selected: {{ countrySelected }}
+            </p>
+        </div>
+    </form>
+</div>
+
+<script>
+    var app = angular.module("worldIndex", []);
+
+    app.controller("appController", ($scope, $http) => {
+
+        $http.get("https://restcountries.eu/rest/v2/all?fields=name;alpha3Code")
+        .then((response) => {
+            $scope.countries = response.data;
+        });
+
+    });
+</script>
+
+</body>
+</html>

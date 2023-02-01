@@ -1,0 +1,27 @@
+.directive("mapDir", () => {
+    console.log("directive called");
+    
+    return {
+        restrict: "A",
+        link: ($scope) => {
+
+            const placeholder = document.getElementById("map");
+            placeholder.innerHTML = "";
+
+            const area = $scope.receivedData.area == null ? 10 : $scope.receivedData.area;
+
+            var map = new ol.Map({
+                target: 'map',
+                layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+                ],
+                view: new ol.View({
+                center: ol.proj.fromLonLat([$scope.receivedData.latlng[1], $scope.receivedData.latlng[0]]),
+                zoom: 10 - Math.log10(area) - Math.abs($scope.receivedData.latlng[0])/90
+                })
+            });       
+        }
+    }
+});
