@@ -1,0 +1,56 @@
+<html>
+
+<header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>          
+    <link rel="stylesheet" href="css/master.css">
+    <title>Bill Splitter</title>
+</header>
+<body>
+
+<div>
+    <form name="appForm">
+        <table>
+            <colgroup>
+                <col width="45%">
+                <col width="10%">
+                <col width="45%">
+            </colgroup>
+            <tr>
+                <td colspan="3">
+                    <h1>BILL SPLITTER</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bill amount</td>
+                <td><input type="number"></td>
+                <td class="right-aligned">$29.99</td>        
+            </tr>
+
+            <tr>
+                <td>Tip%</td>
+                <td><input type="number"></td>
+                <td class="underlined right-aligned">+ $4.50</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Total</td>
+                <td class="right-aligned double-underlined">$34.49</td>
+            </tr>
+
+            <tr>
+                <td>Party size</td>
+                <td><input type="number" ng-model="partySize"></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td class="right-aligned" colspan="2">Each pays</td>
+                <td class="right-aligned">$11.50</td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+
+<header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>          
+    <link rel="stylesheet" href="css/master.css">
+    <title>Bill Splitter</title>
+</header>
+<body>
+
+<div ng-app="">
+    <form name="appForm">
+        <table>
+            <colgroup>
+                <col width="45%">
+                <col width="10%">
+                <col width="45%">
+            </colgroup>
+            <tr>
+                <td colspan="3">
+                    <h1>BILL SPLITTER</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bill amount</td>
+                <td><input type="number" min="0.1" name="billAmount" ng-model="billAmount" required></td>
+                <td class="right-aligned">{{ billAmount | currency }}<span class="red-flag" ng-show="appForm.billAmount.$invalid">Required</span></td>        
+            </tr>
+
+            <tr>
+                <td>Tip%</td>
+                <td><input type="number" min="0" name="tipPercentage" ng-model="tipPercentage" required></td>
+                <td class="underlined right-aligned"><span ng-show="appForm.tipPercentage.$valid">+ {{ billAmount * tipPercentage / 100 | currency }}</span><span class="red-flag" ng-show="appForm.tipPercentage.$invalid">Required</span></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Total</td>
+                <td class="right-aligned double-underlined">{{ billAmount * (1 + tipPercentage/100) | currency }}</td>
+            </tr>
+
+            <tr>
+                <td>Party size</td>
+                <td><input type="number" min="1" name="partySize" ng-model="partySize" required></td>
+                <td class="right-aligned"><span class="red-flag" ng-show="appForm.partySize.$invalid">Required</span></td>
+            </tr>
+            
+            <tr>
+                <td class="right-aligned" colspan="2">Each pays</td>
+                <td class="right-aligned">{{ billAmount * (1 + tipPercentage/100) / partySize | currency }}</td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
