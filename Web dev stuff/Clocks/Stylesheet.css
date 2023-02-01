@@ -1,0 +1,65 @@
+
+#Clock_container
+{width:  90rem; margin-left: 10rem;}
+
+.Clock_object
+{width: 29rem; margin-left: 0.5rem; display: inline-block;}
+
+.Clock_display
+{position:relative; min-width: 5rem; width:20%; float:left}
+
+.Clock_collumn
+{max-width: 25rem; display: inline-block;}
+
+.circle
+{position: relative; background-color: brown; min-height: 20px; min-width: 20px; width: 4rem; height: 4rem; border-style: solid; border-color: black; border-radius: 50%;}
+
+.Hour_hand,.Min_hand
+{position: absolute;background: black;border-radius: 10px; transform-origin: bottom;}  
+
+.Hour_hand
+{width: 5%; height: 25%;top: 30%;left: 50%;}
+
+.Min_hand
+{width:  2.5%; height: 40%;top: 15%;left: 50%;}
+
+/*Mobile landscape
+@media screen and (max-width: 767px)
+{
+    .Clock_collumn
+    {width:  80rem; margin-left: 10rem;}
+    .img_collumn
+    {width: 40%; display: inline-block;}
+    .Content_column
+    {width: 60%; display: inline-block;}
+}
+/*Mobile portrait
+@media screen and (max-width: 478px)
+{
+    .Clock_collumn
+    {width: 33rem; display: inline-block;}
+    .img_collumn
+    {width: 20%; display: inline-block;}
+    .Content_column
+    {width: 80%; display: inline-block;}
+}
+/*Tablet
+@media screen and (max-width: 991px)
+{
+    .Clock_collumn
+    {width: 60rem; margin-left: 20rem;}
+    .img_collumn
+    {width: 30%; display: inline-block;}
+    .Content_column
+    {width: 70%; display: inline-block;}
+}
+/*Desktop
+@media screen and (min-width: 992px)
+{
+    .Clock_collumn
+    {width: 33rem; display: inline-block;}
+    .img_collumn
+    {width: 20%; display: inline-block;}
+    .Content_column
+    {width: 80%; display: inline-block;}
+}
