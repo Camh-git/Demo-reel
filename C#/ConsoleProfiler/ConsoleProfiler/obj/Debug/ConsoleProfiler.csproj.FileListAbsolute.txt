@@ -1,0 +1,7 @@
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\bin\Debug\ConsoleProfiler.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\bin\Debug\ConsoleProfiler.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\bin\Debug\ConsoleProfiler.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\obj\Debug\ConsoleProfiler.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\obj\Debug\ConsoleProfiler.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\obj\Debug\ConsoleProfiler.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\ConsoleProfiler\ConsoleProfiler\obj\Debug\ConsoleProfiler.pdb

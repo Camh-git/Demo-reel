@@ -1,0 +1,14 @@
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Release\Text to morse or binary converter.exe.config
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Release\Text to morse or binary converter.exe.manifest
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Release\Text to morse or binary converter.application
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Release\Text to morse or binary converter.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Release\Text to morse or binary converter.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.csproj.AssemblyReference.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text_to_morse_or_binary_converter.Converter.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text_to_morse_or_binary_converter.Properties.Resources.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.csproj.GenerateResource.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.csproj.CoreCompileInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.exe.manifest
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.application
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Release\Text to morse or binary converter.pdb

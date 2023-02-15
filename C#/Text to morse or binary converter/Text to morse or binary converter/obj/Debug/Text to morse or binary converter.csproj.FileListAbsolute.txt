@@ -1,0 +1,45 @@
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe.config
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.pdb
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Form1.resources
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.exe
+C:\Users\cameron\Documents\visual studio stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe.config
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csprojAssemblyReference.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Properties.Resources.resources
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.GenerateResource.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.CoreCompileInputs.cache
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.exe
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.pdb
+C:\Users\cameron\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Converter.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe.config
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.AssemblyReference.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Converter.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Properties.Resources.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.GenerateResource.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.CoreCompileInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.SuggestedBindingRedirects.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe.config
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.AssemblyReference.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Converter.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text_to_morse_or_binary_converter.Properties.Resources.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.GenerateResource.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.csproj.CoreCompileInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.exe.manifest
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\bin\Debug\Text to morse or binary converter.application
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.exe.manifest
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Text to morse or binary converter - Copy\Text to morse or binary converter\obj\Debug\Text to morse or binary converter.application
