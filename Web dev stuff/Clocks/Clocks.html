@@ -1,132 +1,142 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="StyleSheet.css"/>
-        <title>World clocks</title>
-    </head>
-    <body>
-        <h1>Clocks in 3 different time zones</h1>      
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="StyleSheet.css"/>
+  <title>World clocks</title>
+</head>
+<body>
+  <h1>Clocks in 3 different time zones</h1>      
 
-        <div id = "Clock_container">
-            
-            <div class="Clock_object">
-                <div class = "Clock_display">
-                    <div name ="London_circle" class = "circle">
-                      <div id = "London_H_hand" class = "Hour_hand" z-index="1"></div>
-                      <div id = "London_M_hand" class = "Min_hand" z-index ="2"></div>
-                    </div>
-                </div>
-                <div class="Clock_collumn">
-                    <h3>London</h3>
-                    <p1>Houses of parliament<br>Westminster, LondonSW1A 0AA</p1>
-                    <p name ="London_time">HH:MM</p>            
-                </div>                                
-            </div>
-
-            <div class="Clock_object">
-                <div class = "Clock_display">                    
-                    <div name ="NY_circle" class = "circle">
-                        <div id = "NY_H_hand" class = "Hour_hand"></div>
-                        <div id = "NY_M_hand" class = "Min_hand"></div>
-                    </div>
-                </div>
-                <div class="Clock_collumn">
-                    <h3>New york</h3>
-                    <p1>Empire state building<br>350 Fifth avenue, Manhattan, New York</p1>
-                    <p name ="NY_time">HH:MM</p>            
-                </div>           
-            </div>
-            
-            <div class="Clock_object">
-                <div class = "Clock_display">                  
-                    <div name ="Tokyo_circle" class = "circle">
-                        <div id = "Tokyo_H_hand" class = "Hour_hand"></div>
-                        <div id = "Tokyo_M_hand" class = "Min_hand"></div>
-                    </div>
-                </div>
-                <div class="Clock_collumn">
-                    <h3>Tokyo</h3>
-                    <p1>Tokyo Tower<br>4-2-8, , JP105-0011</p1>
-                    <p name ="Tokyo_time">HH:MM</p>            
-                </div>           
-            </div>        
+  <div id = "Clock_container">
+    <div class="Clock_object">
+      <div class = "Clock_display">
+        <div name ="London_circle" class = "circle">
+          <div id = "London_H_hand" class = "Hour_hand" z-index="1"></div>
+          <div id = "London_M_hand" class = "Min_hand" z-index ="2"></div>
         </div>
+      </div>
+      <div class="Clock_collumn">
+        <h3>London</h3>
+        <p1>Houses of parliament<br>Westminster, LondonSW1A 0AA</p1>
+        <p name ="London_time">HH:MM</p>            
+      </div>                                
+    </div>
 
-        <p1>Notes:<br>To update the displayed time I chose to re-run the script that sets the time at the start of every minute, calculated by subtracting the current second in the minute from 60 and using that to 
-            set the interval.
-            <br>
-            This frequency was chosen because the smallest displayed value is minutes so updating more frequently would be wasteful and updating less often would allow the clocks to show the wrong time. Using 
-            the time remaining to set the interval was chosen over a blanket 60 seconds to prevent desync between the displayed time and real time for anyone who doesn't load the site at 00 seconds.
-            <br>
-            Some times may appear slightly off as this script does not take account of daylight savings time, which can result in some countries appearing to be an hour off during that countrie's particular DST.
-            <br>
-            This is a re-work on codepen of a page originaly made on webflow, found at: https://camerons-clock-site.webflow.io/
+    <div class="Clock_object">
+      <div class = "Clock_display">                    
+        <div name ="NY_circle" class = "circle">
+          <div id = "NY_H_hand" class = "Hour_hand"></div>
+          <div id = "NY_M_hand" class = "Min_hand"></div>
+        </div>
+      </div>
+     <div class="Clock_collumn">
+       <h3>New york</h3>
+       <p1>Empire state building<br>350 Fifth avenue, Manhattan, New York</p1>
+       <p name ="NY_time">HH:MM</p>            
+      </div>           
+    </div>
         
-        </p1>    
-    </body>
+    <div class="Clock_object">
+     <div class = "Clock_display">                  
+       <div name ="Tokyo_circle" class = "circle">
+          <div id = "Tokyo_H_hand" class = "Hour_hand"></div>
+          <div id = "Tokyo_M_hand" class = "Min_hand"></div>
+        </div>
+     </div>
+     <div class="Clock_collumn">
+        <h3>Tokyo</h3>
+        <p1>Tokyo Tower<br>4-2-8, , JP105-0011</p1>
+        <p name ="Tokyo_time">HH:MM</p>            
+      </div>           
+    </div>        
+  </div>
+
+  <p1>
+    Notes:
+    <br>
+    To update the displayed time I chose to re-run the script that sets the time
+    at the start of every minute, calculated by subtracting the current second in
+    the minute from 60 and using that to set the interval.
+    <br>
+    This frequency was chosen because the smallest displayed value is minutes so
+    updating more frequently would be wasteful and updating less often would allow
+    the clocks to show the wrong time. Using the time remaining to set the interval
+    was chosen over a blanket 60 seconds to prevent desync between the displayed 
+    time and real time for anyone who doesn't load the site at 00 seconds.
+    <br>
+    Some times may appear slightly off as this script does not take account of
+    daylight savings time, which can result in some countries appearing to be an
+    hour off during that countrie's particular DST.
+    <br>
+    This is a re-work on codepen of a page originaly made on webflow, found at:
+    https://camerons-clock-site.webflow.io/
+  </p1>    
+</body>
 
 <script>
-     function Set_time()
-    {
-        const date = new Date();
-        UTC_hours = date.getUTCHours()
-        UTC_mins = date.getUTCMinutes()
+  function Set_time()
+  {
+    const date = new Date();
+    let UTC_hours = date.getUTCHours();
+    let UTC_mins = date.getUTCMinutes();
 
-        if (UTC_mins < 10)
-        {UTC_mins = "0"+UTC_mins}
-               
-        //Setting London, New York and Tokyo clocks
-        Set_display("London",0,UTC_hours,UTC_mins)
-        Set_display("NY",-5,UTC_hours,UTC_mins)
-        Set_display("Tokyo",9,UTC_hours,UTC_mins)
-        
-        //Repeating this function at the turn of each minute
-        Wait = 60 - date.getUTCSeconds()
-        setInterval(Set_time,Wait)
+    if (UTC_mins < 10){
+      UTC_mins = "0"+UTC_mins;
     }
-    //takes the names of the display and clock and sets them using the utc time and offset
-    function Set_display(Name, offset,UTCH,UTCM)
-    {
-        //Configuring the local time
-        Local_time = UTCH+ offset
-        if (Local_time < 0)
-        {Local_time +=24}
-        else if (Local_time > 24)
-        {Local_time -=24}
-        if(Local_time < 10)
-        {Local_time = 0 +Local_time}
-
-        Time_display = Name +"_time"
-        document.getElementsByName(Time_display)[0].textContent = Local_time + ":" + UTCM;
-
-        //Setting the various elements of the clock
-        Circle = Name + "_circle"
-        Circle = document.getElementsByName(Circle)[0]
-        Hour_hand = Name + "_H_hand"
-        Hour_hand = document.getElementById(Hour_hand)
-        Min_hand = Name + "_M_hand"
-        Min_hand = document.getElementById(Min_hand)
-
-        Hours_pos = 30*Local_time + UTCM/2//done this way rather than UTCH*15 to include the hour hand moving to the next hour 
-        Hour_hand.style.transform = `rotate(${Hours_pos}deg)`;
-        Mins_pos = UTCM*6 //since 60 fits into 360 6 times
-        Min_hand.style.transform = `rotate(${Mins_pos}deg)`;
-
-        if(Local_time <7 || Local_time > 22)
-            {
-                Circle.style.background = 'black'
-                Hour_hand.style.background = 'white'
-                Min_hand.style.background = 'white'
-            }
-        else
-            {
-                Circle.style.background = 'white'
-                Hour_hand.style.background = 'black'
-                Min_hand.style.background= 'black'
-            }
+          
+    //Setting London, New York and Tokyo clocks
+    Set_display("London",0,UTC_hours,UTC_mins);
+    Set_display("NY",-5,UTC_hours,UTC_mins);
+    Set_display("Tokyo",9,UTC_hours,UTC_mins);
         
+    //Repeating this function at the turn of each minute
+    Wait = 60 - date.getUTCSeconds();
+    setInterval(Set_time,Wait);
+  }
+  
+  //takes the names of the display and clock and sets them using the utc time and offset
+  function Set_display(Name, offset,UTCH,UTCM)
+  {
+    //Configuring the local time
+    let Local_time = UTCH + offset;
+    if (Local_time < 0){
+      Local_time +=24;
     }
-    Set_time()
-    //with thanks to: https://www.geeksforgeeks.org/how-to-create-analog-clock-using-html-css-and-javascript/ for the help on how to manage the rotation
+    else if (Local_time > 24){
+      Local_time -=24;
+    }
+    if(Local_time < 10){
+      Local_time = 0 +Local_time;
+    }
+
+    let Time_display = Name +"_time";
+    document.getElementsByName(Time_display)[0].textContent = Local_time + ":" + UTCM;
+
+    //Setting the various elements of the clock
+    let Circle = Name + "_circle";
+    Circle = document.getElementsByName(Circle)[0];
+    let Hour_hand = Name + "_H_hand";
+    Hour_hand = document.getElementById(Hour_hand);
+    let Min_hand = Name + "_M_hand";
+    Min_hand = document.getElementById(Min_hand);
+
+    let Hours_pos = 30*Local_time + UTCM/2; //done this way rather than UTCH*15 to include the hour hand moving to the next hour 
+    Hour_hand.style.transform = `rotate(${Hours_pos}deg)`;
+    let Mins_pos = UTCM*6; //since 60 fits into 360 6 times
+    Min_hand.style.transform = `rotate(${Mins_pos}deg)`;
+
+    if(Local_time <7 || Local_time > 22){
+      Circle.style.background = 'black';
+      Hour_hand.style.background = 'white';
+      Min_hand.style.background = 'white';
+    }
+    else{
+      Circle.style.background = 'white';
+      Hour_hand.style.background = 'black';
+      Min_hand.style.background= 'black';
+    }
+  }
+  Set_time();
+  //with thanks to: https://www.geeksforgeeks.org/how-to-create-analog-clock-using-html-css-and-javascript/ for the help on how to manage the rotation
 </script>
 </html>
