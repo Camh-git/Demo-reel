@@ -1,0 +1,14 @@
+The ec site consits of 4 pages:
+The Homepage
+The about us page
+The election info/procedures page
+The contact us page
+
+each of these share a common header that starts with a logo and contains the navigation links
+each page also shares a common footer with misc info
+
+Design
+
+the site is deliberatly designed to look like an old offical website that hasn't been updated in a while
+it is governental looking, minimal and mostly filled with information and containing limited images and almost no interactivity
+Most of the website is white space with grey boxes and a dark green primary colour

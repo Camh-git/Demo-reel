@@ -1,0 +1,49 @@
+<html>
+<link rel="stylesheet" href="Assets/stylesheet.css"/>
+ <div id = "Footer">
+  <br>
+  <hr>
+  <br>
+  This website is hosted and maintained by her majesty's government on behalf of this office.
+  <br><br>
+  If you have any concerns relating to any ongoing or past election please report them to us using the information on the contact us page as a matter of urgency.
+  <br><br>
+  The electoral commision is a sub-department of the UK home office responsible for monitering and verify elections.
+  <br>
+  The commision undertakes investigations into any potential breaches of electoral law and co-operates with all relevnt law enforcement agencies to do so.
+  <br><br>
+  This website uses minimal cookies and does not track you in any way, we respect your privacy, your rights remain unaffected.
+  
+  <br><br>
+  To make an offical enquiry please contact us or the UK home office using the information provided or your own sources.
+  <br>  
+  <img src ="Assets/Images/EC_logo.png"  style="width:15%;height:15%;"></a>
+  <br>
+  <div id ="Modal_control_bar">   
+   <div id ="Open_privacy" class ="Modal_bar_item">Privacy Policy</div>
+   <div id ="Open_FAQ" class = "Modal_bar_item">FAQs</div>
+   <div id ="Open_cookies" class = "Modal_bar_item">Cookie Policy</div>   
+  </div>
+  © United kingdom Electoral commision 2021
+    <!-- Privacy Modal -->
+     <div id="Privacy_modal" class="modal">
+      <div class="modal-content">       
+       <?php require_once('Assets/Privacy_modal.html');?>
+      </div>
+     </div>
+	  <!-- FAQ Modal -->
+     <div id="FAQ_modal" class="modal">
+      <div class="modal-content">       
+       <?php require_once('Assets/FAQ_modal.html');?>
+      </div>
+     </div>
+	  <!-- Cookie Modal -->
+     <div id="Cookie_modal" class="modal">
+      <div class="modal-content">      
+       <?php require_once('Assets/Cookie_modal.html');?>
+      </div>
+     </div>
+ 
+ </div>
+<script src ="Assets/Modal_control.js"></script>
+</html>

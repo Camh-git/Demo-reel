@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+ <meta charset="utf-8"/>
+ <link rel="stylesheet" href="Assets/stylesheet.css"/>
+ <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico"/>
+ <title>Electoral Commission</title>
+ <?php 
+ $cookie_name = "Visitor";
+ $cookie_value = true;
+ setcookie($cookie_name, $cookie_value, time() +(86400 * 7), "/");
+ ?>
+</head>
+
+<body>
+ <div id = "header_bar">
+   <!--EC logo and homepage button-->
+  <div id = "header_logo_frame" style = "align: left;"><br>   
+   <img src ="Assets/images/EC_logo.png" style="width:70%;height:70%; margin-left: 10%; margin-top: -7.5%;"></a>
+  </div>
+  <div class ="Header_spacer"></div>
+  <a href="Homepage.php"> <div class = "header_item"><br>EC Home</div></a>
+  <div class ="Header_spacer"></div>
+  <a href="About_us.php"><div class = "header_item"><br>About us</div></a>
+  <div class ="Header_spacer"></div>
+  <a href="Information.php"> <div class = "header_item"><br>Election info</div></a>
+  <div class ="Header_spacer"></div>
+  <a href="Contact_us.php"> <div class = "header_item"><br>Contact us</div></a>
+  <div class ="Header_spacer"></div>
+  <div id ="Header_end">Office of her majesty's most honorable and loyal electoral commision<br>Her majesty's government</div>
+ </div> 
+</body>
+
+</html>

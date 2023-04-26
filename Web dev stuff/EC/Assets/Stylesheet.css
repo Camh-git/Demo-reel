@@ -1,0 +1,76 @@
+/*Sitewide styles*/
+/**{font-family:Transport;}*/
+#main 
+{width: 100%; margin: 0 auto 0 auto;	min-width: 600px;background-size: cover;background-repeat:no-repeat;}
+a:link, a:visited
+{text-decoration: none; color:#111111;}
+html, body 
+{max-width: 110%; overflow-x: hidden; margin-top: 3.25%} /*the top offset is to acount for the header*/
+
+
+/*Header styles*/
+#header_bar
+{position: absolute; top: 0; right: 0; left: 0; height: 7.5%; overflow: hidden; background-color: #013220;}
+.header_item
+{float: left; height: 100vw; width:10vw; background-color: #013220; text-align: center; padding-bottom: 1%; color:grey;}
+#header_logo_frame
+{float: left; height: 100%; width: 10vw; background-color: #013220; text-align: center; padding-bottom: 1%; color:grey;}
+.Header_spacer
+{float: left; Height: 100%; width: .25%; background-color: #000000; text-align: center; padding-bottom: 1%;}
+#Header_end
+{float: right; padding-right: 1% ;Height:100%; background-color:#013220 ;text-align:right; padding-bottom:1%; color:grey;}
+
+.header_item:hover
+{float: left; height: 100%; width :10%; background-color: #bfbfbf; text-align: center; padding-bottom: 1%;}
+
+/*Footer styles*/
+#Footer
+{margin-bottom: 0%; text-align: center;}
+#Modal_control_bar
+{width: 100vw; height: 5%; overflow: hidden;  float: left;}
+.Modal_bar_item
+{margin-left: -1.5vw; width: 5vw; display: inline-block;}
+.modal
+{display: none; position: fixed; z-index: 1; padding-top: 1%; left: 0; top: 0; width: 100%; height: 100%;
+  overflow: auto; /* Enable scroll if needed */  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+.modal-content 
+{background-color: #fefefe; margin: auto; padding: 20px; border: 5px solid #013220; width: 80%;}
+
+/*Homepage styles*/
+.mySlides {display: none;}
+.slideshow-container 
+{width: 750px; height: 500px; position: relative; margin: auto;}
+.active 
+{background-color: #717171;}
+#Notice_text
+{width:75%;  text-align: center; border-style:solid; Border-color:#013220;}
+.Home_text_box
+{Width:75%; border-style:solid; border-color:#013220;}
+.Home_drop_down
+{Width:75%; border-style:solid; border-color:#013220; display:none;}
+
+/*About us styles*/
+#About_us_text
+{width:75%; margin-left:12.5%; text-align: center;}
+#Hiring_box
+{Width:75%; margin-left:12.5%; border-style:solid; border-color:#013220;}
+
+/*Election info styles*/
+.Election_notice
+{Width:75%; margin-left:12.5%; text-align: center; border-style:Solid; Border-color:#013220;}
+#Election_notice_box
+{Width:90%; margin-left:5%; text-align:center; border-style:solid; Border-color:#013220;}
+
+/*Contact us styles*/
+#Contact_us_text
+{width:50%;  text-align: center; border-style:solid; Border-color:#013220;}
+
+/*misc styles*/
+/* Fading animation */
+.fade 
+{-webkit-animation-name: fade; -webkit-animation-duration: 3s; animation-name: fade; animation-duration: 3s;}
+@-webkit-keyframes fade 
+{from {opacity: 0} to {opacity: 1}}
+@keyframes fade 
+{from {opacity: 0} to {opacity: 1}}
+

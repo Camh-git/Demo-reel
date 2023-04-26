@@ -1,0 +1,17 @@
+This document lays out the basics of a possible management system for the EC site
+
+FORM:
+the system will be web based and able to interact with and edit certain elements of the EC website
+
+Functionality:
+The primary purpose of the system will be to allow control over cerain webpage elements.
+the following elements will be editable by the system:
+Homepage: the text within a notice and if it is visible or not. (system will modify the seperate txt file)
+About us: the job listings can be updated (system will modify the seperate txt file)
+Election info: system will allow editing, creation and archival of notices, and allow selection of which to display,
+if no notices are displayed the no election notice will be shown instead.
+Contact us: the contact details can be updated (system will modify the seperate txt file)
+
+In addition a login system will be implemented to prevent unauthorised access, this will be the page that appears
+prior to the main system UI and would be the only way to access it (the UI would kick you back to this page without
+a valid login token, or redirect you if you attempt to load it before the login page)
