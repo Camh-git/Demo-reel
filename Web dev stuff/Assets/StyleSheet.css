@@ -1,0 +1,95 @@
+/*Text styles*/
+h1,h2,h3,h4,h5,p
+{color:white;}
+.Bold
+{font-weight: bold;}
+
+/*Misc sitewide styles*/
+html 
+{background-color: #282c34}
+a:link, a:visited{
+  text-decoration: none; 
+  color:white;
+}
+.small_warning
+{color: #ff0000;}
+
+form{
+  border: 5px solid aliceblue;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: darkgrey;
+  max-width: 30vw;
+}
+.flex-container
+{display: flex;}
+::marker 
+{color: aliceblue;}
+
+/*Header styles*/
+#Header_bar{
+  position: absolute;
+  width:100%; 
+  min-height: 50px;
+  max-height: 10%;
+  justify-content:space-between;
+  background-color:rgba(49, 49, 49, 0.349);
+}
+.Header_item{
+  float: right;
+  font-size: large; 
+  font-weight: bold; 
+  text-align:center;
+  min-width: 2rem;
+  padding-left: 1rem;
+  min-height: 50px;
+  max-height: 10%;
+  padding-right: 1rem;
+}
+
+/*Footer styles*/
+#Footer_content
+{text-align: center;}
+#footer_container{
+  margin-bottom: 0px;
+  padding-top: 2%;
+  min-height: 100px;
+  width: 100%;
+  clear: both;
+}
+
+
+/*Homepage styles*/
+
+
+/*Library styles*/
+.collumn{
+  Float:left;
+  width:24vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin-bottom: 5vh;
+}
+.collumn li{
+  border: 5px solid aliceblue;
+  border-radius: 15% ;
+  padding: 1vh;
+  margin: 1vh .5vw 1vh .25vw;
+  min-height: 5vh;
+  max-width: 20vw;
+  overflow: hidden;
+}
+.Missing_space_warning{
+  color: #ff0000; 
+  font-weight: bold;
+}
+.LS_Type_ind
+{font-weight: bold;}
+
+.List_title{
+  font-weight:bolder;
+   color:white; 
+} /*padding-left:30px;border-left:6px solid crimson;*/
+
+/*Management styles*/

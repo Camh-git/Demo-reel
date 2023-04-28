@@ -1,0 +1,15 @@
+Remaining:
+
+  Major:
+    Populate management with basic crud commands
+    Implement management scripts
+    Create non-placeholder/dev homepage
+    Implement non-placeholder CSS
+
+  Minor:
+	Implement Epub reader
+	Implement a reader for simple txt files
+
+
+Completed:
+	Convert the library to 4 collumns instead of 3
