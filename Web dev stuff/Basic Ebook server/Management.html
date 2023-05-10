@@ -11,9 +11,46 @@
 	<body>
 	    <h1>Management</h1>
 		<h1>This page is currently under construction</h1>
-		<h2>Not all forms are implemented, many of the required scripts have yet to be written</h2>
+		<!--TODO: replace all the placholder text with labels like your supposed to-->
 
-		
+		<!--		
+		<form id="myForm">
+			<input type="file" id="inpFile">
+			<button type="submit">Upload file</button>
+		</form>
+		<script>
+			const myForm = document.getElementById("myForm");
+			const inpFile = document.getElementById("inpFile");
+
+			myForm.addEventListener("submit",e=>{
+				e.preventDefault();
+				const endPoint = "Assets/Scripts/Upload_single.php";
+				const formData = new FormData();
+				console.log(inpFile.files);
+				formData.append("inpFile",inpFile.files[0]);
+				fetch(endPoint,{
+					method:"post",
+					body:formData
+				}).catch(console.error);
+			})
+		</script>
+		-->
+
+		<h2>Manage individual books</h2>
+		<div class="flex-container">
+			
+		</div>
+
+		<h2>Manage folders</h2>
+		<div class="flex-container">
+			
+		</div>
+
+		<h2>Manage library</h2>
+		<div class="flex-container">
+			
+		</div>
+
 		<!--Individual upload, todo:Add a folder select-->
 		<h4>Upload book</h4>
 		<form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_single.php">
@@ -46,21 +83,20 @@
 
 		<!--Delete folder-->
 		<h3>Delete folder</h3>
-		<p>select folder to delete</p>
-		<form action = "Assets/Scripts/Delete_folder.php">
+		<form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_folder.php">
 			<select name ="folder_list3">
 				
 			</select>
 			<input type="submit" value = "Submit" />
 			<p>Delete folder conents? (will be moved to misc if not checked)</p>
-			<input type="checkbox" id="Folder_delete" name="Folder_delete" value="Delete_folder_content"/>
+			<input type="checkbox" name="Delete_content" value="Delete_content"/>
 		</form>
 		
 		<!--Create empty folder-->
 		<h3>Create new folder</h3>
-		<form action = "Assets/Scripts/">
-			<input type="text" value="Enter name here"/>
-			<input type="submit" value="Submit">
+		<form method = "POST"  enctype="multipart/form-data" action = "Assets/Scripts/Create_folder.php">
+			<input type = "text" name="New_folder" value = "Enter name here"/>
+			<input type = "submit" value =" Submit">
 		</form>
 
 		<!--Rename file-->
