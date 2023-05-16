@@ -41,7 +41,7 @@
 		<div class="flex-container Management_collumn">
 		  <!--Individual upload, todo:Add a folder select-->
 		  <form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_single.php">
-        <h4>Upload book</h4>
+        <h3>Upload book</h3>
 		  	<input type = "file" id = "inpFile" name = "inpFile" accept=".epub,.pdf,.txt,.doc,.docx"/>
 			  <input type="submit" value = "upload" />
 			  <p class="Small_warning">Max upload size: 30MB</p>
@@ -49,7 +49,7 @@
 
       <!--Delete file-->
       <!--TODO: make this send a variable with the filename-->
-		  <form action = "Assets/Scripts/Delete_single.php">
+		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_single.php">
         <h3>Delete book</h3>
 			  <p>Select folder:</p>
 			  <select></select>
@@ -60,7 +60,7 @@
 		  </form>
 
       <!--Rename file-->
-		  <form action = "Assets/Scripts/Rename_file.php">
+		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Rename_file.php">
         <h3>Rename book</h3>
 			  <p>Select book:</p>
 			  <select name ="folder_list4">
