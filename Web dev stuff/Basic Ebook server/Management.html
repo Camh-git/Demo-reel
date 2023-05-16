@@ -36,93 +36,91 @@
 		</script>
 		-->
 
+    <!--Manage books-->
 		<h2>Manage individual books</h2>
-		<div class="flex-container">
-			
+		<div class="flex-container Management_collumn">
+		  <!--Individual upload, todo:Add a folder select-->
+		  <form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_single.php">
+        <h4>Upload book</h4>
+		  	<input type = "file" id = "inpFile" name = "inpFile" accept=".epub,.pdf,.txt,.doc,.docx"/>
+			  <input type="submit" value = "upload" />
+			  <p class="Small_warning">Max upload size: 30MB</p>
+		  </form>
+
+      <!--Delete file-->
+      <!--TODO: make this send a variable with the filename-->
+		  <form action = "Assets/Scripts/Delete_single.php">
+        <h3>Delete book</h3>
+			  <p>Select folder:</p>
+			  <select></select>
+			  <p>Select book:</p>
+			  <select></select>
+			  <br>
+			  <input type="submit" value = "Submit" />
+		  </form>
+
+      <!--Rename file-->
+		  <form action = "Assets/Scripts/Rename_file.php">
+        <h3>Rename book</h3>
+			  <p>Select book:</p>
+			  <select name ="folder_list4">
+				
+			  </select>
+			  <br>
+			  <input type="text" value= "New name"/>
+			  <input type="submit" value = "Submit" />
+		  </form>
 		</div>
 
+    <!--Manage folders-->
 		<h2>Manage folders</h2>
-		<div class="flex-container">
-			
+		<div class="flex-container Management_collumn">
+      <!--Folder upload -->
+		  <form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
+        <h3>Upload folder</h3>
+			  <p>Please enter a name for your new folder</p>
+			  <input type="text" id = "newFolderName">
+			  <p>Please add each file you want to upload</p>
+			  <input type = "file" id = "inpFile" name = "inpFiles[]" multiple="multiple" accept=".epub,.pdf,.txt,.doc,.docx"/>
+			  <input type="submit" value = "upload" />
+		  </form>
+
+      <!--Delete folder-->
+		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_folder.php">
+        <h3>Delete folder</h3>
+			  <select name ="folder_list3">
+				
+			  </select>
+			  <input type="submit" value = "Submit" />
+			  <p>Delete folder conents? (will be moved to misc if not checked)</p>
+			  <input type="checkbox" name="Delete_content" value="Delete_content"/>
+		  </form>
+
+      <!--Rename folder-->
+		  <form action = "Assets/Scripts/Rename folder.php"> 
+        <h3>Rename folder</h3>
+			  <p>Select folder:</p>
+			  <select name ="folder_list5">
+				
+			  </select>
+			  <br>
+			  <input type="text" value= "New name"/>
+			  <input type="submit" value = "Submit" />
+		  </form>
+
 		</div>
 
+    <!--Manage libray-->
 		<h2>Manage library</h2>
-		<div class="flex-container">
+		<div class="flex-container Management_collumn">
+      <!--Create empty folder-->
+		  <form method = "POST"  enctype="multipart/form-data" action = "Assets/Scripts/Create_folder.php">
+        <h3>Create new folder</h3>
+			  <input type = "text" name="New_folder" value = "Enter name here"/>
+			  <input type = "submit" value =" Submit">
+		  </form>
 			
 		</div>
-
-		<!--Individual upload, todo:Add a folder select-->
-		<h4>Upload book</h4>
-		<form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_single.php">
-			<input type = "file" id = "inpFile" name = "inpFile" accept=".epub,.pdf,.txt,.doc,.docx"/>
-			<input type="submit" value = "upload" />
-			<p class="Small_warning">Max upload size: 30MB</p>
-		</form>
-
-		<!--Folder upload -->
-		<h3>Upload folder</h3>
-		<form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
-			<p>Please enter a name for your new folder</p>
-			<input type="text" id = "newFolderName">
-			<p>Please add each file you want to upload</p>
-			<input type = "file" id = "inpFile" name = "inpFiles[]" multiple="multiple" accept=".epub,.pdf,.txt,.doc,.docx"/>
-			<input type="submit" value = "upload" />
-		</form>
-
-		<!--Delete file-->
-		<!--TODO: make this send a variable with the filename-->
-		<h3>Delete book</h3>
-		<form action = "Assets/Scripts/Delete_single.php">
-			<p>Select folder:</p>
-			<select></select>
-			<p>Select book:</p>
-			<select></select>
-			<br>
-			<input type="submit" value = "Submit" />
-		</form>
-
-		<!--Delete folder-->
-		<h3>Delete folder</h3>
-		<form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_folder.php">
-			<select name ="folder_list3">
-				
-			</select>
-			<input type="submit" value = "Submit" />
-			<p>Delete folder conents? (will be moved to misc if not checked)</p>
-			<input type="checkbox" name="Delete_content" value="Delete_content"/>
-		</form>
-		
-		<!--Create empty folder-->
-		<h3>Create new folder</h3>
-		<form method = "POST"  enctype="multipart/form-data" action = "Assets/Scripts/Create_folder.php">
-			<input type = "text" name="New_folder" value = "Enter name here"/>
-			<input type = "submit" value =" Submit">
-		</form>
-
-		<!--Rename file-->
-		<h3>Rename book</h3>
-		<form action = "Assets/Scripts/Rename_file.php">
-			<p>Select book:</p>
-			<select name ="folder_list4">
-				
-			</select>
-			<br>
-			<input type="text" value= "New name"/>
-			<input type="submit" value = "Submit" />
-		</form>
-
-		<!--Rename folder-->
-		<h3>Rename folder</h3>
-		<form action = "Assets/Scripts/Rename folder.php">
-			<p>Select folder:</p>
-			<select name ="folder_list5">
-				
-			</select>
-			<br>
-			<input type="text" value= "New name"/>
-			<input type="submit" value = "Submit" />
-		</form>
-
 
 	</body>
 
