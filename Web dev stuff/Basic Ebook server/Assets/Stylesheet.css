@@ -93,3 +93,12 @@ form{
 } /*padding-left:30px;border-left:6px solid crimson;*/
 
 /*Management styles*/
+.Management_collumn{
+  width: 100%;
+  justify-content: center;
+  margin-top: 1%;
+}
+.Management_collumn form{
+  width: 25%;
+  margin-left: 4%;
+}
