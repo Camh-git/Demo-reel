@@ -94,11 +94,13 @@ form{
 
 /*Management styles*/
 .Management_collumn{
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   margin-top: 1%;
 }
 .Management_collumn form{
-  width: 25%;
-  margin-left: 4%;
+  max-width: 25vw;
+  margin-left: 3vw;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
