@@ -17,10 +17,7 @@ a:link, a:visited{
 form{
   border: 5px solid aliceblue;
   border-radius: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background-color: darkgrey;
-  max-width: 30vw;
 }
 .flex-container
 {display: flex;}
@@ -79,6 +76,10 @@ form{
   min-height: 5vh;
   max-width: 20vw;
   overflow: hidden;
+  background-color: darkgrey;
+}
+.collumn li p, .collumn li a{
+  color: black;
 }
 .Missing_space_warning{
   color: #ff0000; 
@@ -89,7 +90,7 @@ form{
 
 .List_title{
   font-weight:bolder;
-   color:white; 
+  color:black; 
 } /*padding-left:30px;border-left:6px solid crimson;*/
 
 /*Management styles*/
@@ -99,6 +100,7 @@ form{
   margin-top: 1%;
 }
 .Management_collumn form{
+  min-width: 20vw;
   max-width: 25vw;
   margin-left: 3vw;
   padding-left: 2.5%;
