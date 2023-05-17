@@ -8,16 +8,19 @@
 	<div id = "header_container"> </div>
 
 	<body>
-		<h1>Dynamic library</h1>
-		<p>
-			File formats are displayed for each title, green means full
-			functionality (download and browser based reader), yellow means 
-			supported but no reader, red means not supported (will still download).
-		</p>
-			<div id = "Col_1" class = "collumn"></div>
-			<div id = "Col_2" class = "collumn"></div>
-			<div id = "Col_3" class = "collumn"></div>
-      <div id = "Col_4" class = "collumn"></div>
+    <div id = "Landing_segment">
+		  <h1>Dynamic library</h1>
+		  <p>
+		    File formats are displayed for each title, green means full
+			  functionality (download and browser based reader), yellow means 
+			  supported but no reader, red means not supported (will still download).
+		  </p>
+      <h4 class = 'Missing_space_warning'>Some books may be missing spaces in their titles, check the console for a list</h4>
+    </div>
+		<div id = "Col_1" class = "collumn"></div>
+		<div id = "Col_2" class = "collumn"></div>
+		<div id = "Col_3" class = "collumn"></div>
+    <div id = "Col_4" class = "collumn"></div>
 
 <?php 
   #Fetch every folder in books   
@@ -25,6 +28,7 @@
 	$Folders = glob($path,GLOB_ONLYDIR);
 	
 	$Collumn_num = 1;
+	$Missing_spaces = "";
 	#Show the contents of every book folder
 	foreach ($Folders as $dir)
 	{
@@ -36,7 +40,6 @@
 		
 		#List the books
 		$Output .='<ul>';
-		$Missing_spaces = "";
 		foreach($content as $book)
 		{
 			#Get the books name from it's filepath and tidy it up.
@@ -80,10 +83,16 @@
 		$Output .="</ul></div>";
 
 		#This output is echoed onto the screen so it can be manipulated by JS
-		echo("<script>console.log('The following titles might be missing some spaces: " .$Missing_spaces."')</script>");		
+		
+				
 		echo($Output);
-
 	}
+	if(strlen($Missing_spaces) > 10)
+	{
+		echo("<p5 id = 'Title_spaces_missing'></p5>");
+		echo("<script>console.log('The following titles might be missing some spaces: " .$Missing_spaces."')</script>");
+	}
+
 	?>
 
 	</body>
@@ -149,7 +158,23 @@
 			else
 			{{t.style.color="red"}}
 		}
-		
+
+    //Hide the missing spaces in titles warning, if one has not been applied
+    const Missing_title_spaces = document.getElementById("Title_spaces_missing");
+    if(Missing_title_spaces == null)
+    {
+      let Warnings = document.getElementsByClassName("Missing_space_warning");
+      for (let warning of Warnings)
+      {
+        warning.innerHTML = "";
+      }
+    }
+    else
+    {
+      let Parent = Missing_title_spaces.parentElement;
+      Parent.removeChild(Missing_title_spaces);
+    }
+  
 	</script>
 
 	<div id = "footer_container"></div>
