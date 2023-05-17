@@ -15,12 +15,14 @@
 			  functionality (download and browser based reader), yellow means 
 			  supported but no reader, red means not supported (will still download).
 		  </p>
-      <h4 class = 'Missing_space_warning'>Some books may be missing spaces in their titles, check the console for a list</h4>
+      <h4 class = 'Missing_space_warning'>Some books may be missing spaces in their titles, check the console for a list.</h4>
     </div>
-		<div id = "Col_1" class = "collumn"></div>
-		<div id = "Col_2" class = "collumn"></div>
-		<div id = "Col_3" class = "collumn"></div>
-    <div id = "Col_4" class = "collumn"></div>
+    <div id="Library_collumns">
+		  <div id = "Col_1" class = "collumn"></div>
+		  <div id = "Col_2" class = "collumn"></div>
+		  <div id = "Col_3" class = "collumn"></div>
+      <div id = "Col_4" class = "collumn"></div>
+    </div>
 
 <?php 
   #Fetch every folder in books   
