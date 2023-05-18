@@ -49,7 +49,7 @@
 
       <!--Delete file-->
       <!--TODO: make this send a variable with the filename-->
-		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_single.php">
+		<form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_single.php">
         <h3>Delete book</h3>
 			  <p>Select folder:</p>
 			  <select></select>
@@ -60,7 +60,7 @@
 		  </form>
 
       <!--Rename file-->
-		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Rename_file.php">
+		<form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Rename_file.php">
         <h3>Rename book</h3>
 			  <p>Select book:</p>
 			  <select name ="folder_list4">
@@ -76,7 +76,7 @@
 		<h2>Manage folders</h2>
 		<div class="flex-container Management_collumn">
       <!--Folder upload -->
-		  <form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
+		<form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
         <h3>Upload folder</h3>
 			  <p>Please enter a name for your new folder</p>
 			  <input type="text" id = "newFolderName">
@@ -97,14 +97,15 @@
 		  </form>
 
       <!--Rename folder-->
-		  <form action = "Assets/Scripts/Rename folder.php"> 
+		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Rename_folder.php"> 
         <h3>Rename folder</h3>
 			  <p>Select folder:</p>
-			  <select name ="folder_list5">
+			  <!--<select name ="Rename_target_folder">
 				
-			  </select>
+			  </select> -->
 			  <br>
-			  <input type="text" value= "New name"/>
+			  <input type="text" name= "Rename_target_folder"/>
+			  <input type="text" name= "New_name"/>
 			  <input type="submit" value = "Submit" />
 		  </form>
 
