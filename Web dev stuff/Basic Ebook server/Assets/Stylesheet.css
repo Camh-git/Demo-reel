@@ -80,6 +80,7 @@ form{
 }
 .collumn li p, .collumn li a{
   color: black;
+  font-weight: bolder;
 }
 .Missing_space_warning{
   color: #ff0000; 
