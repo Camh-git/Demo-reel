@@ -1,5 +1,5 @@
 <?php
-    //$files = array_filter($_FILES['inpFiles']['name']); 
+    //$files = array_filter($_FILES['inpFiles'],$_POST['UF_name']); 
 
     //Create a folder for the books, using the name the user provided
     $folder = "../../Books/";
