@@ -8,123 +8,128 @@
 	
 	<div id = "header_container"> </div>
 	
-	<body>
-	    <h1>Management</h1>
-		<h1>This page is currently under construction</h1>
-		<!--TODO: replace all the placholder text with labels like your supposed to-->
+<body>
+	<h1>Management</h1>
+	<h1>This page is currently under construction</h1>
+	<!--Note on input names: Each input name has a prefix related to it's form eg: inputs for delete single have the prefix DS_-->
+	<!--TODO: have the text inputs that pass values using the value attribute use the name or id attribute instead, clean up unneeded
+		 attributes like this eg.(id and name in upload book where the same)-->
+	<!--TODO: make all input names unique-->
 
-		<!--		
-		<form id="myForm">
-			<input type="file" id="inpFile">
-			<button type="submit">Upload file</button>
+	<!--form actions TODO: see each form-->
+
+  <!--Manage books-->
+	<h2>Manage individual books</h2>
+	<div class = "flex-container Management_collumn">
+		<!--upload single, todo:Add a folder select-->
+		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Upload_single.php">
+    	<h3>Upload book</h3>
+		  <input type = "file" name = "inpFile" accept = ".epub,.pdf,.txt,.doc,.docx"/>
+			<input type = "submit" value = "upload" />
+			<p class = "Small_warning">Max upload size: 30MB</p>
 		</form>
-		<script>
-			const myForm = document.getElementById("myForm");
-			const inpFile = document.getElementById("inpFile");
 
-			myForm.addEventListener("submit",e=>{
-				e.preventDefault();
-				const endPoint = "Assets/Scripts/Upload_single.php";
-				const formData = new FormData();
-				console.log(inpFile.files);
-				formData.append("inpFile",inpFile.files[0]);
-				fetch(endPoint,{
-					method:"post",
-					body:formData
-				}).catch(console.error);
-			})
-		</script>
-		-->
+    <!--Delete single-->
+    <!--TODO: make this send a variable with the filename-->
+		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Delete_single.php">
+    	<h3>Delete book</h3>
+			<select name = "DS_folder_select">
+				<option Value = "None">No selection</option>
 
-    <!--Manage books-->
-		<h2>Manage individual books</h2>
-		<div class="flex-container Management_collumn">
-		  <!--Individual upload, todo:Add a folder select-->
-		  <form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_single.php">
-        <h3>Upload book</h3>
-		  	<input type = "file" id = "inpFile" name = "inpFile" accept=".epub,.pdf,.txt,.doc,.docx"/>
-			  <input type="submit" value = "upload" />
-			  <p class="Small_warning">Max upload size: 30MB</p>
-		  </form>
+			</select>
+			<label for = "DS_folder_select">Select folder</label>
 
-      <!--Delete file-->
-      <!--TODO: make this send a variable with the filename-->
-		<form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_single.php">
-        <h3>Delete book</h3>
-			  <p>Select folder:</p>
-			  <select></select>
-			  <p>Select book:</p>
-			  <select></select>
-			  <br>
-			  <input type="submit" value = "Submit" />
-		  </form>
+			<select name = "DS_book_select">
+				<option Value = "None">No selection</option>
 
-      <!--Rename file-->
-		<form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Rename_file.php">
-        <h3>Rename book</h3>
-			  <p>Select book:</p>
-			  <select name ="folder_list4">
-				
-			  </select>
-			  <br>
-			  <input type="text" value= "New name"/>
-			  <input type="submit" value = "Submit" />
-		  </form>
-		</div>
+			</select>
+			<label for = "DS_book_select">Select book</label>
 
-    <!--Manage folders-->
-		<h2>Manage folders</h2>
-		<div class="flex-container Management_collumn">
-      <!--Folder upload -->
-		<form method ="POST" enctype="multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
-        <h3>Upload folder</h3>
-			  <p>Please enter a name for your new folder</p>
-			  <input type="text" id = "newFolderName">
-			  <p>Please add each file you want to upload</p>
-			  <input type = "file" id = "inpFile" name = "inpFiles[]" multiple="multiple" accept=".epub,.pdf,.txt,.doc,.docx"/>
-			  <input type="submit" value = "upload" />
-		  </form>
+			<br>
+			<input type="submit" value = "Submit" />
+		</form>
 
-      <!--Delete folder-->
-		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Delete_folder.php">
-        <h3>Delete folder</h3>
-			  <select name ="folder_list3">
-				
-			  </select>
-			  <input type="submit" value = "Submit" />
-			  <p>Delete folder conents? (will be moved to misc if not checked)</p>
-			  <input type="checkbox" name="Delete_content" value="Delete_content"/>
-		  </form>
-
-      <!--Rename folder-->
-		  <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Rename_folder.php"> 
-        <h3>Rename folder</h3>
-			  <p>Select folder:</p>
-			  <!--<select name ="Rename_target_folder">
-				
-			  </select> -->
-			  <br>
-			  <input type="text" name= "Rename_target_folder"/>
-			  <input type="text" name= "New_name"/>
-			  <input type="submit" value = "Submit" />
-		  </form>
-
-		</div>
-
-    <!--Manage libray-->
-		<h2>Manage library</h2>
-		<div class="flex-container Management_collumn">
-      <!--Create empty folder-->
-		  <form method = "POST"  enctype="multipart/form-data" action = "Assets/Scripts/Create_folder.php">
-        <h3>Create new folder</h3>
-			  <input type = "text" name="New_folder" value = "Enter name here"/>
-			  <input type = "submit" value =" Submit">
-		  </form>
+    <!--Rename single TODO:write this-->
+		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Rename_file.php">
+    	<h3>Rename book</h3>
+			<select name = "RS_folder_select">
+				<option Value = "None">No selection</option>
 			
-		</div>
+			</select>
+			<label for = "RS_folder_select">Select folder</label>
 
-	</body>
+			<select name = "RS_book_select">
+				<option Value = "None">No selection</option>
 
-	<div id = "footer_container"></div>
-	<script src = "Assets/Scripts/Append_H&F.js"> </script>
+			</select>
+
+			<label for = "RS_book_select">Select book</label>
+
+			<br>
+			<input type = "text" name = "New name" placeholder = "New name"/>
+			<input type = "submit" value = "Submit" />
+		</form>
+	</div>
+
+	<!--Manage folders-->
+	<h2>Manage folders</h2>
+	<div class="flex-container Management_collumn">
+  	<!--Upload folder TODO: make this take names -->
+		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
+  		<h3>Upload folder</h3>
+			<input type = "text" id = "UF_name" placeholder = "name">
+			<label for = "UF_name"></label>
+			<p>Please add each file you want to upload</p>
+			<input type = "file" id = "inpFile" name = "inpFiles[]" multiple = "multiple" accept = ".epub,.pdf,.txt,.doc,.docx"/>
+			<input type = "submit" value = "upload" />
+		</form>
+
+    <!--Delete folder TODO:double check this works with new naming-->
+		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Delete_folder.php">
+    	<h3>Delete folder</h3>
+			<select name = "DF_select">
+				<option Value = "None">No selection</option>
+				
+			</select>
+
+			<input type = "submit" value = "Submit" />
+			<br>
+			<input type = "checkbox" name = "DS_Delete_content" value = "DS_Delete_content"/>
+			<label for = "DS_Delete_content">Delete folder content?(will move contents to misc if not checked)</label>
+		</form>
+
+    <!--Rename folder TODO: fix the path compilation, add the rename function-->
+		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Rename_folder.php"> 
+    	<h3>Rename folder</h3>
+			<select name = "RF_select">
+				<option Value = "None">No selection</option>
+				
+			</select>
+			<label for = "RR_select">Select folder</label>
+
+			<br>
+			<input type = "text" name = "RF_select" placeholder = "Temp_target"/>
+			<input type = "text" name = "New_name" placeholder = "New name"/>
+			<input type = "submit" value = "Submit" />
+		</form>
+
+	</div>
+
+  <!--Manage libray-->
+	<h2>Manage library</h2>
+	<div class = "flex-container Management_collumn">
+  	<!--Create empty folder TODO:find a way to fix the permissions issue-->
+		<form method = "POST"  enctype = "multipart/form-data" action = "Assets/Scripts/Create_folder.php">
+    	<h3>Create new folder</h3>
+			<input type = "text" name = "New_folder" placeholder = "Enter name here"/>
+			<input type = "submit" value = " Submit">
+		</form>
+			
+	</div>
+
+</body>
+
+<div id = "footer_container"></div>
+<script src = "Assets/Scripts/Append_H&F.js"> </script>
+
 </html>
