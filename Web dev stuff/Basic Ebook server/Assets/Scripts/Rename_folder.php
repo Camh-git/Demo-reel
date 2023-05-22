@@ -1,6 +1,6 @@
 <?php
-  //TODO: finish this
-  if(isset($_POST["RF_select"], $_POST["New_name"]))
+  //TODO: fix path compliation, add rename
+  if(isset($_POST["RF_select"], $_POST["RF_RF_New_name"]))
   {
     try
     {
@@ -20,12 +20,12 @@
       echo("<script>console.log('path: '".$file_path.")</script>");
 
       //Add the path to the new address and rename the folder
-      $Final_name = $path + $_POST["New_name"];
+      $Final_name = $path + $_POST["RF_New_name"];
 
     }
     catch(Exception $e)
     {
-      echo("File rename failed with the following exception: " .$e);
+      echo("Folder rename failed with the following exception: " .$e);
     }
   }
   else
@@ -36,7 +36,7 @@
     } 
     catch(Exception $e){}
     try{
-      echo($_POST["New_name"]);
+      echo($_POST["RF_New_name"]);
     } 
     catch(Exception $e){}
   }
