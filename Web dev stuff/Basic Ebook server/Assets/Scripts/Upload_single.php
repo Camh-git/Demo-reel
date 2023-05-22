@@ -1,14 +1,14 @@
 <?php
-  if(isset($_FILES['inpFile']))
+  if(isset($_FILES['US_file_inp']))
   {
     //var_dump($_FILES); #For debug, disable in production
     try{
-      $file = $_FILES["inpFile"];
-      $targetPath="../../Books/Misc/".basename($_FILES["inpFile"]["name"]);
+      $file = $_FILES["US_file_inp"];
+      $targetPath="../../Books/Misc/".basename($file["name"]);
     
-      if(copy($_FILES['inpFile']['tmp_name'],$targetPath))
+      if(copy($file['tmp_name'],$targetPath))
       {
-        echo("Book uploaded to: uploads/".basename($_FILES["inpFile"]["name"]));
+        echo("Book uploaded to: uploads/".basename($_FILES["US_file_inp"]["name"]));
       }
       //Send the user to the success screen
       readfile("../Confirmations,modals,popups/Upload_success_page.html");
