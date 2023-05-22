@@ -12,8 +12,7 @@
 	<h1>Management</h1>
 	<h1>This page is currently under construction</h1>
 	<!--Note on input names: Each input name has a prefix related to it's form eg: inputs for delete single have the prefix DS_-->
-	<!--TODO: have the text inputs that pass values using the value attribute use the name or id attribute instead, clean up unneeded
-		 attributes like this eg.(id and name in upload book where the same)-->
+	<!--TODO: clean up unneeded attributes  eg.(id and name in upload book where the same)-->
 	<!--TODO: make all input names unique-->
 
 	<!--form actions TODO: see each form-->
@@ -24,7 +23,7 @@
 		<!--upload single, todo:Add a folder select-->
 		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Upload_single.php">
     	<h3>Upload book</h3>
-		  <input type = "file" name = "inpFile" accept = ".epub,.pdf,.txt,.doc,.docx"/>
+		  <input type = "file" name = "US_file_inp" accept = ".epub,.pdf,.txt,.doc,.docx"/>
 			<input type = "submit" value = "upload" />
 			<p class = "Small_warning">Max upload size: 30MB</p>
 		</form>
@@ -33,17 +32,19 @@
     <!--TODO: make this send a variable with the filename-->
 		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Delete_single.php">
     	<h3>Delete book</h3>
+			
+			<label for = "DS_folder_select">Select folder</label>
 			<select name = "DS_folder_select">
 				<option Value = "None">No selection</option>
 
 			</select>
-			<label for = "DS_folder_select">Select folder</label>
-
+			
+			<label for = "DS_book_select">Select book</label>
 			<select name = "DS_book_select">
 				<option Value = "None">No selection</option>
 
 			</select>
-			<label for = "DS_book_select">Select book</label>
+			
 
 			<br>
 			<input type="submit" value = "Submit" />
@@ -52,18 +53,19 @@
     <!--Rename single TODO:write this-->
 		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Rename_file.php">
     	<h3>Rename book</h3>
+			<label for = "RS_folder_select">Select folder</label>
 			<select name = "RS_folder_select">
 				<option Value = "None">No selection</option>
 			
 			</select>
-			<label for = "RS_folder_select">Select folder</label>
-
+			
+			<label for = "RS_book_select">Select book</label>
 			<select name = "RS_book_select">
 				<option Value = "None">No selection</option>
 
 			</select>
 
-			<label for = "RS_book_select">Select book</label>
+			
 
 			<br>
 			<input type = "text" name = "New name" placeholder = "New name"/>
@@ -74,20 +76,20 @@
 	<!--Manage folders-->
 	<h2>Manage folders</h2>
 	<div class="flex-container Management_collumn">
-  	<!--Upload folder TODO: make this take names -->
+  	<!--Upload folder TODO: make this take a name for the folder, fix upload -->
 		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
   		<h3>Upload folder</h3>
-			<input type = "text" id = "UF_name" placeholder = "name">
-			<label for = "UF_name"></label>
+			<input type = "text" name = "UF_name" placeholder = "name">
 			<p>Please add each file you want to upload</p>
-			<input type = "file" id = "inpFile" name = "inpFiles[]" multiple = "multiple" accept = ".epub,.pdf,.txt,.doc,.docx"/>
+			<input type = "file" name = "UF_inp_Files[]" multiple = "multiple" accept = ".epub,.pdf,.txt,.doc,.docx"/>
 			<input type = "submit" value = "upload" />
 		</form>
 
     <!--Delete folder TODO:double check this works with new naming-->
 		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Delete_folder.php">
     	<h3>Delete folder</h3>
-			<select name = "DF_select">
+			<label for = "DF_folder_select">Select folder</label>
+			<select name = "DF_folder_select">
 				<option Value = "None">No selection</option>
 				
 			</select>
@@ -101,15 +103,17 @@
     <!--Rename folder TODO: fix the path compilation, add the rename function-->
 		<form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Rename_folder.php"> 
     	<h3>Rename folder</h3>
-			<select name = "RF_select">
+			<label for = "RR_folder_select">Select folder</label>
+			<!--
+			<select name = "RF_folder_select">
 				<option Value = "None">No selection</option>
 				
 			</select>
-			<label for = "RR_select">Select folder</label>
+			-->
 
 			<br>
-			<input type = "text" name = "RF_select" placeholder = "Temp_target"/>
-			<input type = "text" name = "New_name" placeholder = "New name"/>
+			<input type = "text" name = "RF_folder_select" placeholder = "Temp_target"/>
+			<input type = "text" name = "RF_New_name" placeholder = "New name"/>
 			<input type = "submit" value = "Submit" />
 		</form>
 
@@ -121,7 +125,7 @@
   	<!--Create empty folder TODO:find a way to fix the permissions issue-->
 		<form method = "POST"  enctype = "multipart/form-data" action = "Assets/Scripts/Create_folder.php">
     	<h3>Create new folder</h3>
-			<input type = "text" name = "New_folder" placeholder = "Enter name here"/>
+			<input type = "text" name = "CF_Name" placeholder = "Enter name here"/>
 			<input type = "submit" value = " Submit">
 		</form>
 			
