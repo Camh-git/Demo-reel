@@ -11,8 +11,10 @@ a:link, a:visited{
   text-decoration: none; 
   color:white;
 }
-.small_warning
-{color: #ff0000;}
+.warning{
+  color: #ff0000;
+  font-weight: bold;
+}
 
 form{
   border: 5px solid aliceblue;
