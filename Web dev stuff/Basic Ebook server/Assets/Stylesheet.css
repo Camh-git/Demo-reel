@@ -1,7 +1,7 @@
 /*Text styles*/
 h1,h2,h3,h4,h5,p,label
 {color:white;}
-.Bold
+.Bold, label
 {font-weight: bold;}
 
 /*Misc sitewide styles*/
@@ -95,12 +95,12 @@ form{
 } /*padding-left:30px;border-left:6px solid crimson;*/
 
 /*Management styles*/
-.Management_collumn{
+.Management_row{
   width: 100vw;
   justify-content: center;
   margin-top: 1%;
 }
-.Management_collumn form{
+.Management_row form{
   min-width: 20vw;
   max-width: 25vw;
   margin-left: 3vw;
