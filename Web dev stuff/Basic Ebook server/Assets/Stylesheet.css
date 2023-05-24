@@ -60,7 +60,22 @@ form{
 
 
 /*Homepage styles*/
-
+#Homepage_container{
+  display:block;
+  width: 100vw; 
+  text-align: center;
+  overflow: hidden;
+}
+#Instruction_segment{
+  width: 90vw;
+  margin-left: 5vw;
+  text-align: center;
+}
+.Instruction_entry{
+  display: inline-block;
+  width: 25%;
+  padding: 2.5vw;
+}
 
 /*Library styles*/
 .collumn{
