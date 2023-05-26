@@ -5,8 +5,10 @@ h1,h2,h3,h4,h5,p,label
 {font-weight: bold;}
 
 /*Misc sitewide styles*/
-html 
-{background-color: #282c34}
+html {
+  background-color: #282c34; 
+  text-align: center;
+}
 a:link, a:visited{
   text-decoration: none; 
   color:white;
@@ -67,14 +69,27 @@ form{
   overflow: hidden;
 }
 #Instruction_segment{
-  width: 90vw;
-  margin-left: 5vw;
+  width: 100vw;
+  margin-left: 0vw;
   text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 .Instruction_entry{
   display: inline-block;
   width: 25%;
   padding: 2.5vw;
+}
+.Instruction_entry img{
+  background-color: aliceblue;
+  border-radius: 50%;
+  width: 5vw;
+  padding: 1vw;
+  overflow: visible;
+}
+#Carousel_container img{
+  max-width: 33vw;
+  max-height: 33vh;
 }
 
 /*Library styles*/
