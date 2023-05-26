@@ -10,5 +10,5 @@ Image credits:
 Icon credits:
     Homepage
     menu_book_FILL0: https://fonts.google.com/icons?icon.query=book&selected=Material+Symbols+Outlined:menu_book:FILL@0;wght@400;GRAD@0;opsz@48&icon.platform=web
-    Settings: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:settings:FILL@0;wght@400;GRAD@0;opsz@48
-    Browse_gallery: https://fonts.google.com/icons?icon.query=collection&selected=Material+Symbols+Outlined:browse_gallery:FILL@0;wght@400;GRAD@0;opsz@48&icon.platform=web
+    settings_FILL0: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:settings:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=settings
+    library_books_FILL0: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:library_books:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=library
