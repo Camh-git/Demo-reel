@@ -108,6 +108,24 @@
       <input type = "text" name = "CF_Name" placeholder = "Enter name here"/>
       <input type = "submit" value = " Submit">
     </form>
+
+    <!--Move book between folders-->
+    <form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Move_book.php">
+      <h3>Move book to new folder</h3>
+      <label for = "MV_folder_select">Select current folder</label>
+      <select name = "MV_folder_select">
+        <option Value = "None">No selection</option>
+      </select>
+      <label for = "MV_book_select">Select book</label>
+      <select name = "MV_book_select">
+        <option Value = "None">No selection</option>
+      </select>
+      <select name = "MV_target_select">
+        <option Value = "None">No selection</option>
+      </select>
+
+      <input type = "submit" value = "Submit"/>
+    </form>
   </div>
 
   <!--Misc options-->
@@ -124,6 +142,19 @@
       <input type = "checkbox" name = "DL_toggle_disable" value="DL_toggle_disable"/>
       <input type = "password" name = "DL_toggle_PW" placeholder = "Password"/>      
       <h3 class="Warning">Note: this function is solely for personal use, do not enable if server is shared</h3>
+      <input type = "submit" value = "Apply">
+    </form>
+	  
+   <!--Enable or disable online readers-->
+    <form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Toggle_readers.php">
+      <h3>Enable online readers?</h3>
+      <p name = "Downloads enabled display">Readers are currently: </p>
+      <br>
+      <label for = "TOGR_toggle_enable">Enable</label>
+      <input type = "checkbox" name = "TOGR_toggle_enable" value = "DL_toggle_enable"/>
+      <label for = "TOGR_toggle_disable">Disable</label>
+      <input type = "checkbox" name = "TOGR_toggle_disable" value="DL_toggle_disable"/>
+      <input type = "password" name = "TOGR_toggle_PW" placeholder = "Password"/>      
       <input type = "submit" value = "Apply">
     </form>
 
