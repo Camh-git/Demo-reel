@@ -8,6 +8,8 @@ h1,h2,h3,h4,h5,p,label
 html {
   background-color: #282c34; 
   text-align: center;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 a:link, a:visited{
   text-decoration: none; 
@@ -68,12 +70,13 @@ form{
   text-align: center;
   overflow: hidden;
 }
+#Homepage_container h2{
+  margin-top: 10vh;
+}
 #Instruction_segment{
   width: 100vw;
   margin-left: 0vw;
   text-align: center;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
 }
 .Instruction_entry{
   display: inline-block;
@@ -138,4 +141,15 @@ form{
   margin-left: 3vw;
   padding-left: 2.5%;
   padding-right: 2.5%;
+}
+input{
+  /*fix the ofset this causes*/
+  background-color: #282c34;
+  border: none;
+  color: white;
+  padding: .5vw 25vh;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1vh;
 }
