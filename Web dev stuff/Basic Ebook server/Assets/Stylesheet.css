@@ -94,7 +94,24 @@ form{
   max-width: 33vw;
   max-height: 33vh;
 }
-
+#Format_support_table{
+  border-collapse: collapse;
+  width: 50vw;
+  margin-left: 25vw;
+  color: white;
+}
+#Format_support_table td, #Format_support_table th{
+  border: 2px solid;
+  border-color: aliceblue;
+  padding: .5vh;
+}
+#Format_support_table th{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  text-align: left;
+  background-color: darkgray;
+  color: white;
+}
 /*Library styles*/
 .collumn{
   Float:left;
