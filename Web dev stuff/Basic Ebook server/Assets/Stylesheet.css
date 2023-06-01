@@ -80,6 +80,7 @@ form{
 }
 .Instruction_entry{
   display: inline-block;
+  margin-top: -5vh;
   width: 25%;
   padding: 2.5vw;
 }
@@ -153,9 +154,9 @@ form{
   margin-top: 1%;
 }
 .Management_row form{
-  min-width: 20vw;
-  max-width: 25vw;
-  margin-left: 3vw;
+  min-width: 15vw;
+  max-width: 22.5vw;
+  margin-left: 2.5vw;
   padding-left: 2.5%;
   padding-right: 2.5%;
 }
@@ -164,7 +165,7 @@ input{
   background-color: #282c34;
   border: none;
   color: white;
-  padding: .5vw 25vh;
+  padding: .5vw 2.5vh;
   text-align: center;
   display: inline-block;
   font-size: 16px;
