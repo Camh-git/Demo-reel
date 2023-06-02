@@ -130,10 +130,11 @@ form{
   border: 5px solid aliceblue; 
   background-color: darkgrey;
   border-radius: 15% 0% 0% 15% ;
+  height:7vh;
   width:3.5vw;
-  height: 5.9vh;
   float: left;
   overflow: hidden;
+  
 }
 .collumn li .Details{
   border: 5px solid aliceblue;
@@ -141,8 +142,9 @@ form{
   background-color: darkgrey;
   text-align: left;
   overflow: hidden;
-  padding: 1vh;
+  height:5vh;
   width: 16.4vw;
+  padding: 1vh;
   float: left;
   margin-left: -5px;
 }
