@@ -79,7 +79,7 @@
 					break;
 
 			}
-			$Output .= '<li>'.$Header_line.'<br><p1 class="LS_Type_ind">'.$type.'</p1>&emsp;<a href ="'.$book.'" download="'.$Name.'">Download</a></li>';
+			$Output .= '<li><div class = "Thumb"></div><div class = "Details">'.$Header_line.'<br><p1 class="LS_Type_ind">'.$type.'</p1>&emsp;<a href ="'.$book.'" download="'.$Name.'">Download</a></div></li>';
 			//$Output .= '<li><a class="List_title" href = "'.$book.'"target="_blank">'.$Name.'</a><br><p1 class="List_Type_indicator">'.$type.'</p1><a href = "'.$book.'"></a></li>';
 		}
 		$Output .="</ul></div>";
@@ -176,7 +176,7 @@
       let Parent = Missing_title_spaces.parentElement;
       Parent.removeChild(Missing_title_spaces);
     }
-  
+
 	</script>
 
 	<div id = "footer_container"></div>
