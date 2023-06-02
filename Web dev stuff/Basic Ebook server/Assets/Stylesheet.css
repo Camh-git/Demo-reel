@@ -121,15 +121,30 @@ form{
   padding-bottom: 1vh;
   margin-bottom: 5vh;
 }
-.collumn li{
-  border: 5px solid aliceblue;
-  border-radius: 15% ;
-  padding: 1vh;
-  margin: 1vh .5vw 1vh .25vw;
-  min-height: 5vh;
-  max-width: 20vw;
-  overflow: hidden;
+.collumn li {
+  height: 7.5vh;
+  margin: 1.5vh 0 1.5vh 0;
+  display: inline-block;
+}
+.collumn li .Thumb{
+  border: 5px solid aliceblue; 
   background-color: darkgrey;
+  border-radius: 15% 0% 0% 15% ;
+  width:3.5vw;
+  height: 5.9vh;
+  float: left;
+  overflow: hidden;
+}
+.collumn li .Details{
+  border: 5px solid aliceblue;
+  border-radius: 0% 15% 15% 0% ;
+  background-color: darkgrey;
+  text-align: left;
+  overflow: hidden;
+  padding: 1vh;
+  width: 16.4vw;
+  float: left;
+  margin-left: -5px;
 }
 .collumn li p, .collumn li a{
   color: black;
