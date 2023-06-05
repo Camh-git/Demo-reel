@@ -14,7 +14,7 @@ def bogosort(data,runs) -> list:
     return data, runs
 
 def niavesort(data):
-    "go through swaping numbers from high to low, repeat until done"
+    """go through swaping numbers from high to low, repeat until done"""
     while not is_sorted(data):       
         for i in range(len(data)-1):
             if (data[i] > data[i+1]):
