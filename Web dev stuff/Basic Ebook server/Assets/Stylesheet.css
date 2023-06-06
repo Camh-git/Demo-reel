@@ -180,7 +180,7 @@ form{
   padding-left: 2.5%;
   padding-right: 2.5%;
 }
-input{
+input, select{
   /*fix the ofset this causes*/
   background-color: #282c34;
   border: none;
