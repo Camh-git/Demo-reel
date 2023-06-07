@@ -69,19 +69,27 @@
 			
 			#Setting the header line to the appropriate reader setup based on filetype
 			$Header_line = "";
+			$Thumbnail = "";
+			$Thumbnail_alt = "";
 			switch(pathinfo($book,PATHINFO_EXTENSION))
 			{
 				case "pdf":
 					$Header_line = '<a class="List_title" href = "'.$book.'"target="_blank">'.$Name.'</a>';
 					break;
+				case "txt":
+					$Thumbnail = '/Images/Icons/Text-txt.png';
+					$Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+					break;
 				default:
 					$Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+					$Thumbnail_alt = 'Generic' . pathinfo($book,PATHINFO_EXTENSION) . 'thumbnail';
 					break;
 
 			}
+			#Set up the thumbnail
 			$Output .= 
 			'<li>
-				<div class = "Thumb"><img src = ""></div>
+				<div class = "Thumb"><img src = "'.$Thumbnail.'"></div>
 				<div class = "Details">'.$Header_line.'<br><p1 class="LS_Type_ind">'.$type.'</p1>&emsp;<a href ="'.$book.'" download="'.$Name.'">Download</a></div>
 			</li>';
 			//$Output .= '<li><a class="List_title" href = "'.$book.'"target="_blank">'.$Name.'</a><br><p1 class="List_Type_indicator">'.$type.'</p1><a href = "'.$book.'"></a></li>';
