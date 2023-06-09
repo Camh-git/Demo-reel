@@ -4,10 +4,14 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	
 		<link rel="stylesheet" href="Assets/StyleSheet.css"/>		
 		<title>EBook Library</title>    
-	</head>
-	<div id = "header_container"> </div>
+</head>
+<div id = "header_container"> </div>
 
-	<body>
+<body>
+  <!--TODO: 
+    Implement thumbnail extractions and readers for each file format
+    un-comment the failed to get thumbnail console logs once implemented
+  -->
     <div id = "Landing_segment">
 		  <h1>Dynamic library</h1>
 		  <p>
@@ -23,7 +27,6 @@
 		  <div id = "Col_3" class = "collumn"></div>
       <div id = "Col_4" class = "collumn"></div>
     </div>
-
 <?php 
   #Fetch every folder in books   
   $path = "\Books\\".DIRECTORY_SEPARATOR."*";
@@ -51,7 +54,7 @@
 				$Name[0] = strtoupper($Name[0]);
 			}
 			catch(Exception $e) {
-				echo "<script>console.log('failed to capitalise a title with error:".$e->getMessage()."')</script>";
+				echo "<script>console.log('Failed to capitalise a title with error:".$e->getMessage()."')</script>";
 			  }
 			  #Warn user if the title doesn't have many spaces
 			if(substr_count($Name,' ') < strlen($Name)/9)
@@ -67,19 +70,61 @@
 			$type_raw = explode('.',$book); 
 			$type = strtolower(end($type_raw));	
 			
-			#Setting the header line to the appropriate reader setup based on filetype
-			$Header_line = "";
-			$Thumbnail = "";
+			#Getting the thumbnail and setting the header line to show the appropriate reader and placeholder thumbnail based on filetype
+      #Note: most of these have the same header line as the default, this will change as readers are introduced
+      #Note: The thumbnail is handled here so that if a unique one cannot be generated a file type appropriate placeholder can be assigned.
+      $Thumbnail = getThumb($book);
 			$Thumbnail_alt = "";
+			$Header_line = "";
 			switch(pathinfo($book,PATHINFO_EXTENSION))
 			{
 				case "pdf":
 					$Header_line = '<a class="List_title" href = "'.$book.'"target="_blank">'.$Name.'</a>';
+					if ($Thumbnail == "Placeholder"){
+						$Thumbnail = 'Assets/Images/Icons/Icon_pdf_file.png';
+            $Thumbnail_alt = "Generic PDF thumbnail";
+					}
 					break;
 				case "txt":
-					$Thumbnail = '/Images/Icons/Text-txt.png';
 					$Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+					if ($Thumbnail == "Placeholder"){
+            $Thumbnail = 'Assets/Images/Icons/Text-txt.png';
+            $Thumbnail_alt = "Generic TXT thumbnail";
+          }
 					break;
+				
+				case "epub":
+          $Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+					if ($Thumbnail == "Placeholder"){
+					  $Thumbnail = 'Assets/Images/Icons/Epub_logo.png';
+            $Thumbnail_alt = "Generic EPUB thumbnail";
+          }
+					break;
+
+				case "mobi":
+          $Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+					if ($Thumbnail == "Placeholder"){
+					  $Thumbnail = 'Assets/Images/Icons/Icon_mobi_file.png';
+            $Thumbnail_alt = "Generic MOBI thumbnail";
+          }
+					break;
+
+				case "azw3":
+          $Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+          if ($Thumbnail == "Placeholder"){
+					  $Thumbnail = 'Assets/Images/Icons/logo-azw3-2101145464.png';
+            $Thumbnail_alt = "Generic AZW3 thumbnail";
+          }
+					break;
+
+				case "html":
+          $Header_line = '<p1 class=List_title>'.$Name.'</p1>';
+          if ($Thumbnail == "Placeholder"){
+					  $Thumbnail = 'Assets/Images/Icons/HTML5_logo_black.png';
+            $Thumbnail_alt = "Generic HTML thumbnail";
+          }
+					break;
+
 				default:
 					$Header_line = '<p1 class=List_title>'.$Name.'</p1>';
 					$Thumbnail_alt = 'Generic' . pathinfo($book,PATHINFO_EXTENSION) . 'thumbnail';
@@ -89,7 +134,7 @@
 			#Set up the thumbnail
 			$Output .= 
 			'<li>
-				<div class = "Thumb"><img src = "'.$Thumbnail.'"></div>
+				<div class = "Thumb"><img src = "'.$Thumbnail.'" alt ="'.$Thumbnail_alt.'"></div>
 				<div class = "Details">'.$Header_line.'<br><p1 class="LS_Type_ind">'.$type.'</p1>&emsp;<a href ="'.$book.'" download="'.$Name.'">Download</a></div>
 			</li>';
 			//$Output .= '<li><a class="List_title" href = "'.$book.'"target="_blank">'.$Name.'</a><br><p1 class="List_Type_indicator">'.$type.'</p1><a href = "'.$book.'"></a></li>';
@@ -106,6 +151,22 @@
 		echo("<p5 id = 'Title_spaces_missing'></p5>");
 		echo("<script>console.log('The following titles might be missing some spaces: " .$Missing_spaces."')</script>");
 	}
+
+  /**
+   * Take the path to a book, checks the chache and creates a thumbnail if needed, stores them in the thumbnail cache, returns the path to the file.
+   */
+  function getThumb($Target){
+    $Thumbnail = "Assets/Images/Thumbnail_cache/";
+    try{
+      throw new Exception("Not implemented");
+    } 
+    catch(Exception $e){
+      //echo "<script>console.log('Failed to get thumbnail for: ".$Target." with error:".$e->getMessage()."')</script>";
+      $Thumbnail = "Placeholder";
+    }
+    return($Thumbnail);
+  }
+  
 
 	?>
 
