@@ -137,6 +137,11 @@ form{
   overflow: hidden;
   
 }
+.collumn li .Thumb img{
+  z-index: 0;
+  width: 90%;
+  padding: 5%;
+}
 .collumn li .Details{
   border: 5px solid aliceblue;
   border-top-right-radius: 5%15%;
@@ -150,7 +155,6 @@ form{
   float: left;
   margin-left: -5px;
 }
-
 .collumn li p, .collumn li a{
   color: white;
   font-weight: bolder;
@@ -176,7 +180,7 @@ form{
 .Management_row form{
   min-width: 15vw;
   max-width: 22.5vw;
-  margin-left: 2.5vw;
+  margin: 0 1.25vw 0 1.25vw;
   padding-left: 2.5%;
   padding-right: 2.5%;
 }
