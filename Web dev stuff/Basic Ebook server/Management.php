@@ -44,6 +44,7 @@
 ?>
 
 <body>
+<div id = "Management_pannel">
   <h1>Management</h1>
   <h1>This page is currently under construction</h1>
   <!--Note on input names: Each input name has a prefix related to it's form eg: inputs for delete single have the prefix DS_-->
@@ -279,6 +280,7 @@
     </form>
 
   </div>
+</div>
 
 </body>
 
@@ -288,6 +290,23 @@
 <script>
   //This script collects all the book info php left behind and creates an object from it.
 
+    //get the folders and their associated books
+    let Folders = document.getElementsByClassName("Book_folder");
+	  console.log("Total number of folders found: " + Folders.length);
+    //console.log(Folders);
+    
+    
+
+    //Removing the lists left by php
+    const controls = document.getElementById("Management_pannel");
+    document.body.appendChild(controls)
+    let To_remove =  document.getElementsByClassName("Book_folder");
+		while(To_remove.length >0)
+		{
+			To_remove[0].parentNode.removeChild(To_remove[0]);
+		}
+
+    
 
 </script>
 
