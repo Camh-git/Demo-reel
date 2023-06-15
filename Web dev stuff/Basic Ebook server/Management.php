@@ -18,7 +18,7 @@
       $Output .= "<div class ='Book_folder'>";
 		  #Get and print the folder name
 		  $Title = substr($dir,6);
-		  $Output .='<h2>'.$Title.':</h2>';
+		  $Output .='<h5>'.$Title.':</h5>';
 		  $content = glob("".$dir."/{*.*}",GLOB_BRACE);
 
       #List the books
@@ -169,8 +169,8 @@
         <option Value = "None">No selection</option>
       </select>
       <br>
-      <label for = "MV_target_select">Select neew folder</label>
-      <select name = "MV_target_select">
+      <label for = "MV_target_folder_select">Select new folder</label>
+      <select name = "MV_target_folder_select">
         <option Value = "None">No selection</option>
       </select>
       <br>
@@ -291,11 +291,44 @@
   //This script collects all the book info php left behind and creates an object from it.
 
     //get the folders and their associated books
-    let Folders = document.getElementsByClassName("Book_folder");
+    let Folders = document.getElementsByClassName("Book_folder"); //TODO: now that each folder is an h5 see if can grab by that instead
 	  console.log("Total number of folders found: " + Folders.length);
-    //console.log(Folders);
+    console.log(Folders);
+
+    //spilt up the selects into folders and books
+    let select_list = document.querySelectorAll('select');
+    let folder_selects = [];
+    let book_selects = [];
+    let misc_folders = [];
+    for(let i = 0; i < select_list.length; i++)
+    {
+      if(select_list[i].getAttribute("name").includes("folder")){
+        folder_selects.push(select_list[i]);
+      } else if (select_list[i].getAttribute("name").includes("book")){
+        book_selects.push(select_list[i]);
+      } else{
+        misc_folders.push(select_list[i]);
+      }
+    }
+    //console.log("folders: " + folder_selects.length + ", books: " + book_selects.length + ", misc: " + misc_folders.length);
     
-    
+    //populate the folders selects with all the folders
+
+    let select_contents = "";
+    let folder_titles = document.querySelectorAll('h5');
+    for(let i = 0; i < folder_titles.length; i++){
+      select_contents +='<option value = ' + folder_titles[i].innerHTML.replace(":","")+ '>' + folder_titles[i].innerHTML.replace(":","") + '</option>';
+    }
+    //console.log(select_contents);
+    for(let i = 0; i < folder_selects.length; i++){
+      folder_selects[i].innerHTML += select_contents;
+    }
+
+
+    //Add event listeners to each of the books folders, to detect when their 
+    //folder select changes and populate accordingly
+
+    //Case by case handling for the misc selects
 
     //Removing the lists left by php
     const controls = document.getElementById("Management_pannel");
@@ -306,8 +339,9 @@
 			To_remove[0].parentNode.removeChild(To_remove[0]);
 		}
 
-    
-
+</script>
+<script>
+  console.log("folder stuff: " + Folders);
 </script>
 
 </html>
