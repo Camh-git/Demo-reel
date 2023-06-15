@@ -189,9 +189,10 @@ input, select{
   background-color: #282c34;
   border: none;
   color: white;
-  padding: .5vw 2.5vh;
+  padding: .5vw 1.5vh;
   text-align: center;
   display: inline-block;
   font-size: 16px;
   margin-top: 1vh;
+  max-width: 20vw;
 }
