@@ -12,7 +12,7 @@
 	  $Folders = glob($path,GLOB_ONLYDIR);
 	
 	  $Collumn_num = 1;
-    $Output = "";
+    $Output = '<div id = "Book_collection">';
     #Show the contents of every book folder
   	foreach ($Folders as $dir){
       $Output .= "<div class ='Book_folder'>";
@@ -34,11 +34,12 @@
 			  catch(Exception $e) {
 				  echo "<script>console.log('Failed to capitalise a title with error:".$e->getMessage()."')</script>";
 			  }
-        $Output .= '<li><div class = "Details">'.$Name.'</div></li>';
+        $Output .= '<li>'.$Name.'</li>';
       }
+      $Output .='</ul></div>';
 
     }
-    $Output .="</ul></div>";
+    $Output .="</div>";
 		#This output is echoed onto the screen so it can be manipulated by JS
 		echo($Output);
 ?>
@@ -290,10 +291,13 @@
 <script>
   //This script collects all the book info php left behind and creates an object from it.
 
-    //get the folders and their associated books
-    let Folders = document.getElementsByClassName("Book_folder"); //TODO: now that each folder is an h5 see if can grab by that instead
-	  console.log("Total number of folders found: " + Folders.length);
-    console.log(Folders);
+    //Get and hide the folders and their associated books, move the pannel to the correct position
+    let Folders = document.getElementById("Book_collection");
+    Folders.style.display = "none";
+    const controls = document.getElementById("Management_pannel");
+    document.body.appendChild(controls)
+    const footer = document.getElementById("footer_container");
+    document.body.appendChild(footer)
 
     //spilt up the selects into folders and books
     let select_list = document.querySelectorAll('select');
@@ -310,38 +314,36 @@
         misc_folders.push(select_list[i]);
       }
     }
-    //console.log("folders: " + folder_selects.length + ", books: " + book_selects.length + ", misc: " + misc_folders.length);
     
     //populate the folders selects with all the folders
-
     let select_contents = "";
     let folder_titles = document.querySelectorAll('h5');
     for(let i = 0; i < folder_titles.length; i++){
       select_contents +='<option value = ' + folder_titles[i].innerHTML.replace(":","")+ '>' + folder_titles[i].innerHTML.replace(":","") + '</option>';
     }
-    //console.log(select_contents);
     for(let i = 0; i < folder_selects.length; i++){
       folder_selects[i].innerHTML += select_contents;
     }
 
 
-    //Add event listeners to each of the books folders, to detect when their 
-    //folder select changes and populate accordingly
+    //Add event listeners to each of the folder selects, to detect changes
+    //and populate their book folder acordingly
+    for(let i = 0; i < folder_selects.length; i++){
+      folder_selects[i].addEventListener('change',function(){
+        //Find the right folder and add it's books
+        let Folders = document.querySelectorAll('h5');
+        for(let x = 0; x < Folders.length; x++){
+          if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
+            console.log("found match");
+          }       
+        }
+        book_selects[i].innerHTML +='';
+      });
+    }
 
     //Case by case handling for the misc selects
+    
 
-    //Removing the lists left by php
-    const controls = document.getElementById("Management_pannel");
-    document.body.appendChild(controls)
-    let To_remove =  document.getElementsByClassName("Book_folder");
-		while(To_remove.length >0)
-		{
-			To_remove[0].parentNode.removeChild(To_remove[0]);
-		}
-
-</script>
-<script>
-  console.log("folder stuff: " + Folders);
 </script>
 
 </html>
