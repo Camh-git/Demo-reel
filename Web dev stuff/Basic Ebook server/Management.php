@@ -170,8 +170,9 @@
         <option Value = "None">No selection</option>
       </select>
       <br>
-      <label for = "MV_target_folder_select">Select new folder</label>
-      <select name = "MV_target_folder_select">
+      <!--NOTE: This naming inconsistency is intentional, it prevents the book select from changing when a new target is chosen -->
+      <label for = "mv_target_folder_select">Select new folder</label>
+      <select name = "mv_target_folder_select">
         <option Value = "None">No selection</option>
       </select>
       <br>
@@ -186,12 +187,12 @@
     <!--Manage thumbnails TODO:write this-->
     <form method = "POST" enctype="multipart/form-data" action = "Assets/Scripts/Set_thumbnail.php">
       <h3>Re-assign Thumbnails</h3>
-      <label for = "Thumb_folder_select">Folder</label>
-      <select name = "Thumb_folder_select">
+      <label for = "TH_folder_select">Folder</label>
+      <select name = "TH_folder_select">
         <option Value = "None">No selection</option>
       </select>
-      <label for = "Thumb_book_select">Book</label>
-      <select name = "MV_book_select">
+      <label for = "TH_book_select">Book</label>
+      <select name = "TH_book_select">
         <option Value = "None">No selection</option>
       </select>
       <br>
@@ -330,14 +331,36 @@
     //and populate their book folder acordingly
     for(let i = 0; i < folder_selects.length; i++){
       folder_selects[i].addEventListener('change',function(){
-        //Find the right folder and add it's books
+        //Check that a matching book select exists 
+        let book_select_name = this.getAttribute("name").substring(0,2);
+        book_select_name += "_book_select";
+        let Target_book_select = "";
+        try{
+          Target_book_select = document.getElementsByName(book_select_name); 
+        }
+        catch (err){
+          //There is no matching book select, so we can remove this listener
+          console.log("Entered a folder select without a matching book select, removing listener");
+          this.removeEventListener('change',function(){return});
+          return;
+        }
+
+
+        //A matching book select exists, so now we find the right folder
+        let book_select_contents = "";
         let Folders = document.querySelectorAll('h5');
         for(let x = 0; x < Folders.length; x++){
           if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
-            console.log("found match");
+            //Once found, go to it's sibling list and collect the books
+            let book_list = Folders[x].nextSibling.childNodes;
+            for (y = 0; y < book_list.length; y++){
+              book_select_contents +='<option value = ' + book_list[y].innerHTML.replace(":","")+ '>' + book_list[y].innerHTML.replace(":","") + '</option>';
+              //console.log(book_list[y].innerHTML);
+            }
           }       
         }
-        book_selects[i].innerHTML +='';
+        //Add the books to the matching book select
+        Target_book_select[0].innerHTML = book_select_contents;
       });
     }
 
