@@ -303,7 +303,7 @@
     //spilt up the selects into folders and books
     let select_list = document.querySelectorAll('select');
     let folder_selects = [];
-    let book_selects = [];
+    let book_selects = []; //TODO: check if this is redundant
     let misc_folders = [];
     for(let i = 0; i < select_list.length; i++)
     {
@@ -326,42 +326,33 @@
       folder_selects[i].innerHTML += select_contents;
     }
 
-
-    //Add event listeners to each of the folder selects, to detect changes
-    //and populate their book folder acordingly
+    //Add event listeners to each of the folder selects, to detect changes and populate their book folder acordingly
     for(let i = 0; i < folder_selects.length; i++){
-      folder_selects[i].addEventListener('change',function(){
-        //Check that a matching book select exists 
-        let book_select_name = this.getAttribute("name").substring(0,2);
-        book_select_name += "_book_select";
-        let Target_book_select = "";
-        try{
+      //Check if the folder select has a matching book folder
+      let target_book_select_name = folder_selects[i].getAttribute("name").substring(0,2) + "_book_select";
+      let target_book_select =  document.getElementsByName(target_book_select_name); 
+      if(target_book_select.length != 0){
+        folder_selects[i].addEventListener('change',function(){
+          //Find the right folder
+          let book_select_contents = "";
+          let Folders = document.querySelectorAll('h5');
+          for(let x = 0; x < Folders.length; x++){
+            if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
+              //Once found, go to it's sibling list and collect the books
+              let book_list = Folders[x].nextSibling.childNodes;
+              for (y = 0; y < book_list.length; y++){
+                book_select_contents +='<option value = ' + book_list[y].innerHTML.replace(":","")+ '>' + book_list[y].innerHTML.replace(":","") + '</option>';
+                //console.log(book_list[y].innerHTML);
+              }
+           }       
+          }
+          //Add the books to the matching book select
+          let book_select_name = this.getAttribute("name").substring(0,2) + "_book_select";
+          let Target_book_select = "";
           Target_book_select = document.getElementsByName(book_select_name); 
-        }
-        catch (err){
-          //There is no matching book select, so we can remove this listener
-          console.log("Entered a folder select without a matching book select, removing listener");
-          this.removeEventListener('change',function(){return});
-          return;
-        }
-
-
-        //A matching book select exists, so now we find the right folder
-        let book_select_contents = "";
-        let Folders = document.querySelectorAll('h5');
-        for(let x = 0; x < Folders.length; x++){
-          if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
-            //Once found, go to it's sibling list and collect the books
-            let book_list = Folders[x].nextSibling.childNodes;
-            for (y = 0; y < book_list.length; y++){
-              book_select_contents +='<option value = ' + book_list[y].innerHTML.replace(":","")+ '>' + book_list[y].innerHTML.replace(":","") + '</option>';
-              //console.log(book_list[y].innerHTML);
-            }
-          }       
-        }
-        //Add the books to the matching book select
-        Target_book_select[0].innerHTML = book_select_contents;
-      });
+          Target_book_select[0].innerHTML = book_select_contents;
+        });
+      }
     }
 
     //Case by case handling for the misc selects
