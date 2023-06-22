@@ -17,3 +17,5 @@ The quiz will warn the user if they repeat an answer.
 The quiz will display a results screen on completion, timer expiration, or after the user presses exit.
 The results screen shows the states the user correctly guessed, incorrectly guessed and missed.
 The results scrren will also display the user's score and how many states they guessed, with alternate messages for all states guessed or a perfect score.
+
+This programm is currently being updated and is subject to change
