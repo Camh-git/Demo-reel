@@ -1,0 +1,26 @@
+Image resources used in this project will generally come from wikimedia commons, Icons will generaly be from google material.io
+Image credits:
+    App wide
+    Favicon used Book-icon2.png, modified by: https://favicon.io/
+    Book-icon2.png: https://upload.wikimedia.org/wikipedia/commons/7/73/Book-icon2.png
+
+
+    Homepage
+    Ereader.jpg: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ereader.jpg/640px-Ereader.jpg
+    Small_bookshelf.jpg: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Library_bookshelf.jpg/640px-Library_bookshelf.jpg
+    Library: https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bookshelf_of_Sanko_Library_2.jpg/640px-Bookshelf_of_Sanko_Library_2.jpg
+    Library_bookshelf:https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bookshelf_Prunksaal_OeNB_Vienna_AT_matl00786ch.jpg/640px-Bookshelf_Prunksaal_OeNB_Vienna_AT_matl00786ch.jpg
+
+    Library
+    PDF icon:https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Icon_pdf_file.svg/640px-Icon_pdf_file.svg.png
+    EPUB icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Epub_logo.svg/640px-Epub_logo.svg.png
+    TXT icon: https://en.wikipedia.org/wiki/Text_file#/media/File:Text-txt.svg
+    Mobi icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Icon_mobi_file.svg/640px-Icon_mobi_file.svg.png
+    AZW3 icon: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmarcpernot.net%2Fimages%2Flogo-azw3.jpg&f=1&nofb=1&ipt=d46454fcdd7ac7ab9ddf79afe66f8ce18bc1164bff0703e538a536f93b83584e&ipo=images
+    HTML5 logo: https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/HTML5_logo_black.svg/640px-HTML5_logo_black.svg.png
+
+Icon credits:
+    Homepage
+    menu_book_FILL0: https://fonts.google.com/icons?icon.query=book&selected=Material+Symbols+Outlined:menu_book:FILL@0;wght@400;GRAD@0;opsz@48&icon.platform=web
+    settings_FILL0: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:settings:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=settings
+    library_books_FILL0: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:library_books:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=library
