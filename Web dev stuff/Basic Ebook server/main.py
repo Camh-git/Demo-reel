@@ -1,8 +1,17 @@
 from flask import Flask, request, jsonify
+from flask_restful import Resource, APi
+from flask_talisman import Talisman
+import os
 
 app = Flask(__name__)
+# Create a content security policy and apply it
+csp = {
+    'default-src': '\'self\''
+}
+talisman = Talisman(app, content_security_policy=csp)
 
 @app.route("/")
+@app.route("/Check")
 def welcome():
     return "Hello from basic ebook server"
 
@@ -61,11 +70,10 @@ def Toggle_dls(option, code):
 def Toggle_readers(option, code):
     return 501
 
-#http://127.0.0.1:5000/lists?address=1.1.1.1&list=whitelist&option=add
-@app.route("/lists/<address>&&<list>&&<option>", methods = ["PUT"])
-def Manage_ip_list(address, list, option):
-
-    #Get data from the right list
+#http://127.0.0.1:5000/lists/1.1.1.1/whitelist/add
+@app.route("/lists/<address>/<list>/<option>")
+def Manage_ip_list(address,list,option):
+     #Get data from the right list
     data = ""
     if list.upper() == "WHITELIST":
         with open("Assets/Whitelist.txt","r") as file:
@@ -78,10 +86,10 @@ def Manage_ip_list(address, list, option):
         return "Bad list option: " + list  
      
     #If adding and adress check it exists then add if not, or remove if selected
-    if(option.upper == "ADD"):
+    if(option.upper() == "ADD"):
         if address not in data:
             data += ("\n" + str(address))
-    elif(option.upper == "REMOVE"):
+    elif(option.upper() == "REMOVE"):
         data = data.replace(address,"")
     else:
         return "Bad whitelist action: " + option
@@ -96,7 +104,8 @@ def Manage_ip_list(address, list, option):
     else:
         return "Bad list option: " + list  
 
-    return 200
+    return "done" #TO DO: replace with 200
+    
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
