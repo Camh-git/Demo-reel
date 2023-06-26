@@ -3,25 +3,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	
 		<link rel="stylesheet" href="Assets/StyleSheet.css"/>		
-		<title>EBook server</title>    
 	</head>
 	<div id = "header_container"> </div>
 	
 	<body>
 	  <h1>Simple Ebook server</h1>
 		<div id="Homepage_container">
+      
 		  <br>
       <h1>Welcome to Simple Ebook server</h1>
 		  <div id = "Carousel_container">
-        <img src = "Assets/Images/Ereader.jpg" alt="An e-reader"/>
-        <img src = "Assets/Images/Library.jpg" alt="A row of library shelfs"/>
-        <img src = "Assets/Images/Library_bookshelf.jpg" 
-          alt = "A bookshelf with a library ladder in front"
-        />
-        <img src = "Assets/Images/Small_bookshelf.jpg" 
-          alt = "A trio of bookshelfs in a contemporary library"
-        />
-
+          <img id = "Hero_img_1" src = "Assets/Images/Ereader.jpg" alt="An e-reader"/>
+          <img id = "Hero_img_2" src = "Assets/Images/Library.jpg" alt="A row of library shelfs"/>
 		  </div> 
       <h3>An accessible place to store all your Ebooks on the network</h3>
 
@@ -75,8 +68,8 @@
         http://192.168.0.110/Simple_Ebook_Server/Home.html
         <br>
         The books folder is located at: web root/Simple_Ebook_server/Books
-	<br>
-        Note: The service's css is currenlty only set up for 1080p monitors,
+        <br>
+        Note: The service's css is currently only set up for 1080p monitors,
         other sizes may experience issues
       </h2>
 
@@ -123,4 +116,26 @@
 
 	<div id = "footer_container"></div>
 	<script src = "Assets/Scripts/Append_H&F.js"> </script>
+  <script>
+    //swap out the image every 5seconds
+    let pos = 0;
+
+    const interval = setInterval(function() {
+      const files = ["Ereader.jpg","Library.jpg","Library_bookshelf.jpg","Small_bookshelf.jpg"]
+      const alts = ["An e-reader","A row of library shelfs","A bookshelf with a library ladder in front", "A trio of bookshelfs in a contemporary library"]
+      let h1 = document.getElementById("Hero_img_1")
+      let h2 = document.getElementById("Hero_img_2")
+      if(pos+1 > files.length-1){
+        pos = 0
+      }
+      h1.src = h2.src
+      h2.src = ("Assets/Images/" + files[pos])
+      pos++
+
+    }, 5000);
+
+
+    //Assets/Images/Library_bookshelf.jpg
+
+  </script>
 </html>
