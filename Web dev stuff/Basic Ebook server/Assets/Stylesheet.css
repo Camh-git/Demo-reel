@@ -92,8 +92,20 @@ form{
   overflow: visible;
 }
 #Carousel_container img{
-  max-width: 33vw;
-  max-height: 33vh;
+  border: 2px solid aliceblue;
+  border-radius: 25%;
+  overflow: hidden;
+  width: 20vw;
+  height: 25vh;
+  margin: 1vh 1vw 1vh 1vw;
+  animation: 10s Fade infinite ease-out;
+}
+@keyframes Fade {
+  0%{opacity: .5;}
+  20%{opacity: 1;}
+  89%{opacity: 1;}
+  100%{opacity: .5;}
+
 }
 #Format_support_table{
   border-collapse: collapse;
