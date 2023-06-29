@@ -27,34 +27,57 @@ def Upload_book(book_name, folder = "Misc"):
 def Remove_book(book_name):
     return 501
 
-#TODO: figure out why it doesn't like the folder param, add a try catch that throws 404 if no file
-@app.route("/rename_book/<string:book_name>/<string:new_name>")
-@app.route("/rename_book/<string:book_name>/<string:new_name>/<string:folder>", methods = ["PUT"])
-def Rename_book( book_name, new_name, folder = 'Misc'):
+@app.route("/rename_book/<string:folder>/<string:book_name>/<string:new_name>")
+def Rename_book(folder, book_name, new_name, ):
     if request.method == "POST":
         return 405
     old_name = 'Books/' + folder + '/' + book_name
     new_name = 'Books/' + folder + '/' + new_name
-    os.rename(old_name, new_name)
+    try:
+        os.rename(old_name, new_name)
+        resp = jsonify(success = True, status_code = 200)
+    except Exception:
+        resp = jsonify(success = False, status_code = 404)
+    
     return "done"
 
 #Folder methods
 @app.route("/post_folder/<string:folder_name>/<content>", methods = ["POST"])
 def Upload_folder(folder_name, contents):
+
     return 501
 
-@app.route("/delete_folder/<string:folder_name>/<bool:delete_content>", methods = ["DELETE"])
-def Delete_folder():
+@app.route("/delete_folder/<string:folder_name>/<string:delete_content>", methods = ["DELETE"])
+def Delete_folder(folder_name,delete_contents):
     return 501
 
-@app.route("/rename_folder/<string:folder_name>/<string:new_name>", methods = ["PUT"])
-def Rename_folder(folder_name, new_name):
-    return 501
+#TODO: figure out why specifying a put method on the renames causes errors
+@app.route("/rename_folder/<string:folder_name>/<string:new_name>")
+def Rename_folder(folder_name, new_name): 
+    
+    old_name = 'Books/' + folder_name
+    new_name = 'Books/' + new_name
+    try:
+        os.rename(old_name, new_name)
+        resp = jsonify(success = True, status_code = 200)
+    except Exception:
+        resp = jsonify(success = False, status_code = 404)
+        
+    return resp
 
 #Library management functions
-@app.route("/create_folder/<string:folder_name>", methods = ["POST"])
+@app.route("/create_folder/<string:folder_name>")
 def Create_folder(folder_name):
-    return 501
+    if not os.path.exists("Books/" + folder_name):
+        try:
+            os.makedirs("Books/" + folder_name)
+            resp = jsonify(success = True, status_code = 201)
+        except Exception:
+            resp = jsonify(success = False, status_code = 500, body = "Failed to create dir after determining that the name was available")
+    else:
+        resp = jsonify(success = False, status_code = 500, body = "Failed to create dir, name already in use")
+
+    return resp
 
 @app.route("/move_book_to_folder/<string:old_folder_name>/<string:new_folder_name>/<string:book_name>", methods = ["PUT"])
 def Move_book_to_folder(old_folder_name, new_folder_name, book_name):
