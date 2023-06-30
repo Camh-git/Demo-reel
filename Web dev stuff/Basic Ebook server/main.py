@@ -1,3 +1,4 @@
+import shutil
 from flask import Flask, request, jsonify
 from flask_restful import Resource
 from flask_talisman import Talisman
@@ -11,6 +12,8 @@ csp = {
 talisman = Talisman(app, content_security_policy=csp)
 
 #TODO: add some string input cleaning
+#TODO: add logging
+#TODO: add security
 
 @app.route("/")
 @app.route("/Check")
@@ -23,23 +26,30 @@ def welcome():
 def Upload_book(book_name, folder = "Misc"):
     return 501
 
-@app.route("/delete_book/<string:book_name>", methods = ["DELETE"])
-def Remove_book(book_name):
-    return 501
+@app.route("/delete_book/<string:folder>/<string:book_name>")
+def Delete_book(folder, book_name):
+    target = 'Books/' + folder + '/' + book_name
+    try:
+        os.remove(target)
+        resp = jsonify(success = True, status = 200)
+    except Exception:
+        resp = jsonify(success = False, status = 404, path = target)
+
+    return resp
 
 @app.route("/rename_book/<string:folder>/<string:book_name>/<string:new_name>")
-def Rename_book(folder, book_name, new_name, ):
+def Rename_book(folder, book_name, new_name):
     if request.method == "POST":
         return 405
     old_name = 'Books/' + folder + '/' + book_name
     new_name = 'Books/' + folder + '/' + new_name
     try:
         os.rename(old_name, new_name)
-        resp = jsonify(success = True, status_code = 200)
+        resp = jsonify(success = True, status = 200, path = new_name)
     except Exception:
-        resp = jsonify(success = False, status_code = 404)
+        resp = jsonify(success = False, status = 404, path = old_name)
     
-    return "done"
+    return resp
 
 #Folder methods
 @app.route("/post_folder/<string:folder_name>/<content>", methods = ["POST"])
@@ -47,9 +57,31 @@ def Upload_folder(folder_name, contents):
 
     return 501
 
-@app.route("/delete_folder/<string:folder_name>/<string:delete_content>", methods = ["DELETE"])
-def Delete_folder(folder_name,delete_contents):
-    return 501
+#TODO:finish this, get correct code for failing to move files
+@app.route("/delete_folder/<string:folder_name>/<string:delete_content>")
+def Delete_folder(folder_name,delete_content):
+    if delete_content == "Yes":
+        try:
+            shutil.rmtree(folder_name)
+            resp = jsonify(success = True, status = 200, path = "Books/" + folder_name)
+        except Exception:
+            resp = jsonify(success = False, status = 500, body = "Error removing all books from: Books/" + folder_name)
+    else:
+        #Moving all the contents of this dir to misc
+        try:
+            pass
+        except Exception:
+            resp = jsonify(success = False, status = 304, body = "Error moving all books from: Books/" + folder_name + "To Books/misc prior to deletion")
+            return resp
+        
+        #Delete the dir
+        try:
+            os.rmdir("Books/" + folder_name)
+            resp = jsonify(success = True, status = 200, path = "Books/" + folder_name, body = "Deleted: " + folder_name + ". All books moved to Books/misc")
+        except Exception:
+            resp = jsonify(success = False, status = 500, body = "Error deleting folder: Books/" + folder_name)
+    
+    return resp
 
 #TODO: figure out why specifying a put method on the renames causes errors
 @app.route("/rename_folder/<string:folder_name>/<string:new_name>")
@@ -59,9 +91,9 @@ def Rename_folder(folder_name, new_name):
     new_name = 'Books/' + new_name
     try:
         os.rename(old_name, new_name)
-        resp = jsonify(success = True, status_code = 200)
+        resp = jsonify(success = True, status = 200, path = new_name)
     except Exception:
-        resp = jsonify(success = False, status_code = 404)
+        resp = jsonify(success = False, status = 404, path = old_name)
         
     return resp
 
@@ -71,11 +103,11 @@ def Create_folder(folder_name):
     if not os.path.exists("Books/" + folder_name):
         try:
             os.makedirs("Books/" + folder_name)
-            resp = jsonify(success = True, status_code = 201)
+            resp = jsonify(success = True, status = 201)
         except Exception:
-            resp = jsonify(success = False, status_code = 500, body = "Failed to create dir after determining that the name was available")
+            resp = jsonify(success = False, status = 500, body = "Failed to create dir after determining that the name was available")
     else:
-        resp = jsonify(success = False, status_code = 500, body = "Failed to create dir, name already in use")
+        resp = jsonify(success = False, status = 500, body = "Failed to create dir, name already in use")
 
     return resp
 
@@ -101,6 +133,7 @@ def Toggle_dls(option, code):
 def Toggle_readers(option, code):
     return 501
 
+#TODO: add trys, return a propper response
 #http://127.0.0.1:5000/lists/1.1.1.1/whitelist/add
 @app.route("/lists/<address>/<string:list>/<string:option>")
 def Manage_ip_list(address,list,option):
