@@ -2,6 +2,7 @@ import shutil
 from flask import Flask, request, jsonify
 from flask_restful import Resource
 from flask_talisman import Talisman
+from flask_cors import CORS, cross_origin
 import os
 
 app = Flask(__name__)
@@ -57,21 +58,22 @@ def Upload_folder(folder_name, contents):
 
     return 501
 
-#TODO:finish this, get correct code for failing to move files
+
 @app.route("/delete_folder/<string:folder_name>/<string:delete_content>")
 def Delete_folder(folder_name,delete_content):
-    if delete_content == "Yes":
+    if delete_content.upper() == "YES":
         try:
-            shutil.rmtree(folder_name)
+            shutil.rmtree("Books/"+folder_name)
             resp = jsonify(success = True, status = 200, path = "Books/" + folder_name)
         except Exception:
             resp = jsonify(success = False, status = 500, body = "Error removing all books from: Books/" + folder_name)
     else:
         #Moving all the contents of this dir to misc
         try:
-            pass
+            for book in os.listdir("Books/"+folder_name):
+                shutil.move("Books/"+folder_name+"/"+book,"Books/Misc/")            
         except Exception:
-            resp = jsonify(success = False, status = 304, body = "Error moving all books from: Books/" + folder_name + "To Books/misc prior to deletion")
+            resp = jsonify(success = False, status = 304, body = "Error moving all books from: Books/" + folder_name + " To Books/misc prior to deletion")
             return resp
         
         #Delete the dir
@@ -111,18 +113,44 @@ def Create_folder(folder_name):
 
     return resp
 
-@app.route("/move_book_to_folder/<string:old_folder_name>/<string:new_folder_name>/<string:book_name>", methods = ["PUT"])
+@app.route("/move_book_to_folder/<string:old_folder_name>/<string:new_folder_name>/<string:book_name>")
 def Move_book_to_folder(old_folder_name, new_folder_name, book_name):
-    return 501
+    old_path = "Books/" + old_folder_name + "/" + book_name
+    new_path = "Books/" + new_folder_name + "/" + book_name
+
+    if os.path.isfile(old_path):
+        if os.path.exists("Books/" + new_folder_name):
+            try:
+                shutil.move(old_path,new_path)
+                resp = jsonify(success = True, status = 200)
+            except Exception:
+                resp = jsonify(success = False, status = 500, body = "Failed to move book")
+        else:
+            resp = jsonify(success = False, status = 404, body = "Failed to move book, target folder does not exist")
+    else:
+        resp = jsonify(success = False, status = 404, body = "Failed to move book, Failed to find source")
+    
+    return resp
 
 #Thumbnail management functions
 @app.route("/reassign_thumb/<string:folder_name>/<string:book_name>/<string:thumb>", methods = ["PUT"])
 def Reasign_thumb(folder_name, book_name, thumb):
     return 501
 
-@app.route("/clear_thumbs/<string:option>", methods = ["PUT"])
+#TODO: add the re-population function
+@app.route("/clear_thumbs/<string:option>")
 def Clear_thumbs(option = "Clear"):
-    return 501
+    if option == "clear":
+        try:
+            for img in os.listdir("Assets/Images/Thumbnail_cache"):
+                os.remove("Assets/Images/Thumbnail_cache/"+img)
+            resp = jsonify(success = True, status = 200)
+        except Exception:
+            resp = jsonify(success = False, status = 500, body = "Failed to clear cache")
+    elif option == "":
+        resp = jsonify(success = False, status = 501, body = "Not implemented")
+
+    return resp
 
 #Misc option functions
 @app.route("/toggle_dl/<string:option>/<string:code>", methods = ["PUT"])
