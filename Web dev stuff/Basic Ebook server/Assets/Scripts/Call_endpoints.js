@@ -2,16 +2,19 @@ function Assign_submit_actions(){
     //Get the submit btns/forms and assign their actions to the functions
     document.getElementById("DS_form").addEventListener('submit',event =>{
         event.preventDefault();
-        Hello_world();
+        let Folder = event.target.children[2]
+        let Book = event.target.children[5]
+        Call_delete_book(Folder.options[Folder.selectedIndex].innerHTML, Book.options[Book.selectedIndex].innerHTML)
     })
 }
-function Hello_world(){
-    alert("Hello_world");
-}
+//TODO: find a way to get the correct address
+const IP = ""
 
 //Manage books
 function Call_upload_book(){}
-function Call_delete_book(){}
+async function Call_delete_book(Folder,Book){
+    let response = await fetch(IP + '/delete_book/'+ Folder +'/'+ Book )
+}
 function Call_rename_book(){}
 
 //Manage folders
