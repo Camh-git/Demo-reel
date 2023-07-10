@@ -299,56 +299,56 @@
 
   //spilt up the selects into folders, books and misc
   const SELECT_LIST = document.querySelectorAll('select');
-  let folder_selects = [];
-  let book_selects = []; //TODO: check if this is redundant
-  let misc_folders = [];
+  let folderSelects = [];
+  let bookSelects = []; //TODO: check if this is redundant
+  let miscFolders = [];
   for(let i = 0; i < SELECT_LIST.length; i++)
   {
     if(SELECT_LIST[i].getAttribute("name").includes("folder")){
-      folder_selects.push(SELECT_LIST[i]);
+      folderSelects.push(SELECT_LIST[i]);
     } else if (SELECT_LIST[i].getAttribute("name").includes("book")){
-      book_selects.push(SELECT_LIST[i]);
+      bookSelects.push(SELECT_LIST[i]);
     } else{
-      misc_folders.push(SELECT_LIST[i]);
+      miscFolders.push(SELECT_LIST[i]);
     }
   }
     
   //populate the folder selects with all the folders
-  let select_contents = "";
+  let selectContents = "";
   const FOLDER_TITLES = document.querySelectorAll('h5');
   for(let i = 0; i < FOLDER_TITLES.length; i++){
-    select_contents +='<option value = ' + FOLDER_TITLES[i].innerHTML.replace(":","")+ '>' + FOLDER_TITLES[i].innerHTML.replace(":","") + '</option>';
+    selectContents +='<option value = ' + FOLDER_TITLES[i].innerHTML.replace(":","")+ '>' + FOLDER_TITLES[i].innerHTML.replace(":","") + '</option>';
   }
-  for(let i = 0; i < folder_selects.length; i++){
-    folder_selects[i].innerHTML += select_contents;
+  for(let i = 0; i < folderSelects.length; i++){
+    folderSelects[i].innerHTML += selectContents;
   }
 
   //Add event listeners to each of the folder selects, to detect changes and populate their book folder acordingly
-  for(let i = 0; i < folder_selects.length; i++){
+  for(let i = 0; i < folderSelects.length; i++){
     //Check if the folder select has a matching book folder
-    let target_book_select_name = folder_selects[i].getAttribute("name").substring(0,2) + "_book_select";
-    let target_book_select =  document.getElementsByName(target_book_select_name);
+    let targetBookSelectName = folderSelects[i].getAttribute("name").substring(0,2) + "_book_select";
+    let targetBookSelect =  document.getElementsByName(targetBookSelectName);
 
-    if(target_book_select.length != 0){
-      folder_selects[i].addEventListener('change',function(){
+    if(targetBookSelect.length != 0){
+      folderSelects[i].addEventListener('change',function(){
         //Find the right folder
-        let book_select_contents = "";
+        let bookSelectContents = "";
         let Folders = document.querySelectorAll('h5');
         for(let x = 0; x < Folders.length; x++){
           if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
             //Once found, go to it's sibling list and collect the books
-            let book_list = Folders[x].nextSibling.childNodes;
-            for (y = 0; y < book_list.length; y++){
-              book_select_contents +='<option value = ' + book_list[y].innerHTML.replace(":","")+ '>' + book_list[y].innerHTML.replace(":","") + '</option>';
-              //console.log(book_list[y].innerHTML);
+            let bookList = Folders[x].nextSibling.childNodes;
+            for (y = 0; y < bookList.length; y++){
+              bookSelectContents +='<option value = ' + bookList[y].innerHTML.replace(":","")+ '>' + bookList[y].innerHTML.replace(":","") + '</option>';
+              //console.log(bookList[y].innerHTML);
             }
           }       
         }
         //Add the books to the matching book select
-        let book_select_name = this.getAttribute("name").substring(0,2) + "_book_select";
-        let Target_book_select = "";
-        Target_book_select = document.getElementsByName(book_select_name); 
-        Target_book_select[0].innerHTML = book_select_contents;
+        let bookSelectName = this.getAttribute("name").substring(0,2) + "_book_select";
+        let targetBookSelect = "";
+        targetBookSelect = document.getElementsByName(bookSelectName); 
+        targetBookSelect[0].innerHTML = bookSelectContents;
       });
     }
     }
