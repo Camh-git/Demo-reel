@@ -59,7 +59,7 @@
 
   <!--Manage books-->
   <h2>Manage individual books</h2>
-  <div class = "flex-container Management_row">
+  <div class = "flex-container Management-row">
     <!--upload single, todo:Add a folder select-->
     <form method = "POST" enctype = "multipart/form-data" id = "US_form" action = "Assets/Scripts/Upload_single.php">
       <h3>Upload book</h3>
@@ -106,7 +106,7 @@
 
   <!--Manage folders-->
   <h2>Manage folders</h2>
-  <div class="flex-container Management_row">
+  <div class="flex-container Management-row">
     <!--Upload folder TODO: make this take a name for the folder, fix upload -->
     <form method = "POST" enctype = "multipart/form-data" action = "Assets/Scripts/Upload_folder.php">
       <h3>Upload folder</h3>
@@ -145,7 +145,7 @@
 
   <!--Manage libray-->
   <h2>Manage library</h2>
-  <div class = "flex-container Management_row">
+  <div class = "flex-container Management-row">
     <!--Create empty folder TODO:find a way to fix the permissions issue-->
     <form method = "POST"  enctype = "multipart/form-data" id = "CF_form">
       <h3>Create new folder</h3>
@@ -180,7 +180,7 @@
 
   <!--Manage thumbnails-->
   <h2>Manage Thumbnails</h2>
-  <div class = "flex-container Management_row">
+  <div class = "flex-container Management-row">
     <!--Manage thumbnails TODO:write this-->
     <form method = "POST" enctype="multipart/form-data" id = "TH_select_form">
       <h3>Re-assign Thumbnails</h3>
@@ -228,7 +228,7 @@
 
   <!--Misc options-->
   <h2>Misc options</h2>
-  <div class = "flex-container Management_row">
+  <div class = "flex-container Management-row">
     <!--Enable or disable downloads-->
     <form method = "POST" enctype = "multipart/form-data" id = "DL_toggle_form">
       <h3>Enable downloads?</h3>
@@ -287,72 +287,73 @@
 <script src = "Assets/Scripts/Append_H&F.js"> </script>
 
 <script>
-  //This script collects all the book info php left behind and creates an object from it.
+//This script collects all the book info php left behind and creates an object from it.
 
-    //Get and hide the folders and their associated books, move the pannel to the correct position
-    let Folders = document.getElementById("Book_collection");
-    Folders.style.display = "none";
-    const controls = document.getElementById("Management_pannel");
-    document.body.appendChild(controls)
-    const footer = document.getElementById("footer_container");
-    document.body.appendChild(footer)
+  //Get and hide the folders and their associated books, move the pannel to the correct position
+  const FOLDERS = document.getElementById("Book_collection");
+  FOLDERS.style.display = "none";
+  const controls = document.getElementById("Management_pannel");
+  document.body.appendChild(controls)
+  const footer = document.getElementById("footer_container");
+  document.body.appendChild(footer)
 
-    //spilt up the selects into folders and books
-    let select_list = document.querySelectorAll('select');
-    let folder_selects = [];
-    let book_selects = []; //TODO: check if this is redundant
-    let misc_folders = [];
-    for(let i = 0; i < select_list.length; i++)
-    {
-      if(select_list[i].getAttribute("name").includes("folder")){
-        folder_selects.push(select_list[i]);
-      } else if (select_list[i].getAttribute("name").includes("book")){
-        book_selects.push(select_list[i]);
-      } else{
-        misc_folders.push(select_list[i]);
-      }
+  //spilt up the selects into folders, books and misc
+  const SELECT_LIST = document.querySelectorAll('select');
+  let folder_selects = [];
+  let book_selects = []; //TODO: check if this is redundant
+  let misc_folders = [];
+  for(let i = 0; i < SELECT_LIST.length; i++)
+  {
+    if(SELECT_LIST[i].getAttribute("name").includes("folder")){
+      folder_selects.push(SELECT_LIST[i]);
+    } else if (SELECT_LIST[i].getAttribute("name").includes("book")){
+      book_selects.push(SELECT_LIST[i]);
+    } else{
+      misc_folders.push(SELECT_LIST[i]);
     }
+  }
     
-    //populate the folders selects with all the folders
-    let select_contents = "";
-    let folder_titles = document.querySelectorAll('h5');
-    for(let i = 0; i < folder_titles.length; i++){
-      select_contents +='<option value = ' + folder_titles[i].innerHTML.replace(":","")+ '>' + folder_titles[i].innerHTML.replace(":","") + '</option>';
+  //populate the folder selects with all the folders
+  let select_contents = "";
+  const FOLDER_TITLES = document.querySelectorAll('h5');
+  for(let i = 0; i < FOLDER_TITLES.length; i++){
+    select_contents +='<option value = ' + FOLDER_TITLES[i].innerHTML.replace(":","")+ '>' + FOLDER_TITLES[i].innerHTML.replace(":","") + '</option>';
+  }
+  for(let i = 0; i < folder_selects.length; i++){
+    folder_selects[i].innerHTML += select_contents;
+  }
+
+  //Add event listeners to each of the folder selects, to detect changes and populate their book folder acordingly
+  for(let i = 0; i < folder_selects.length; i++){
+    //Check if the folder select has a matching book folder
+    let target_book_select_name = folder_selects[i].getAttribute("name").substring(0,2) + "_book_select";
+    let target_book_select =  document.getElementsByName(target_book_select_name);
+
+    if(target_book_select.length != 0){
+      folder_selects[i].addEventListener('change',function(){
+        //Find the right folder
+        let book_select_contents = "";
+        let Folders = document.querySelectorAll('h5');
+        for(let x = 0; x < Folders.length; x++){
+          if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
+            //Once found, go to it's sibling list and collect the books
+            let book_list = Folders[x].nextSibling.childNodes;
+            for (y = 0; y < book_list.length; y++){
+              book_select_contents +='<option value = ' + book_list[y].innerHTML.replace(":","")+ '>' + book_list[y].innerHTML.replace(":","") + '</option>';
+              //console.log(book_list[y].innerHTML);
+            }
+          }       
+        }
+        //Add the books to the matching book select
+        let book_select_name = this.getAttribute("name").substring(0,2) + "_book_select";
+        let Target_book_select = "";
+        Target_book_select = document.getElementsByName(book_select_name); 
+        Target_book_select[0].innerHTML = book_select_contents;
+      });
     }
-    for(let i = 0; i < folder_selects.length; i++){
-      folder_selects[i].innerHTML += select_contents;
     }
 
-    //Add event listeners to each of the folder selects, to detect changes and populate their book folder acordingly
-    for(let i = 0; i < folder_selects.length; i++){
-      //Check if the folder select has a matching book folder
-      let target_book_select_name = folder_selects[i].getAttribute("name").substring(0,2) + "_book_select";
-      let target_book_select =  document.getElementsByName(target_book_select_name); 
-      if(target_book_select.length != 0){
-        folder_selects[i].addEventListener('change',function(){
-          //Find the right folder
-          let book_select_contents = "";
-          let Folders = document.querySelectorAll('h5');
-          for(let x = 0; x < Folders.length; x++){
-            if(this.options[this.selectedIndex].text == Folders[x].innerHTML.replace(":","")){
-              //Once found, go to it's sibling list and collect the books
-              let book_list = Folders[x].nextSibling.childNodes;
-              for (y = 0; y < book_list.length; y++){
-                book_select_contents +='<option value = ' + book_list[y].innerHTML.replace(":","")+ '>' + book_list[y].innerHTML.replace(":","") + '</option>';
-                //console.log(book_list[y].innerHTML);
-              }
-           }       
-          }
-          //Add the books to the matching book select
-          let book_select_name = this.getAttribute("name").substring(0,2) + "_book_select";
-          let Target_book_select = "";
-          Target_book_select = document.getElementsByName(book_select_name); 
-          Target_book_select[0].innerHTML = book_select_contents;
-        });
-      }
-    }
-
-    //Case by case handling for the misc selects
+  //Case by case handling for the misc selects
     
 
 </script>
