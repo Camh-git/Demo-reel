@@ -167,81 +167,79 @@ function getThumb($Target){
 
 	</body>
 
-	<script>
-		
-		//Getting the lists the php script left for us to use
-		const FOLDERS = document.getElementsByClassName("Book_folder");
-		console.log("Total number of folders found: " + FOLDERS.length);
+<script>
+  //Getting the lists the php script left for us to use
+	const FOLDERS = document.getElementsByClassName("Book_folder");
+	console.log("Total number of folders found: " + FOLDERS.length);
 
-		const COL_1 = document.getElementById("Col_1");
-		const COL_2 = document.getElementById("Col_2");
-		const COL_3 = document.getElementById("Col_3");
-		const COL_4 = document.getElementById("Col_4");
-		let Col_num = 0;
+	const COL_1 = document.getElementById("Col_1");
+	const COL_2 = document.getElementById("Col_2");
+	const COL_3 = document.getElementById("Col_3");
+	const COL_4 = document.getElementById("Col_4");
+	let Col_num = 0;
 
-		//Distributing the lists we stored in 'Folders' into the collumns
-		for(let item of FOLDERS)
+	//Distributing the lists we stored in 'Folders' into the collumns
+	for(let item of FOLDERS)
+	{
+		switch(Col_num)
 		{
-
-			switch(Col_num)
-			{
-				case 0:
-					COL_1.innerHTML += item.innerHTML;
-					break;
+			case 0:
+				COL_1.innerHTML += item.innerHTML;
+				break;
 				
-				case 1:
-					COL_2.innerHTML += item.innerHTML;
-					break;
+			case 1:
+				COL_2.innerHTML += item.innerHTML;
+				break;
 				
-				case 2:
-					COL_3.innerHTML += item.innerHTML;
-					break;
-				case 3:
-					COL_4.innerHTML += item.innerHTML;
-					break;
+			case 2:
+				COL_3.innerHTML += item.innerHTML;
+				break;
+			case 3:
+				COL_4.innerHTML += item.innerHTML;
+				break;
 
-				default:
-					console.log ("Error, tried writting to collumn: " + Col_num)						
-			}
-			Col_num+=1;
-			if(Col_num > 3)
-			{				
-				Col_num = 0;
-			}	
+			default:
+				console.log ("Error, tried writting to collumn: " + Col_num)						
 		}
+		Col_num+=1;
+		if(Col_num > 3)
+		{				
+			Col_num = 0;
+		}	
+	}
 
-		//Removing the lists left by php
-		while(FOLDERS.length >0)
-		{
-			FOLDERS[0].parentNode.removeChild(FOLDERS[0]);
-		}
+	//Removing the lists left by php
+	while(FOLDERS.length >0)
+	{
+		FOLDERS[0].parentNode.removeChild(FOLDERS[0]);
+	}
 
-		//Add colour coding to show the support levels of each file type
-		let types = document.getElementsByClassName("LS_Type_ind");
-		for(let t of types)
-		{
-			if(t.innerHTML==="pdf")
-			{t.style.color = "green"}
-			else if(t.innerHTML==="epub")
-			{t.style.color="yellow"}
-			else
-			{{t.style.color="red"}}
-		}
+	//Add colour coding to show the support levels of each file type
+	let types = document.getElementsByClassName("LS_Type_ind");
+	for(let t of types)
+	{
+		if(t.innerHTML==="pdf")
+		{t.style.color = "green"}
+		else if(t.innerHTML==="epub")
+		{t.style.color="yellow"}
+		else
+		{{t.style.color="red"}}
+	}
 
-    //Hide the missing spaces in titles warning, if one has not been applied
-    const Missing_title_spaces = document.getElementById("Title_spaces_missing");
-    if(Missing_title_spaces == null)
-    {
-		let Warnings = document.getElementsByClassName("Missing_space_warning");
-		for (let warning of Warnings)
+  //Hide the missing spaces in titles warning, if one has not been applied
+  const MissingTitleSpaces = document.getElementById("Title_spaces_missing");
+  if(MissingTitleSpaces == null)
+  {
+    let Warnings = document.getElementsByClassName("Missing_space_warning");
+      for (let warning of Warnings)
 		{
 			warning.innerHTML = "";
 		}
     }
     else
     {
-		let Parent = Missing_title_spaces.parentElement;
-		Parent.removeChild(Missing_title_spaces);
+      let Parent = MissingTitleSpaces.parentElement;
+      Parent.removeChild(MissingTitleSpaces);
     }
 
 	</script>
