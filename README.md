@@ -8,6 +8,7 @@ Feel free to have a look around, the most interesting stuff can be found in the 
   <li>Some content may have copyrighted material, credit will always be given</li>
   <li>If applicable credits for a project can normally be found in a file called "credits.txt"</li>
   <li>Any copyrighted material will be removed if asked.</li>
+</ul>
 
 ## Tech returners
 Most recently I have been working on the tech returners full stack developer program, including lots of web development, react, a bit of database work and a group project.
