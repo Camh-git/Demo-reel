@@ -1,0 +1,767 @@
+//TODO: add params to storage and recover them on start up
+        public class info_collection
+        {
+            public string Prefix = "ALC";
+            public string Stored_arg = "";
+            public int Timer = 0;
+            public int Airlock_count = 0;
+            public bool Init = false;
+            public int Name_plate = 0;
+            public int Screen_index = 1;
+            public IMyTextSurface This_screen;
+        }
+        
+        public info_collection Info = new info_collection();
+        public List<Airlock> Airlocks = new List<Airlock>();
+
+        public Program()
+        {
+            Fetch_airlocks();
+        }       
+
+        public void Save()
+        {
+            //save the airlock info as a coded string
+            Storage = "";
+        }
+
+        public void Main(string argument, UpdateType updateSource)
+        {
+            if(!Info.Init)
+            { Fetch_airlocks(); }
+            if (Info.Stored_arg != "")
+            {
+                string Sarg = Info.Stored_arg;
+                if (Sarg.Contains("TOGGLE_END:"))
+                {
+                    Info.Timer++;
+                    if (Info.Timer >= 2)
+                    {                        
+                        End_timer();
+                        int i = Convert.ToInt32(Sarg.Split(':')[1]);
+                        foreach (Airlock A in Airlocks)
+                        {
+                            if (A.Number == i)
+                            {
+                                //See Airlock.toggle_end for how the arg should be formatted
+                                A.Toggle_end(argument);                                
+                            }
+                        }
+                    }
+                }
+                else if (Sarg.Contains("OPEN_DEPRESS_END:"))
+                {
+                    End_timer();
+                    int i = Convert.ToInt32(Sarg.Split(':')[1]);
+                    foreach(Airlock A in Airlocks)
+                    {
+                        if (A.Number == i)
+                        { HCS_Full_open(A,false);}
+                    }
+                    
+                }
+                else if (Sarg.Contains("OPEN_PRESS_END:"))
+                {
+                    End_timer();
+                    int i = Convert.ToInt32(Sarg.Split(':')[1]);
+                    foreach (Airlock A in Airlocks)
+                    {
+                        if (A.Number == i)
+                        { HCS_Full_open(A,true); }
+                    }
+                }
+                else
+                { Echo("AIRLOCK CONTROLLER: ERROR: Stored arg did not match any known command, arg was: " +Sarg); }
+            }  
+            
+            else
+            {
+                string arg = argument.ToUpper();
+                if (arg.Contains("TOGGLE:"))
+                {
+                    int i = Convert.ToInt32(arg.Split(':')[1]);
+                    Echo("Toggling airlock: " + i);
+                    bool Found = false;
+                    foreach (Airlock A in Airlocks)
+                    {
+                        if (A.Number == i)
+                        {
+                            Found = true;
+                            A.Toggle_start();                         
+                            Info.Stored_arg = "TOGGLE_END:"+A.Number;
+                            Runtime.UpdateFrequency = UpdateFrequency.Update100; 
+                            try 
+                            {
+                                if (A.Skipped_press)
+                                {
+                                    //TODO: check if the situation causing the skip is resolved
+                                    End_timer();
+                                    if (A.DV_or_DP == "PRESS")
+                                    { 
+                                        Indicate_pressurised(A);
+
+                                    }
+                                    else if (A.DV_or_DP == "DEPRESS")
+                                    {
+                                        Indicate_depressurised(A);
+                                    }
+                                    else{ Echo("Airlock " + A.Number + " has an invalid DV_or_DP value, it is: " + A.DV_or_DP); }
+                                    A.Skipped_press = false;
+                                }
+                            }                          
+                            catch { } 
+                            Echo("DEBUG: airlock:" + A.Number +", DV OR DP: " + A.DV_or_DP + ", Skipped: " +A.Skipped_press + ", SV depress: " + A.Secondary_vent.Depressurize.ToString());                     
+                        }
+                    }
+                    if (!Found)
+                    { Echo("Error: failed to find airlock: " + i); }
+                }
+                else if (arg.Contains("CHECK_OPTIONS"))
+                {
+                    int i = arg[arg.Length - 1];
+                    foreach (Airlock A in Airlocks)
+                    {
+                        if (A.Number == i)
+                        {
+                            A.Check_options();
+                        }
+                    }
+                }
+                else if (arg.Contains("SET_PREFIX:"))
+                {
+                    if (arg.Contains(':'))
+                    {
+                        Info.Prefix = arg.Split(':')[1].ToUpper();
+                        Echo("Airlock controller: Prefix set to: " + Info.Prefix);
+                    }
+                    else
+                    { Echo("Airlock controller: ERROR: SET_PREFIX requires a : separating the SET_PREFIX command and it's paramater"); }
+                    return;
+                }
+                else if (arg.Contains("OPEN_DEPRESS:"))
+                {
+                    int i = Convert.ToInt32(arg.Split(':')[1]);
+                    Echo("attempting to open airlock: " + i + " fully depressed");
+                    foreach (Airlock A in Airlocks)
+                    {
+                        if (A.Number == i)
+                        { Open_depress(A); }
+                    }
+                }
+                else if (arg.Contains("OPEN_PRESS:"))
+                {
+                    int i = Convert.ToInt32(arg.Split(':')[1]);
+                    Echo("attempting to open press airlock: " + i + " fully pressurised");
+                    foreach (Airlock A in Airlocks)
+                    {
+                        if (A.Number == i)
+                        { Open_press(A); }
+                    }
+                }
+                else if (arg.Contains("SURFACE:"))
+                {
+                    int i = Convert.ToInt32(arg.Split(':')[1]);
+                    if (i>3 || i<0)
+                    { Echo("ERROR: Only indexes in the rang 0-3 are valid for text surfaces on Sci-fi button pannels, no action taken"); }
+                    else 
+                    {
+                        Info.Screen_index = i;
+                        Echo("INFO: Indicator screen index set to: " + Info.Screen_index + " Please use the UPDATE or FETCH commands to set up the new screens");
+                    }
+                }
+                else if (arg.Contains("NAME_PLATE:"))
+                {
+                    int i = Convert.ToInt32(arg.Split(':')[1]);
+                    if (i > 3 || i < 0)
+                    { Echo("ERROR: Only indexes in the rang 0-3 are valid for text surfaces on Sci-fi button pannels, no action taken"); }
+                    else
+                    {
+                        Info.Name_plate = i;
+                        Echo("INFO: Indicator screen index set to: " + Info.Screen_index + " Please use the UPDATE or FETCH commands to set up the new screens");
+                    }
+                }
+                else if (arg.Contains("SET_DP:"))
+                { Airlocks[Convert.ToInt32(arg.Split(':')[1]) - 1].DV_or_DP = "PRESS"; }
+                else if (arg.Contains("SET_DD:"))
+                { Airlocks[Convert.ToInt32(arg.Split(':')[1]) - 1].DV_or_DP = "DEPRESS"; }
+                else if (arg.Contains("CLEAR_SV_SET"))
+                { Airlocks[Convert.ToInt32(arg.Split(':')[1]) - 1].DV_or_DP = ""; }
+                //TODO: add warning that the auto select for this setting isnt very reliable
+                else //switch for simple misc functions
+                { 
+                    switch (arg)
+                    {
+                        case "UPDATE":
+                        case "FETCH":                           
+                        case "INIT":
+                            Fetch_airlocks();
+                            break;
+                        case "SHOW":
+                        case "SHOW_AIRLOCKS":
+                        case "DISPLAY_AIRLOCKS":
+                            Show_airlocks();
+                            break;
+                        case "SYNC":
+                        case "RESYNC":
+                        case "SYNC_AIRLOCKS":
+                            Resync_airlocks();
+                            break;
+                        case "RESET_SURFACE":
+                        case "RESET_SURFACES":
+                            Info.Screen_index = 1;
+                            Echo("Indicator screen index reset to 1");
+                            break;
+                        case "RESET_NAME":
+                            Info.Name_plate = 0;
+                            Echo("Name plate index reset to 0");
+                            break;
+                        case "RESET_PREFIX":
+                            Info.Prefix = "ALC";
+                            break;
+                        case "HELP":
+                            Echo("This script is designed to allow simple automation of all the airlocks on your ship\n" +
+                                "Each airlock is assigned it's own number and taged blocks at launch, the system creates a list of them that you can then" +
+                                "interact with. A basic airlock can be cycled using the command TOGGLE:number eg: TOGGLE:1.\n\n" +
+                                "Available commands:\n" +
+                                "TOGGLE:num : Toggles the airlock with the given number\n" +
+                                "CHECK_OPTIONS: Checks what blocks each airlock has and sets their options tags acordingly\n" +                                
+                                "SET_PREFIX:X : Sets the system prefix to X (default ALC)\n" +
+                                "RESET_PREFIX: Sets the system prefix back to its default value(ALC)\n" +
+                                "OPEN_PRESS:num/OPEN_DEPRESS:num: Opens all of the coresponding doors on the given airlock and closes the others\n" +
+                                "SET_NAME:X : Sets the index of the text surface the system uses as a name plate on taged sci-fi control pannels (0-3)\n" +
+                                "RESET_NAME: Resets the name plate index to back to it's default(0)\n" +
+                                "SURFACE:X: Sets the index of the text surface the system uses as an indicator on taged sci-fi control pannels (0-3)\n" +
+                                "RESET_SURFACES: Resets the indicator index back to it's default(1)\n" +
+                                "UPDATE/FETCH/INIT: collects tagged blocks, re-fills and re-sets up the airlocks list\n" +
+                                "SHOW_AIRLOCKS/DISPLAY_AIRLOCKS: Prints info on all airlocks contained by the system\n" +
+                                "SYNC/RESYNC/SYNC_AIRLOCKS: Attempts to set each airlock vent's depressurize value based on it's current door statuses\n\n"+                                
+                                "Tags:\n" +
+                                "Note: tags should take the form: [xyz] where x=prefix y=airlock number and z=identifier, eg:[alc1dd]\n" +
+                                "PD: Pressure door - Use to tag any airlock door(s) that lead to a pressurised section, this includes sections like " +
+                                "hangers that may not allways be pressurised\n  in this case be sure to set the SV tag(see below)\n" +
+                                "DD: Depress door - Use to tag any airlock door(s) that lead to a depressurised section\n" +
+                                "V:  Vent - Use to tag the airlock's vent, use only 1, this script is designed for moderately sized airlocks, if you have" +
+                                "a larger space that requires multiple vents to cycle reasonably fast (such as a fighter hanger) try a hanger control script\n" +
+                                "(Optional) SV: secondary vent - Used on airlocks where one side may or may not be pressurised (eg a hanger airlock) to determin" +
+                                "if that side has pressure and how to procceed, tag only one, can simply be an extra tag on a vent used in a hanger\n" +
+                                "(Optional)CP: Use to tag sci-fi button pannels that control this airlock, allows the airlock to indicate it's status at the chosen position");                           
+                            break;
+                        default:
+                            Echo("Airlock controler: ERROR: The input did not match any recognised command, input was: " + arg);
+                            break;
+                    }
+                }
+            }
+        }
+        public class Airlock
+        {
+            public int Number;
+            public List<IMyDoor> Pressure_doors = new List<IMyDoor>();
+            public List<IMyDoor> Depress_doors = new List<IMyDoor>();
+            public IMyAirVent Vent;
+            //for airlocks with more than 2 doors
+            bool Over_2;
+            //for airlocks where both sides can be a Vacuum (eg hanger airlocks)
+            //bool Double_vac;
+            public IMyAirVent Secondary_vent; //goes on the vent for the room that may be depressurised
+            public bool Skipped_press = false;
+            public string DV_or_DP = "";
+            string Skipped_side = "";
+            public List<IMyTextSurface> Name_plates = new List<IMyTextSurface>();
+            public List<IMyTextSurface> Indicators = new List<IMyTextSurface>();
+            bool Has_indicators = false;
+            
+
+            public Airlock(int Num)
+            {
+                Number = Num;
+            }
+            public void Check_options()
+            {
+                if (Pressure_doors.Count + Depress_doors.Count > 2)
+                { Over_2 = true; }
+                if (Secondary_vent != null)
+                { DV_or_DP = "YES"; }
+                if(Indicators.Count !=0)
+                { Has_indicators = true; }
+            }
+            public void Toggle_start()
+            {
+                foreach (IMyDoor D in Pressure_doors)
+                { D.CloseDoor(); }
+                foreach (IMyDoor D in Depress_doors)
+                { D.CloseDoor(); }
+                if (Skipped_press)
+                {
+                    if (Skipped_side == "DEPRESS")
+                    {
+                        Vent.Depressurize = false;
+                        foreach (IMyDoor D in Depress_doors) { D.Enabled = true; }
+                    }
+                    else if (Skipped_side == "PRESS")
+                    {
+                        Vent.Depressurize = true;
+                        foreach (IMyDoor D in Pressure_doors) { D.Enabled = true; }                        
+                    }
+                    //Skipped_press = false; //TODO: note: this may need to be re-introduced, it has been stoped because it interferes with the toggle command flow in main
+                }
+
+                if (DV_or_DP != "")
+                {
+                    if (DV_or_DP == "DEPRESS")
+                    {
+                        if (Secondary_vent.CanPressurize)
+                        {   //TODO: make sure the description of sv in help is sensible
+                            //procceed normally
+                            if (Vent.Depressurize)
+                            { Vent.Depressurize = false; }
+                            else { Vent.Depressurize = true; }
+                        }
+                        else
+                        {
+                            //both sides are depressed, open instantly
+                            foreach (IMyDoor D in Pressure_doors)
+                            { D.Enabled = true; D.OpenDoor(); }
+                            foreach (IMyDoor D in Depress_doors)
+                            { D.Enabled = true; D.OpenDoor(); }
+                            Vent.Depressurize = true;
+                            Skipped_press = true;
+                            Skipped_side = "DEPRESS"; //TODO: make sure these are the right way round
+                        }
+                    }
+                    else if (DV_or_DP == "PRESS")
+                    {
+                        if (!Secondary_vent.CanPressurize)
+                        {
+                            //proceed normaly
+                            if (Vent.Depressurize)
+                            { Vent.Depressurize = false; }
+                            else { Vent.Depressurize = true; }
+                        }
+                        else
+                        {
+                            //both sides are pressed, open instantly
+                            foreach(IMyDoor D in Pressure_doors) 
+                            { D.Enabled = true; D.OpenDoor(); }
+                            foreach(IMyDoor D in Depress_doors)
+                            { D.Enabled = true; D.OpenDoor(); }
+                            Vent.Depressurize = false;
+                            Skipped_press = true;
+                            Skipped_side = "PRESS"; //TODO: make sure these are the right way round
+                        }
+                    }
+                    else
+                    {
+                        //DV_or_DP is invalid
+                    }
+                }
+                else
+                {
+                    if (Vent.Depressurize)
+                    { Vent.Depressurize = false; }
+                    else { Vent.Depressurize = true; }
+                }
+                if (Has_indicators)
+                {
+                    foreach(IMyTextSurface T in Indicators)
+                    {
+                        T.WriteText("Cycle in\nprogress");
+                        T.FontColor = Color.Black;
+                        T.BackgroundColor = Color.Yellow;
+                        T.AddImageToSelection("Danger");
+                    }
+                }
+            }
+            public void Toggle_end(string arg = "")
+            {
+                if (!Over_2) //Normal path
+                {                    
+                    foreach (IMyDoor D in Pressure_doors)
+                    {
+                        if (D.Enabled)
+                        { D.Enabled = false; }
+                        else { D.Enabled = true; }
+                        D.OpenDoor();
+                    }
+                    foreach (IMyDoor D in Depress_doors)
+                    {
+                        if (D.Enabled)
+                        { D.Enabled = false; }
+                        else { D.Enabled = true; }
+                        D.OpenDoor();
+                    }
+                    if (Has_indicators)
+                    {                        
+                        foreach(IMyTextSurface T in Indicators)
+                        {                    
+                            if (Vent.Depressurize == false)
+                            {
+                                T.WriteText("Airlock\npressurised");
+                                T.FontColor = Color.White;
+                                T.BackgroundColor = Color.ForestGreen;
+                                T.ClearImagesFromSelection();
+                            }
+                            else
+                            {
+                                T.BackgroundColor = Color.Red;
+                                T.FontColor = Color.Yellow;
+                                T.WriteText("Airlock\nDepressurised");
+                                T.ClearImagesFromSelection();
+                            }
+                        }
+                    }
+                }
+                else //multi choice selective path
+                {
+                    //Arg must be in the format: prefix: D/P number  D/P for depress/pressure door followed by the number in the door's name
+                    //EG: the command for a door named AL5 depress 1 would be ALC:D1
+                    //Door numbers are required since the doors may not nessecarily be indexed in order eg: AL5 depress 1 may not be in Depress_doors[0]
+                    arg = arg.Split(':')[1].ToUpper();
+                    int Target = Convert.ToInt32(arg.Remove(0, 1));
+                    if (arg.Contains("D"))
+                    {
+                        foreach (IMyAirtightHangarDoor D in Depress_doors)
+                        {
+                            if (D.Name.Contains(Target.ToString()))
+                            {
+                                D.Enabled = true;
+                            }
+                            else { D.Enabled = false; }
+                            D.OpenDoor();
+                        }
+                        foreach(IMyAirtightHangarDoor D in Pressure_doors)
+                        { D.Enabled = false; }
+                        if (Has_indicators)
+                        {
+                            foreach (IMyTextSurface T in Indicators)
+                            {
+                                T.BackgroundColor = Color.Red;
+                                T.FontColor = Color.Yellow;
+                                T.WriteText("Airlock\nDepressurised");
+                                T.ClearImagesFromSelection();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach(IMyAirtightHangarDoor D in Pressure_doors)
+                        {
+                            //since we are moving between pressurised sections we can open all the safe doors for ease of movement
+                            D.Enabled = true;
+                            D.OpenDoor();
+                        }                       
+                        foreach(IMyDoor D in Depress_doors)
+                        { D.Enabled = false; }
+                        if (Has_indicators)
+                        {
+                            foreach (IMyTextSurface T in Indicators)
+                            {
+                                T.WriteText("Airlock\npressurised");
+                                T.FontColor = Color.White;
+                                T.BackgroundColor = Color.ForestGreen;
+                                T.ClearImagesFromSelection();
+                            }
+                        }
+                    }
+
+                }                
+            }
+        }
+        public void Indicate_pressurised(Airlock AL)
+        {
+            foreach (IMyTextSurface T in AL.Indicators)
+            {
+                T.WriteText("Airlock\npressurised");
+                T.FontColor = Color.White;
+                T.BackgroundColor = Color.ForestGreen;
+                T.ClearImagesFromSelection();
+            }
+        }
+        public void Indicate_depressurised(Airlock AL)
+        {
+            foreach (IMyTextSurface T in AL.Indicators)
+            {
+                T.BackgroundColor = Color.Red;
+                T.FontColor = Color.Yellow;
+                T.WriteText("Airlock\nDepressurised");
+                T.ClearImagesFromSelection();
+            }
+        }
+
+        public void Fetch_airlocks()
+        {
+            //Counting the number of vents that match the naming pattern to determin how many airlocks are needed, since there exactly 1 per airlock
+            Echo("Attempting to fetch airlocks");
+            int Count = 1;
+            List<IMyAirVent> vents = new List<IMyAirVent>(); //used to initalise current_vent and find single vents with tags          
+            string prefix = "";
+            Airlocks.Clear();
+            try
+            {
+                //before adding a new airlock, check that it exists on the ship
+                bool found = true;
+                while (found)
+                {
+                    try
+                    {
+                        prefix = "[" + Info.Prefix + Count + "V]";
+                        GridTerminalSystem.GetBlocksOfType(vents, b => b.CustomName.Contains(prefix));
+                        if (vents[0] != null)
+                        { Echo("Found vent with number: " + Count); vents.Clear();/*this is just to make sure an empty vent errors*/ }
+                    }
+                    catch { Echo("Concluded airlock count with: " + (Count - 1) + " Airlocks"); found = false; break; }
+
+                    Airlock AL = new Airlock(Count); //I know this is ugly, but sometimes GetBlocksOfType gets angry if you set up the string in its brackets
+                    prefix = "[" + Info.Prefix + AL.Number + "PD]";
+                    GridTerminalSystem.GetBlocksOfType(AL.Pressure_doors, b => b.CustomName.Contains(prefix));
+                    prefix = "[" + Info.Prefix + AL.Number + "DD]";
+                    GridTerminalSystem.GetBlocksOfType(AL.Depress_doors, b => b.CustomName.Contains(prefix));
+                    vents.Clear();
+                    prefix = "[" + Info.Prefix + AL.Number + "V]";
+                    GridTerminalSystem.GetBlocksOfType(vents, b => b.CustomName.Contains(prefix));
+                    if (vents.Any())
+                    { AL.Vent = vents[0]; }
+                    try  /*fetch the secondary_vent, if it exists*/
+                    {
+                        vents.Clear();
+                        prefix = "[" + Info.Prefix + AL.Number + "SV]";
+                        GridTerminalSystem.GetBlocksOfType(vents, b => b.CustomName.Contains(prefix));
+                        if (vents.Any())
+                        {
+                            AL.Secondary_vent = vents[0];
+                        }
+                    }
+                    catch { }
+                    try /*fetch the text surface(s) on any controller sci-fi pannels(if any exist)*/
+                    {
+                        AL.Indicators.Clear();
+                        List<IMyButtonPanel> Pannels = new List<IMyButtonPanel>();
+                        prefix = "[" + Info.Prefix + AL.Number + "CP]";
+                        GridTerminalSystem.GetBlocksOfType(Pannels, b => b.CustomName.Contains(prefix));
+                        foreach (IMyButtonPanel P in Pannels)
+                        {
+                            IMyTextSurfaceProvider oPanel = P as IMyTextSurfaceProvider;
+                            AL.Name_plates.Add(oPanel.GetSurface(Info.Name_plate));
+                            AL.Indicators.Add(oPanel.GetSurface(Info.Screen_index));
+                        }
+                        foreach (IMyTextSurface T in AL.Indicators)
+                        {
+                            T.ContentType = ContentType.TEXT_AND_IMAGE;
+                            T.FontSize = 3;
+                            T.TextPadding = 20;
+                            T.Alignment = TextAlignment.CENTER;
+                            T.WriteText("Airlock:\nnot cycled");
+                        }
+                        foreach (IMyTextSurface T in AL.Name_plates)
+                        {
+                            T.ContentType = ContentType.TEXT_AND_IMAGE;
+                            T.FontSize = 4;
+                            T.Alignment = TextAlignment.CENTER;
+                            T.WriteText("Airlock:\n" + AL.Number);
+                        }
+                    }
+                    catch { }
+                    AL.Check_options();
+                    if (AL.DV_or_DP.ToUpper() == "YES")
+                    { Find_DD_or_DP(AL); }
+                    Airlocks.Add(AL);
+                    Count++;
+                    
+                    IMyTextSurfaceProvider oPan = Me as IMyTextSurfaceProvider;
+                    Info.This_screen = oPan.GetSurface(0);
+                    Info.This_screen.ContentType = ContentType.TEXT_AND_IMAGE;
+                    Info.This_screen.FontSize = 3;
+                    Info.This_screen.Alignment = TextAlignment.CENTER;
+                    Info.This_screen.WriteText("Airlock count:\n" + Airlocks.Count());
+                }
+            }
+            catch { }
+            if (Airlocks.Count == 0)
+            {
+                Echo("WARNING: No airlocks detected, please use the comand help to ensure everything is properly labeled");
+                Info.Init = false;
+            }
+            else
+            {
+                Echo("Airlock controller: Set a total of: " + Airlocks.Count + " airlocks");
+                Info.Init = true;
+            }
+        }
+       
+        public void End_timer()
+        {
+            Info.Stored_arg = "";
+            Info.Timer = 0;
+            Runtime.UpdateFrequency = UpdateFrequency.None;
+        }
+        public void Find_DD_or_DP(Airlock AL)
+        {
+            if (AL.Secondary_vent != null)
+            {
+                Vector3 SVP = AL.Secondary_vent.Position;
+                Vector3 Closest_press;
+                Closest_press.X = 10000; Closest_press.Y = 10000; Closest_press.Z = 10000;
+                Vector3 Closest_depress;
+                Closest_depress.X = 10000; Closest_depress.Y = 10000; Closest_depress.Z = 10000;
+                float AVG_dist_press = 10000;
+                foreach (IMyDoor D in AL.Pressure_doors)
+                {
+                    float DistX = (D.Position.X - SVP.X) / Math.Abs(SVP.X) * 100;
+                    float DistY = (D.Position.X - SVP.Y) / Math.Abs(SVP.Y) * 100;
+                    float DistZ = (D.Position.X - SVP.Z) / Math.Abs(SVP.Z) * 100;
+                    float AVG = (DistX + DistY + DistZ) / 3;
+                    if (AVG < AVG_dist_press)
+                    {
+                        AVG_dist_press = AVG;
+                        Closest_press.X = D.Position.X;
+                        Closest_press.Y = D.Position.Y;
+                        Closest_press.Z = D.Position.Z;
+                    }
+                }
+                float AVG_dist_depress = 10000;
+                foreach (IMyDoor D in AL.Depress_doors)
+                {
+                    float DistX = (D.Position.X - SVP.X) / Math.Abs(SVP.X) * 100;
+                    float DistY = (D.Position.X - SVP.Y) / Math.Abs(SVP.Y) * 100;
+                    float DistZ = (D.Position.X - SVP.Z) / Math.Abs(SVP.Z) * 100;
+                    float AVG = (DistX + DistY + DistZ) / 3;
+                    if (AVG < AVG_dist_depress)
+                    {
+                        AVG_dist_depress = AVG;
+                        Closest_depress.X = D.Position.X;
+                        Closest_depress.Y = D.Position.Y;
+                        Closest_depress.Z = D.Position.Z;
+                    }
+                }
+                Echo("Airlock: " + AL.Number + " press dist: " + AVG_dist_press +", depress dist: " + AVG_dist_depress);
+                if (AVG_dist_press < AVG_dist_depress)
+                {
+                    AL.DV_or_DP = "DEPRESS";
+                }
+                else
+                {
+                    AL.DV_or_DP = "PRESS";
+                }
+            }
+            else
+            { Echo("FIND_DD_OR_DP: ERROR, airlock " + AL.Number + " does not contain a secondary vent and should not have been sent here"); }
+        }
+        public void HCS_Full_open(Airlock A, bool Pressurise = false)
+        {
+            if (Pressurise == true)
+            { A.Vent.Depressurize = false; }
+            else { A.Vent.Depressurize = true; }
+
+            foreach(IMyDoor D in A.Pressure_doors)
+            {
+                D.Enabled = true;
+                D.OpenDoor();
+            }
+            foreach(IMyDoor D in A.Depress_doors)
+            {
+                D.Enabled = true;
+                D.OpenDoor();
+            }
+        }
+        public void Open_depress(Airlock A) //TODO: if HCS_Full_open works these next 4 functions are redundant
+        {           
+            A.Vent.Depressurize = false;
+            foreach (IMyDoor D in A.Depress_doors)
+            {
+                D.Enabled = false;
+                D.OpenDoor();
+            }
+            foreach (IMyDoor D in A.Pressure_doors)
+            { D.CloseDoor(); }
+            Info.Stored_arg = "OPEN_DEPRESS_END:" + A.Number;
+            Runtime.UpdateFrequency = UpdateFrequency.Update100;
+        }
+        public void Open_depress_end(Airlock A)
+        {
+            foreach(IMyDoor D in A.Pressure_doors)
+            { D.Enabled = false; }
+        }
+        public void Open_press(Airlock A)
+        {
+            A.Vent.Depressurize = false;
+            foreach (IMyDoor D in A.Pressure_doors)
+            {
+                D.Enabled = true;
+                D.OpenDoor();
+            }
+            foreach (IMyDoor D in A.Depress_doors)
+            {
+                D.Enabled = true;
+                D.OpenDoor();
+            }
+            //Info.Stored_arg = "OPEN_PRESS_END:" + A.Number;
+            //Runtime.UpdateFrequency = UpdateFrequency.Update100;
+        }
+        public void Open_press_end(Airlock A)
+        {
+            foreach (IMyDoor D in A.Pressure_doors)
+            { D.Enabled = false; }
+            foreach (IMyDoor D in A.Depress_doors)
+            { D.Enabled = false; }            
+        } 
+        public void Show_airlocks()
+        {
+            Echo("INFO: the following is the information about each airlock:");
+            foreach(Airlock A in Airlocks)
+            {
+                Echo("Airlock: " + A.Number);
+                Echo("Doors:");
+                foreach(IMyDoor D in A.Pressure_doors)
+                { Echo(D.CustomName); }
+                foreach (IMyDoor D in A.Depress_doors)
+                { Echo(D.CustomName); }
+                Echo("Vent:" + A.Vent.CustomName);
+                if (A.Pressure_doors.Count + A.Depress_doors.Count > 2)
+                { Echo("Over 2: True"); }
+                else { Echo("Over 2: False"); }
+                if (A.DV_or_DP != "")
+                {
+                    Echo("DV or DP: " + A.DV_or_DP);
+                }
+                else { Echo("DV or DP: False"); };
+            }
+        }
+        
+        public void Resync_airlocks()
+        {
+            Echo("INFO: attempting to sync the airlocks pressure setting to their current open doors");
+            foreach(Airlock A in Airlocks)
+            {
+                bool Open_press = false;
+                bool Open_depress = false;
+                foreach(IMyDoor D in A.Pressure_doors)
+                {
+                    if (D.Enabled) 
+                    { Open_press = true; break; } 
+                }
+                foreach (IMyDoor D in A.Depress_doors)
+                {
+                    if (D.Enabled)
+                    { Open_depress = true; break; }
+                }
+                if (Open_press && !Open_depress)
+                {
+                    A.Vent.Depressurize = false;
+                    Echo("INFO: Airlock " + A.Number + " is open to a pressurised area, vent set to pressurise");
+                }
+                else if (!Open_press && Open_depress)
+                {
+                    A.Vent.Depressurize = true;
+                    Echo("INFO: Airlock " + A.Number + " is open to vacuum, vent set to depressurise");
+                }
+                else if (Open_press && Open_depress)
+                {
+                    Echo("WARNING: Airlock " + A.Number + " is open on both ends, no vent setting applied");
+                }
+                else if (!Open_press && !Open_depress)
+                {
+                    Echo("WARNING: Airlock " + A.Number + " is closed on both ends, unable to determin appropriate vent setting, no changes made");
+                }
+            }
+        }
+        /*End of script*/

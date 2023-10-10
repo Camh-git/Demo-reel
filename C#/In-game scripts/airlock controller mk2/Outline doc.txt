@@ -1,0 +1,49 @@
+Stateless 2 door airlock sequence
+start with one side on, one side (closed) off
+block 1:
+  close all doors
+  toggle pressure
+  disable other call button(s)
+
+block 2:
+  toggle each door on/off
+  call each door to open(works because the door you came through is now offline)
+
+
+info
+string prefix
+
+//airlock values
+int airlock_num
+list<doors> pressure_side_doors  //differenece serves only for airlocks with > 2 doors
+list<doors> depress_side_doors
+vent vent
+  
+  public airlock(int num)
+      airlock_num = num
+	  string prefix = "["+info.prefix+num+ "PD]"  //IK this is ugly but gridterminal can get angry with references in its calls
+	  grid.setgroup(pressure_side_doors,prefix)
+	  prefix = "["+info.prefix+num+info+"DD]"
+	  grid.setgroup(pressure_side_doors,prefix)
+	  prefix ="["+info.prefix+num+"V]";
+	  vent = grid.GetBlockWithNameContains(prefix)
+
+
+//for airlocks with more than 2 doors
+bool Over_2 //flag set to true if more than 2 doors
+/*block 1 determin pressure status on if selected door is depress or not, block 2 offline all doors but the one we want*/
+
+//for airlocks where both sides can be a Vacuum (eg hanger airlocks)
+bool can_double_vac 
+vent Extra_vent
+bool skipped_press
+
+pds lead to the pressurised(or most often pressurised) side
+problem:
+double vac needs an way to determin which situation it is in (pos double press or poss double vac)
+if depress door is nearest sv then probable double pressure (hanger - interior example)(chq front)
+pressure door being closer means probable double depress (hanger - exterior airlock example)(vega)
+
+
+
+include manual toggle
