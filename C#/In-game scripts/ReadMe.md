@@ -27,12 +27,10 @@ The code for each project can be found in /project name/Program.cs
   <li>
     <h4>Hanger control system</h4>
     <p>Controls the full cycling process of a single hanger aboard a ship, can opperate with open/close commands or a simple toggle</p>
-    <strong>Not currently uploaded</strong>
   </li>
   <li>
     <h4>Airlock control system</h4>
     <p>Controls the cycling process of all tagged airlocks aboard a ship, can opperate with open/close commands or a simple toggle.</p>
-    <strong>Not currently uploaded</strong>
   </li>
 </ul>
 
