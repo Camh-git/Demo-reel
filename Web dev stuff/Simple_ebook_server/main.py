@@ -207,4 +207,8 @@ def Catch_all(path):
     return "Invalid path: " + path, 400
 
 if __name__ == "__main__":
+    print("launching...")
+    print("To access the server's UI from this machine go to: localhost:88/Simple_Ebook_server/Home.html")
+    print("To access the server's UI from another machine substitute the localhost portion with the computer's IP")
+    print("")
     app.run(debug = True)
