@@ -1,0 +1,16 @@
+The final task of the tech returners program was a group project to setup a 
+backend that calls at least 2 apis, manipulates the data and makes it
+available on an endpoint.
+The next part was to create a frontend using react that would call the API
+and display the resulting data.
+
+The 4 teammembers where myself, Timalka K, Marlon Tancredo and Zanna Prane
+
+
+Backend:
+https://github.com/MarlonTancredo/weather-app-project-backend
+To run use: npm start
+
+Frontend:
+https://github.com/Camh-git/Weather-app-project-frontend
+To run: make sure you are in the correct Dir and use: npm run dev
