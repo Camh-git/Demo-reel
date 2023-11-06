@@ -20,15 +20,14 @@
   $Output ="<ul>";
   foreach ($Folders as $dir){
     #Get the name and add the link
-
     $Title = substr($dir,6);
     $Output .= "<li><a href ='./Books/".$Title."'>";
+    
     #Add the name and close the li
     $Output .= $Title ."</a></li>";
   }
   $Output .= "</ul>";
-  echo($Output)
-  
+  echo($Output) 
 
   ?>
 </html>
