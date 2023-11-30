@@ -16,3 +16,12 @@ The results of this project can be found in my repos from ~16/8/23 - ~1/10/23, o
 ```html
   Tech returners repo: https://github.com/Camh-git/Tech-returners
 ```
+
+## Current project
+I am currently continuing work on my ebook server project, which was put on hiatus during the tech returners program (see weather app group project)
+The aims of the project at this stage are to:
+  - Implement a management system for the library using a flask API.
+  - Replace the old php code with python (converting to a newer LAMP stack).
+  - Modify the layout and CSS to work on a wide range of screen sizes.
+  - Bring the older, less polished code up to standard.
+See the project repo at: **https://github.com/Camh-git/Simple_Ebook_Server** for more information.
