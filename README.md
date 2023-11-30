@@ -24,4 +24,5 @@ The aims of the project at this stage are to:
   - Replace the old php code with python (converting to a newer LAMP stack).
   - Modify the layout and CSS to work on a wide range of screen sizes.
   - Bring the older, less polished code up to standard.
+
 See the project repo at: **https://github.com/Camh-git/Simple_Ebook_Server** for more information.
