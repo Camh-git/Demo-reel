@@ -4,8 +4,6 @@ import os
 import shutil
 import json
 
-#The following is a copy of the book API used in my simple ebook server project, as of 24/11/23
-
 app = Flask(__name__)
 mainDir = "./Books"
 CORS(app)
@@ -21,12 +19,36 @@ def welcome():
 def check_ACLS():
     json_data = read_json_no_code("settings.json")
     settings = json.loads(json_data)
+
+    # Check if the caller meets ACL requirements
     if settings["EnableWhiteList"] == True:
         if request.remote_addr not in settings["WhiteList"]:
             return "401"
     elif settings["EnableBlackList"] == True:
         if request.remote_addr in settings["BlackList"]:
             return "401"
+
+    # Check that the requested endpoint is enabled
+    if settings["EnableManagement"] != True:
+        # Allow the request through if it's heading to one of the non-management endpoings
+        if not request.path == "/list-books" and not request.path == "/list-folders" and not request.path == "/list-thumbs" and not "/fetch-settings" in request.path and not "/toggle-management" in request.path:
+            return "423"
+
+    if settings["EnableUpload"] != True:
+        if "/post-book" in request.path or "/post-folder" in request.path or "/upload-thumb" in request.path:
+            return "423"
+
+    if settings["EnableRename"] != True:
+        if "/rename-book" in request.path or "/rename-folder" in request.path:
+            return "423"
+
+    if settings["EnableReAssign"] != True:
+        if "/move-book-to-folder" in request.path or "/reassign-thumb" in request.path:
+            return "423"
+
+    if settings["EnableDelete"] != True:
+        if "/delete-book" in request.path or "/delete-folder" in request.path or "/clear-thumbs" in request.path:
+            return "423"
 
 
 # Book methods
@@ -43,6 +65,25 @@ def list_books():
     response = app.response_class(response=json.dumps(
         list), status=200, mimetype='application/json')
     return response
+
+
+@app.route("/json-list-books")
+def json_list_books():
+    data = '{"Books":['
+    for folder in os.listdir(mainDir):
+        data += '{"Folder":"'+folder + '","Content":['
+        emptyDir = True
+        for book in os.listdir("{0}/{1}".format(mainDir, folder)):
+            emptyDir = False
+            components = os.path.splitext(book)
+            data += '{"Name":"' + components[0] + \
+                '","ext":"' + components[1]+'"},'
+        if not emptyDir:
+            data = data[:-1]
+        data += "]},"
+    data = data[:-1]
+    data += ']}'
+    return data
 
 
 @app.route("/post-book/<book_name>", methods=["POST"])
@@ -220,6 +261,28 @@ def List_Thumbs():
     response = app.response_class(response=json.dumps(
         list), status=200, mimetype='application/json')
     return response
+
+
+@app.route("/list-thumbs-json")
+def List_Thumbs_json():
+    list = '{"Images":['
+    empty_cache = True
+    for image in os.listdir("./Assets/Images/Thumbnail_cache/"):
+        empty_cache = False
+        components = os.path.splitext(image)
+        list += '{"Name":"' + components[0] + '","ext":"'+components[1]+'" },'
+    if not empty_cache:
+        list = list[:-1]
+    list += "]}"
+    return list
+
+
+@app.route("/thumb-map")
+def show_thumb_map():
+    data = read_json_no_code("./Assets/Images/Thumbnail_map.json")
+    data = data[:-2]
+    data += "," + List_Thumbs_json()[1:]
+    return data
 
 
 def generate_thumbs():
@@ -456,6 +519,43 @@ def Manage_acls(address, list, option, code):
             return write_settings(json_data, code)
         else:
             return "404"
+    else:
+        return "401"
+
+
+# Management control options
+
+@app.route("/toggle-management/<option>&&<function>&&<code>")
+def Toggle_management(option, function, code):
+    if (option == "" or code == ""):
+        return "400"
+    # Check if the function is valid, and select the correct json option to change
+    setting = ""
+    if not (function.upper() == "MANAGEMENT" or function.upper() == "UPLOAD" or function.upper() == "DELETE" or function.upper() == "RENAME" or function.upper() == "MOVE"):
+        return "406"
+    elif function.upper() == "MANAGEMENT":
+        setting = "EnableManagement"
+    elif function.upper() == "UPLOAD":
+        setting = "EnableUpload"
+    elif function.upper() == "DELETE":
+        setting = "EnableDelete"
+    elif function.upper() == "RENAME":
+        setting = "EnableRename"
+    elif function.upper() == "MOVE":
+        setting = "EnableReAssign"
+
+    if check_password(code):
+        settings = fetch_settings(code)
+        json_data = json.loads(settings)
+
+        if option.upper() == "TRUE":
+            json_data[setting] = True
+        elif option.upper() == "FALSE":
+            json_data[setting] = False
+        else:
+            return "406"
+
+        return write_settings(json_data, code)
     else:
         return "401"
 
