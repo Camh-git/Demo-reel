@@ -2,14 +2,15 @@ from os import remove
 from sys import argv
 import os
 i = 1
+title = str(input("Please enter the folder title: "))
 target = int(input("Please enter the number of folders: "))
 
 while i <= target:
     newpath = ""
     if i < 10:
-        newpath = 'Season 0{0}'.format(i)
+        newpath = '{0} 0{1}'.format(title,i)
     else:
-        newpath = 'Season {0}'.format(i)
+        newpath = '{0} {1}'.format(title,i)
     if not os.path.exists(newpath):
         os.makedirs(newpath)
     i+=1
