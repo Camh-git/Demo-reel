@@ -1,0 +1,19 @@
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\bin\Debug\net6.0-windows\Chapter time calc.exe
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\bin\Debug\net6.0-windows\Chapter time calc.deps.json
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\bin\Debug\net6.0-windows\Chapter time calc.runtimeconfig.json
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\bin\Debug\net6.0-windows\Chapter time calc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\bin\Debug\net6.0-windows\Chapter time calc.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.csproj.AssemblyReference.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter_time_calc.Form1.resources
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.csproj.GenerateResource.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.AssemblyInfoInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.AssemblyInfo.cs
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.csproj.CoreCompileInputs.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\refint\Chapter time calc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.pdb
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.genruntimeconfig.cache
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\ref\Chapter time calc.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\camer\Documents\visual studio stuff\C# stuff\Chapter time calc\Chapter time calc\obj\Debug\net6.0-windows\Chapter time calc.csproj.CopyComplete
