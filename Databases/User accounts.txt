@@ -1,0 +1,55 @@
+election_support_user:  localhost
+GRANT SELECT, INSERT, UPDATE, DELETE, RELOAD, PROCESS, FILE, REFERENCES, INDEX, ALTER, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON *.* TO 'election_support_user'@'localhost' IDENTIFIED BY PASSWORD '*3CD5D5DEB1D2ED7D3C33CFB565C2D377D0CB8B29' WITH GRANT OPTION;
+
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `election_support`.* TO 'election_support_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`offical_logins` TO 'election_support_user'@'localhost';
+
+election_user: localhost
+GRANT USAGE ON *.* TO 'election_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`parties` TO 'election_user'@'localhost';
+
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE VIEW, SHOW VIEW ON `election db`.`voter_codes` TO 'election_user'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `election db`.`constituencies` TO 'election_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`application_details` TO 'election_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`login_history` TO 'election_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`results` TO 'election_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`candidates` TO 'election_user'@'localhost';
+
+GRANT ALL PRIVILEGES ON `election db`.`previous_incumbents` TO 'election_user'@'localhost';
+
+pma:  localhost
+GRANT USAGE ON *.* TO 'pma'@'localhost';
+
+GRANT SELECT, INSERT, UPDATE, DELETE, EXECUTE ON `phpmyadmin`.* TO 'pma'@'localhost';
+
+root:  127.0.0.1
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' WITH GRANT OPTION;
+
+root: ::1
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'::1' WITH GRANT OPTION;
+
+root: localhost
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `c#quizdb`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `banking\_app\_db`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `election db`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `mysql`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `phpmyadmin`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `test`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `website\_users`.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT PROXY ON ''@'%' TO 'root'@'localhost' WITH GRANT OPTION;
